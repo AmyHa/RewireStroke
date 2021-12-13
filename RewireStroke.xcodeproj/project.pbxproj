@@ -15,14 +15,12 @@
 		620551B42767B96100BD51C9 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B32767B96100BD51C9 /* SignUpViewModel.swift */; };
 		620551B62767CD4700BD51C9 /* CredentialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B52767CD4700BD51C9 /* CredentialsViewModel.swift */; };
 		620551BA2767CEF600BD51C9 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B92767CEF600BD51C9 /* UserCredentials.swift */; };
-		6219FA982681F76500E88396 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6219FA972681F76500E88396 /* InfoViewModel.swift */; };
 		6219FAA5268204CA00E88396 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6219FAA4268204CA00E88396 /* InfoListView.swift */; };
 		621CCB9E26337D1C00C1DC47 /* ExerciseProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621CCB9C26337D1C00C1DC47 /* ExerciseProgressTableViewCell.swift */; };
 		622199FF267B845B0049F9FE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622199FD267B845B0049F9FE /* InfoViewController.swift */; };
 		62219A00267B845B0049F9FE /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 622199FE267B845B0049F9FE /* InfoViewController.xib */; };
 		62219A06267B846C0049F9FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62219A04267B846C0049F9FE /* ProfileViewController.swift */; };
 		62219A07267B846C0049F9FE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62219A05267B846C0049F9FE /* ProfileViewController.xib */; };
-		62219A0C267B87AC0049F9FE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62219A0B267B87AC0049F9FE /* HomeViewModel.swift */; };
 		6239D340251BC73500D5795D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D33F251BC73500D5795D /* Constants.swift */; };
 		6239D342251BC88E00D5795D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6239D341251BC88E00D5795D /* Roboto-Bold.ttf */; };
 		6239D344251BCB5900D5795D /* Rajdhani-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6239D343251BCB5900D5795D /* Rajdhani-SemiBold.ttf */; };
@@ -160,14 +158,12 @@
 		620551B32767B96100BD51C9 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		620551B52767CD4700BD51C9 /* CredentialsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsViewModel.swift; sourceTree = "<group>"; };
 		620551B92767CEF600BD51C9 /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
-		6219FA972681F76500E88396 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		6219FAA4268204CA00E88396 /* InfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListView.swift; sourceTree = "<group>"; };
 		621CCB9C26337D1C00C1DC47 /* ExerciseProgressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProgressTableViewCell.swift; sourceTree = "<group>"; };
 		622199FD267B845B0049F9FE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		622199FE267B845B0049F9FE /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		62219A04267B846C0049F9FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		62219A05267B846C0049F9FE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		62219A0B267B87AC0049F9FE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6239D33F251BC73500D5795D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6239D341251BC88E00D5795D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		6239D343251BCB5900D5795D /* Rajdhani-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -531,8 +527,6 @@
 			isa = PBXGroup;
 			children = (
 				62C5706326717438005683A0 /* ActivityViewModel.swift */,
-				62219A0B267B87AC0049F9FE /* HomeViewModel.swift */,
-				6219FA972681F76500E88396 /* InfoViewModel.swift */,
 				620551AC2767603A00BD51C9 /* LoginViewModel.swift */,
 				620551B32767B96100BD51C9 /* SignUpViewModel.swift */,
 				620551B52767CD4700BD51C9 /* CredentialsViewModel.swift */,
@@ -937,9 +931,7 @@
 				62512292256B30850031627A /* UICircularProgressView.swift in Sources */,
 				6219FAA5268204CA00E88396 /* InfoListView.swift in Sources */,
 				62219A06267B846C0049F9FE /* ProfileViewController.swift in Sources */,
-				62219A0C267B87AC0049F9FE /* HomeViewModel.swift in Sources */,
 				621CCB9E26337D1C00C1DC47 /* ExerciseProgressTableViewCell.swift in Sources */,
-				6219FA982681F76500E88396 /* InfoViewModel.swift in Sources */,
 				62A6ED1C25EB9F65009685D3 /* SubmitPopUpViewController.swift in Sources */,
 				6239D34D251FA88A00D5795D /* WelcomeViewController.swift in Sources */,
 				626EFB9325DF274D009F7A97 /* ColorExtension.swift in Sources */,
