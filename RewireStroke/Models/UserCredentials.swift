@@ -9,17 +9,6 @@
 struct UserCredentials {
     var email: String
     var password: String
-    var firstName: String?
-    var lastName: String?
-    
-    
-    init?(email: String, password: String, firstName: String?, lastName: String?) {
-        self.email = email
-        self.password = password
-        
-        if let firstName = firstName, let lastName = lastName {
-            self.firstName = firstName
-            self.lastName = lastName
-        }
-    }
+    var firstName: String? = nil
+    var lastName: String? = nil
 }
