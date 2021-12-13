@@ -99,8 +99,6 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToHome() {
-    
-        loginViewModel.increaseNumberOfLogins()
         
         // Since numberOfLogins > 0, then just transition to the homepage
         let homeViewController = HomeViewController.init(nibName: Constants.View.homeViewController, bundle: nil)
