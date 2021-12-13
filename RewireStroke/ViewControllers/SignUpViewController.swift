@@ -89,7 +89,6 @@ class SignUpViewController: UIViewController {
         showButton.addTarget(self, action: #selector(self.showButtonTapped), for: .touchDown)
     }
     
-    // check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message
     private func validateFields() -> String? {
         
         // check that all fields are filled in
@@ -120,14 +119,14 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
         
-        guard let email = emailTextField.text, let password = passwordTextField.text, var firstName = firstNameTextField.text, var lastName = lastNameTextField.text else {
-            return
-        }
+        guard let email = emailTextField.text, let password = passwordTextField.text, var firstName = firstNameTextField.text, var lastName = lastNameTextField.text else { return }
         
         firstName = firstName.trimmingCharacters(in: .whitespacesAndNewlines)
         lastName = lastName.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        signUpViewModel.performSignUp(email: email, password: password, firstName: firstName, lastName: lastName) { error in
+        guard let userCredentials = UserCredentials(email: email, password: password, firstName: firstName, lastName: lastName) else { return }
+        
+        signUpViewModel.performSignUp(userCredentials: userCredentials) { error in
             
             if let error = error {
                 switch error {

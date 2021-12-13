@@ -13,6 +13,8 @@
 		620551AD2767603A00BD51C9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551AC2767603A00BD51C9 /* LoginViewModel.swift */; };
 		620551B22767AE5F00BD51C9 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B12767AE5F00BD51C9 /* FirebaseService.swift */; };
 		620551B42767B96100BD51C9 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B32767B96100BD51C9 /* SignUpViewModel.swift */; };
+		620551B62767CD4700BD51C9 /* CredentialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B52767CD4700BD51C9 /* CredentialsViewModel.swift */; };
+		620551BA2767CEF600BD51C9 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B92767CEF600BD51C9 /* UserCredentials.swift */; };
 		6219FA982681F76500E88396 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6219FA972681F76500E88396 /* InfoViewModel.swift */; };
 		6219FAA5268204CA00E88396 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6219FAA4268204CA00E88396 /* InfoListView.swift */; };
 		621CCB9E26337D1C00C1DC47 /* ExerciseProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621CCB9C26337D1C00C1DC47 /* ExerciseProgressTableViewCell.swift */; };
@@ -156,6 +158,8 @@
 		620551AC2767603A00BD51C9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		620551B12767AE5F00BD51C9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		620551B32767B96100BD51C9 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		620551B52767CD4700BD51C9 /* CredentialsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsViewModel.swift; sourceTree = "<group>"; };
+		620551B92767CEF600BD51C9 /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
 		6219FA972681F76500E88396 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		6219FAA4268204CA00E88396 /* InfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListView.swift; sourceTree = "<group>"; };
 		621CCB9C26337D1C00C1DC47 /* ExerciseProgressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProgressTableViewCell.swift; sourceTree = "<group>"; };
@@ -355,6 +359,7 @@
 				6263587B260747CE00A58FFE /* Exercise.swift */,
 				627AFA17261DB8F200A64CEE /* Workout.swift */,
 				620551AA276229BE00BD51C9 /* Result.swift */,
+				620551B92767CEF600BD51C9 /* UserCredentials.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				6219FA972681F76500E88396 /* InfoViewModel.swift */,
 				620551AC2767603A00BD51C9 /* LoginViewModel.swift */,
 				620551B32767B96100BD51C9 /* SignUpViewModel.swift */,
+				620551B52767CD4700BD51C9 /* CredentialsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -921,11 +927,13 @@
 				6251228C256A9FF70031627A /* HomeViewController.swift in Sources */,
 				62C433EC251A40DF00477355 /* SceneDelegate.swift in Sources */,
 				62E996BA25CF6175003B5051 /* RingProgressView.swift in Sources */,
+				620551B62767CD4700BD51C9 /* CredentialsViewModel.swift in Sources */,
 				620551B22767AE5F00BD51C9 /* FirebaseService.swift in Sources */,
 				62C4341E251A479E00477355 /* SignUpViewController.swift in Sources */,
 				62A6EC8725E1C96E009685D3 /* Question.swift in Sources */,
 				6239D340251BC73500D5795D /* Constants.swift in Sources */,
 				620551AB276229BE00BD51C9 /* Result.swift in Sources */,
+				620551BA2767CEF600BD51C9 /* UserCredentials.swift in Sources */,
 				62512292256B30850031627A /* UICircularProgressView.swift in Sources */,
 				6219FAA5268204CA00E88396 /* InfoListView.swift in Sources */,
 				62219A06267B846C0049F9FE /* ProfileViewController.swift in Sources */,

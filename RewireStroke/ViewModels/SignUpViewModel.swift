@@ -15,27 +15,25 @@ enum SignUpError: Error {
     case emptyDetails
 }
 
-class SignUpViewModel {
+class SignUpViewModel: CredentialsViewModel {
+    internal var firebaseService: FirebaseService
     
-    private let firebaseService: FirebaseService
+    func areFieldsEmpty(credentials: UserCredentials) -> Bool {
+        return credentials.email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        credentials.password.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        credentials.firstName?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        credentials.lastName?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+    }
     
     init(firebaseService: FirebaseService = FirebaseService()) {
         self.firebaseService = firebaseService
     }
     
-    func areFieldsEmpty(email: String, password: String, firstname: String, lastname: String) -> Bool {
-        
-        return email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        password.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        lastname.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-    }
-    
-    func performSignUp(email: String, password: String, firstName: String, lastName: String, completion: @escaping (Error?) ->()) {
-        if self.areFieldsEmpty(email: email, password: password, firstname: firstName, lastname: lastName) {
+    func performSignUp(userCredentials: UserCredentials, completion: @escaping (Error?) ->()) {
+        if self.areFieldsEmpty(credentials: userCredentials) {
             completion(SignUpError.emptyDetails)
         } else {
-            firebaseService.createNewUser(email: email, password: password, firstName: firstName, lastName: lastName) { error in
+            firebaseService.createNewUser(userCredentials: userCredentials) { error in
                 completion(error)
             }
             completion(nil)
