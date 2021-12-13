@@ -12,8 +12,6 @@ import Combine
 
 class UserManager {
     
-    var subscriptions = Set<AnyCancellable>()
-    
     static var uid = ""
     static var numberOfLogins = 1
     
