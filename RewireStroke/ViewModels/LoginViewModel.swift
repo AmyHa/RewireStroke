@@ -16,26 +16,24 @@ enum LoginError: Error {
     case emptyDetails
 }
 
-class LoginViewModel {
+class LoginViewModel: CredentialsViewModel {
+    internal var firebaseService: FirebaseService
     
-    private let firebaseService: FirebaseService
+    func areFieldsEmpty(credentials: UserCredentials) -> Bool {
+        return credentials.email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        credentials.password.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+    }
     
     init(firebaseService: FirebaseService = FirebaseService()) {
         self.firebaseService = firebaseService
     }
-    
-    func areFieldsEmpty(email: String, password: String) -> Bool {
-        
-        return email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        password.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-    }
 
-    func performLogin(email: String, password: String, completion: @escaping (Error?) ->()) {
+    func performLogin(_ userCredentials: UserCredentials, completion: @escaping (Error?) ->()) {
         
-        if self.areFieldsEmpty(email: email, password: password) {
+        if self.areFieldsEmpty(credentials: userCredentials) {
             completion(LoginError.emptyDetails)
         } else {
-            firebaseService.login(email: email, password: password) { error in
+            firebaseService.login(userCredentials) { error in
                 if let error = error {
                     completion(error)
                 } else {
