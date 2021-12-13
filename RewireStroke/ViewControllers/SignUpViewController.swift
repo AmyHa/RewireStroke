@@ -12,7 +12,8 @@ import FirebaseFirestore
 import Firebase
 
 class SignUpViewController: UIViewController {
-
+    
+    var signUpViewModel = SignUpViewModel()
     
     @IBOutlet weak var firstNameTextField: CustomTextField!
     @IBOutlet weak var lastNameTextField: CustomTextField!
@@ -119,42 +120,27 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
         
-        // Validate fields
-        let error = validateFields()
+        guard let email = emailTextField.text, let password = passwordTextField.text, var firstName = firstNameTextField.text, var lastName = lastNameTextField.text else {
+            return
+        }
         
-        if let err = error {
-            // There is something wrong with the fields, show error message
-            showError(error: err)
-        } else {
-            // create cleaned version of the data
-            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        firstName = firstName.trimmingCharacters(in: .whitespacesAndNewlines)
+        lastName = lastName.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        signUpViewModel.performSignUp(email: email, password: password, firstName: firstName, lastName: lastName) { error in
             
-            // create user
-            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, err) in
-                // check for errors
-                if err != nil {
-                    self.showError(error: "Error creating user")
-                } else {
-                    let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstName": firstName, "lastName": lastName, "uid": result!.user.uid, "numberOfLogins": 1]) { (error) in
-                        if error != nil {
-                            self.showError(error: "Error saving user data.")
-                            print(error)
-                        }
-                    }
-                    
-                    // Transition to home screen
-                    self.transitionToHome()
+            if let error = error {
+                switch error {
+                case SignUpError.emptyDetails:
+                    self.showError(error: "Please fill in all details.")
+                default:
+                    print("Sign-up failed: \(error)")
                 }
+            } else {
+                self.transitionToHome()
             }
         }
         
-    }
-    
-    @IBAction func loginButtonTapped(_ sender: Any) {
-        
-        // Navigate to
     }
     
     @objc func showButtonTapped() {

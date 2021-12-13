@@ -31,6 +31,23 @@ class FirebaseService {
         }
     }
     
+    func createNewUser(email: String, password: String, firstName: String, lastName: String, completion: @escaping (Error?) -> ()) {
+        Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+            
+            // If there was an error creating the user – don't add users details to the "users" table
+            if let error = err {
+                completion(err)
+            } else {
+                self.db.collection("users").addDocument(data: ["firstName": firstName, "lastName": lastName, "uid": result?.user.uid, "numberOfLogins": 1]) { (error) in
+                    completion(error)
+                }
+                
+                completion(nil)
+            }
+            
+        }
+    }
+    
     func increaseNumberOfLogins() {
         let user = Auth.auth().currentUser
         if let user = user {
