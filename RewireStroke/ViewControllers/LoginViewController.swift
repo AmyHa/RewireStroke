@@ -180,41 +180,14 @@ class LoginViewController: UIViewController {
         if let err = error {
             showError(error: err)
         } else {
-            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            // Signing in the user
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                
-                if error != nil {
-                    // couldn't sign in
-                    self.errorLabel.text = error!.localizedDescription
-                    self.errorLabel.alpha = 1
+            loginViewModel.performLogin(email: email, password: password) { error in
+                if let error = error {
+                    print("Unable to login: \(error)")
                 } else {
-                    let db = Firestore.firestore()
-                    
-                    let user = Auth.auth().currentUser
-                    if let user = user {
-                        UserManager.uid = user.uid
-                        db.collection("users").whereField("uid", isEqualTo: user.uid)
-                            .getDocuments() { (querySnapshot, err) in
-                                if let err = err {
-                                    print("Error getting user document: \(err)")
-                                } else {
-                                    let userData = querySnapshot!.documents[0].data()
-                                    if let numberOfLogins = userData["numberOfLogins"] as? Int {
-                                        if numberOfLogins > 0 {
-                                            print("whoo greater than 0")
-                                        } else {
-                                            print("whoo not greater than 0")
-                                        }
-                                    }
-                                }
-                        }
-                    }
                     self.transitionToHome()
                 }
             }
+            
         }
         
         

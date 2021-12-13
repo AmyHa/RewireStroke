@@ -14,8 +14,10 @@ import FirebaseFirestoreSwift
 
 class LoginViewModel {
     
-    init() {
-        
+    private let firebaseService: FirebaseService
+    
+    init(firebaseService: FirebaseService = FirebaseService()) {
+        self.firebaseService = firebaseService
     }
     
     // check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message
@@ -60,4 +62,13 @@ class LoginViewModel {
         }
     }
 
+    func performLogin(email: String, password: String, completion: @escaping (Error?) ->()) {
+        firebaseService.login(email: email, password: password) { error in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
+            }
+        }
+    }
 }
