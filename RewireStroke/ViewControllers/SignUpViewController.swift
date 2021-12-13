@@ -130,7 +130,7 @@ class SignUpViewController: UIViewController {
             
             if let error = error {
                 switch error {
-                case SignUpError.emptyDetails:
+                case CredentialsError.emptyDetails:
                     self.showError(error: "Please fill in all details.")
                 default:
                     print("Sign-up failed: \(error)")

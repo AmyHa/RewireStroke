@@ -11,6 +11,10 @@ import FirebaseFirestore
 import Firebase
 import FirebaseFirestoreSwift
 
+enum CredentialsError: Error {
+    case emptyDetails
+}
+
 protocol CredentialsViewModel {
     var firebaseService: FirebaseService { get set }
     

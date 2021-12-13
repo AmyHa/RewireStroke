@@ -11,10 +11,6 @@ import FirebaseFirestore
 import Firebase
 import FirebaseFirestoreSwift
 
-enum SignUpError: Error {
-    case emptyDetails
-}
-
 class SignUpViewModel: CredentialsViewModel {
     internal var firebaseService: FirebaseService
     
@@ -31,7 +27,7 @@ class SignUpViewModel: CredentialsViewModel {
     
     func performSignUp(userCredentials: UserCredentials, completion: @escaping (Error?) ->()) {
         if self.areFieldsEmpty(credentials: userCredentials) {
-            completion(SignUpError.emptyDetails)
+            completion(CredentialsError.emptyDetails)
         } else {
             firebaseService.createNewUser(userCredentials) { error in
                 completion(error)

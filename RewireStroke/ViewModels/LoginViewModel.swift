@@ -12,10 +12,6 @@ import FirebaseFirestore
 import Firebase
 import FirebaseFirestoreSwift
 
-enum LoginError: Error {
-    case emptyDetails
-}
-
 class LoginViewModel: CredentialsViewModel {
     internal var firebaseService: FirebaseService
     
@@ -31,7 +27,7 @@ class LoginViewModel: CredentialsViewModel {
     func performLogin(_ userCredentials: UserCredentials, completion: @escaping (Error?) ->()) {
         
         if self.areFieldsEmpty(credentials: userCredentials) {
-            completion(LoginError.emptyDetails)
+            completion(CredentialsError.emptyDetails)
         } else {
             firebaseService.login(userCredentials) { error in
                 if let error = error {
