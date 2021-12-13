@@ -25,6 +25,8 @@ class LoginViewController: UIViewController {
     
     var showButton: UIButton!
     
+    var loginViewModel = LoginViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -89,18 +91,6 @@ class LoginViewController: UIViewController {
         closeButton.tintColor = Colours.primaryDark
         closeButton.setImage(icon, for: .normal)
         closeButton.imageView?.contentMode = .scaleAspectFit
-    }
-
-    // check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message
-    private func validateFields() -> String? {
-        
-        // check that all fields are filled in
-        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            
-            return "Please fill in all fields."
-        }
-        return nil
     }
     
     func showError(error: String) {
@@ -208,8 +198,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            return
+        }
         // Validate text fields
-        let error = validateFields()
+        let error = loginViewModel.validateFields(email: email, password: password)
         
         if let err = error {
             showError(error: err)
