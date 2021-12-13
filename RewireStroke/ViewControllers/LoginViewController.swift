@@ -174,23 +174,20 @@ class LoginViewController: UIViewController {
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             return
         }
-        // Validate text fields
-        let error = loginViewModel.validateFields(email: email, password: password)
         
-        if let err = error {
-            showError(error: err)
-        } else {
-            loginViewModel.performLogin(email: email, password: password) { error in
-                if let error = error {
+        loginViewModel.performLogin(email: email, password: password) { error in
+            if let error = error {
+                switch error {
+                case LoginError.incompleteDetails:
+                    self.showError(error: "Please complete all fields.")
+
+                default:
                     print("Unable to login: \(error)")
-                } else {
-                    self.transitionToHome()
                 }
+            } else {
+                self.transitionToHome()
             }
-            
         }
-        
-        
     }
 }
 

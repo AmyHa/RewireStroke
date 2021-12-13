@@ -12,6 +12,10 @@ import FirebaseFirestore
 import Firebase
 import FirebaseFirestoreSwift
 
+enum LoginError: Error {
+    case incompleteDetails
+}
+
 class LoginViewModel {
     
     private let firebaseService: FirebaseService
@@ -20,55 +24,30 @@ class LoginViewModel {
         self.firebaseService = firebaseService
     }
     
-    // check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message
-    func validateFields(email: String, password: String) -> String? {
+    func areFieldsComplete(email: String, password: String) -> Bool {
         
         // check that all fields are filled in
         if email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             password.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            
-            return "Please fill in all fields."
-        }
-        return nil
-    }
-    
-    func increaseNumberOfLogins() {
-        let db = Firestore.firestore()
-        
-        let user = Auth.auth().currentUser
-        if let user = user {
-            UserManager.uid = user.uid
-            db.collection("users").whereField("uid", isEqualTo: user.uid)
-                .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting user document: \(err)")
-                } else {
-                    let userData = querySnapshot!.documents[0].data()
-                    let userRef = querySnapshot!.documents[0].documentID
-
-                    if let numberOfLogins = userData["numberOfLogins"] as? Int {
-                            db.collection("users").document(userRef).updateData([
-                            "numberOfLogins": numberOfLogins+1
-                        ]) { err in
-                            if let err = err {
-                                print("Error updating document: \(err)")
-                            } else {
-                                print("Document successfully updated")
-                            }
-                        }
-                    }
-                }
-            }
+            return false
+        } else {
+            return true
         }
     }
 
     func performLogin(email: String, password: String, completion: @escaping (Error?) ->()) {
-        firebaseService.login(email: email, password: password) { error in
-            if let error = error {
-                completion(error)
-            } else {
-                completion(nil)
-            }
+        
+        if self.areFieldsComplete(email: email, password: password) {
+            firebaseService.login(email: email, password: password) { error in
+                if let error = error {
+                    completion(error)
+                } else {
+                    completion(nil)
+                }
+            }            
+        } else {
+            completion(LoginError.incompleteDetails)
         }
+        
     }
 }
