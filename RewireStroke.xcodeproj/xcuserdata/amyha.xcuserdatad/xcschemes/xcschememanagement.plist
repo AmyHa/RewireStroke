@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>RewireBusinessLogicUnitTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>28</integer>
+		</dict>
+		<key>RewireStroke.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>62BAC5CB26BFF4F00037C798</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62C433E5251A40DF00477355</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62C433FB251A40E000477355</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62C43406251A40E000477355</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

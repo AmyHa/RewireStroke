@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AssessmentViewController" customModule="RewireStroke" customModuleProvider="target">
+            <connections>
+                <outlet property="answerButtonsStackView" destination="VLD-Hd-4r0" id="LDb-ZB-Lag"/>
+                <outlet property="assessmentLabel" destination="pYa-Ig-RRs" id="WJn-p0-rqr"/>
+                <outlet property="backButton" destination="PYo-TB-b7t" id="OqO-vF-Cds"/>
+                <outlet property="nextButton" destination="EhX-tn-g3c" id="0KY-gK-23s"/>
+                <outlet property="questionLabel" destination="2wR-6U-nVJ" id="PI6-eZ-fC0"/>
+                <outlet property="selectionWarningLabel" destination="EPC-c7-wyV" id="2Pf-2s-UeH"/>
+                <outlet property="videoContainerView" destination="I4f-6d-XLt" id="4hG-eP-He7"/>
+                <outlet property="view" destination="iN0-l3-epB" id="uJG-xx-VeT"/>
+                <outlet property="warningLabel" destination="RuW-36-oPK" id="rF1-08-0EW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4f-6d-XLt" userLabel="Video Container View ">
+                    <rect key="frame" x="0.0" y="84" width="414" height="200"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="ka6-zX-njf"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lower Limb Assessment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYa-Ig-RRs" userLabel="Assessment Label">
+                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="vdR-ZZ-oKN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a warning label." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuW-36-oPK" userLabel="Warning Label" customClass="WarningLabel" customModule="RewireStroke" customModuleProvider="target">
+                    <rect key="frame" x="20" y="314" width="374" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="2xc-8W-RuL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wR-6U-nVJ" userLabel="Question Label">
+                    <rect key="frame" x="20" y="449" width="374" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="IfI-aw-UtA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VLD-Hd-4r0" userLabel="Answer Buttons Stack View">
+                    <rect key="frame" x="20" y="544" width="374" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMf-dQ-7CL" customClass="DefaultButton" customModule="RewireStroke" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="104.5" height="30"/>
+                            <state key="normal" title="Not at all"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGA-5y-uff" customClass="DefaultButton" customModule="RewireStroke" customModuleProvider="target">
+                            <rect key="frame" x="134.5" y="0.0" width="105" height="30"/>
+                            <state key="normal" title="A little "/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNh-7w-cqr" customClass="DefaultButton" customModule="RewireStroke" customModuleProvider="target">
+                            <rect key="frame" x="269.5" y="0.0" width="104.5" height="30"/>
+                            <state key="normal" title="Fully "/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please make a selection before clicking Next." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPC-c7-wyV" userLabel="Selectiion Warning Label" customClass="WarningLabel" customModule="RewireStroke" customModuleProvider="target">
+                    <rect key="frame" x="20" y="634" width="374" height="30.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYo-TB-b7t" userLabel="Back Button">
+                    <rect key="frame" x="20" y="834" width="12" height="22"/>
+                    <state key="normal" image="backButton"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhX-tn-g3c" userLabel="Next Button">
+                    <rect key="frame" x="382" y="834" width="12" height="22"/>
+                    <state key="normal" image="nextButton"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RuW-36-oPK" secondAttribute="trailing" constant="20" id="0uf-Se-xk5"/>
+                <constraint firstItem="pYa-Ig-RRs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1Ze-nv-Pm0"/>
+                <constraint firstItem="EPC-c7-wyV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="4We-FM-vL3"/>
+                <constraint firstItem="RuW-36-oPK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="633-mZ-soV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="I4f-6d-XLt" secondAttribute="trailing" id="Fqj-LP-oXE"/>
+                <constraint firstItem="RuW-36-oPK" firstAttribute="top" secondItem="I4f-6d-XLt" secondAttribute="bottom" constant="30" id="Fuw-de-0rK"/>
+                <constraint firstItem="2wR-6U-nVJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="HNS-s8-Hkv"/>
+                <constraint firstItem="PYo-TB-b7t" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="JYO-yP-FUl"/>
+                <constraint firstItem="I4f-6d-XLt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Qou-kl-EYL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VLD-Hd-4r0" secondAttribute="trailing" constant="20" id="Qze-8x-h8c"/>
+                <constraint firstAttribute="bottom" secondItem="EhX-tn-g3c" secondAttribute="bottom" constant="40" id="UnM-RG-yKi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EPC-c7-wyV" secondAttribute="trailing" constant="20" id="WII-n4-yiP"/>
+                <constraint firstItem="2wR-6U-nVJ" firstAttribute="top" secondItem="RuW-36-oPK" secondAttribute="bottom" constant="35" id="Xkb-aC-7el"/>
+                <constraint firstItem="pYa-Ig-RRs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="fen-XY-t6r"/>
+                <constraint firstAttribute="bottom" secondItem="PYo-TB-b7t" secondAttribute="bottom" constant="40" id="gF1-Gt-J77"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2wR-6U-nVJ" secondAttribute="trailing" constant="20" id="gRV-zE-W2q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pYa-Ig-RRs" secondAttribute="trailing" id="gl9-LN-8x8"/>
+                <constraint firstItem="VLD-Hd-4r0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="jN3-2d-9IK"/>
+                <constraint firstItem="VLD-Hd-4r0" firstAttribute="top" secondItem="2wR-6U-nVJ" secondAttribute="bottom" constant="35" id="mTd-TG-qGw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EhX-tn-g3c" secondAttribute="trailing" constant="20" id="vvH-Js-Hyf"/>
+                <constraint firstItem="EPC-c7-wyV" firstAttribute="top" secondItem="VLD-Hd-4r0" secondAttribute="bottom" constant="60" id="yVf-44-NLi"/>
+                <constraint firstItem="I4f-6d-XLt" firstAttribute="top" secondItem="pYa-Ig-RRs" secondAttribute="bottom" id="yXU-bJ-chl"/>
+            </constraints>
+            <point key="canvasLocation" x="-200.00000000000003" y="112.5"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="EPC-c7-wyV">
+            <size key="intrinsicContentSize" width="374.5" height="30.5"/>
+        </designable>
+        <designable name="RuW-36-oPK">
+            <size key="intrinsicContentSize" width="204" height="30.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="backButton" width="12" height="16"/>
+        <image name="nextButton" width="12" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

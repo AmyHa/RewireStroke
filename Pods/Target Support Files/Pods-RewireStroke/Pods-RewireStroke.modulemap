@@ -1,0 +1,6 @@
+framework module Pods_RewireStroke {
+  umbrella header "Pods-RewireStroke-umbrella.h"
+
+  export *
+  module * { export * }
+}

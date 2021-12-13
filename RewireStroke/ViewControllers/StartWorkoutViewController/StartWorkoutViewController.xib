@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartWorkoutViewController" customModule="RewireStroke" customModuleProvider="target">
+            <connections>
+                <outlet property="closeWorkoutButton" destination="iN8-Qu-D2I" id="dnc-CS-bc0"/>
+                <outlet property="tableView" destination="KMt-c3-3qR" id="N3A-KL-R4L"/>
+                <outlet property="videoContainerView" destination="j7d-rT-zKq" id="5vS-Tc-bec"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7d-rT-zKq" userLabel="Video Container View ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="c4g-M8-cpq"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KMt-c3-3qR">
+                    <rect key="frame" x="0.0" y="244" width="414" height="580"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="580" id="ycw-zx-Eka"/>
+                    </constraints>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN8-Qu-D2I" customClass="DefaultButton" customModule="RewireStroke" customModuleProvider="target">
+                    <rect key="frame" x="147" y="824" width="120" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="wcL-yy-LX1"/>
+                    </constraints>
+                    <state key="normal" title="End workout"/>
+                    <connections>
+                        <action selector="closeWorkoutButtonTapped:" destination="-1" eventType="touchUpInside" id="kBX-Ed-k8g"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="j7d-rT-zKq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8wI-Uk-fW3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iN8-Qu-D2I" secondAttribute="bottom" id="AUx-9R-VDd"/>
+                <constraint firstItem="iN8-Qu-D2I" firstAttribute="top" secondItem="KMt-c3-3qR" secondAttribute="bottom" id="PSc-BU-QXb"/>
+                <constraint firstItem="KMt-c3-3qR" firstAttribute="top" secondItem="j7d-rT-zKq" secondAttribute="bottom" id="YgD-tQ-I5L"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KMt-c3-3qR" secondAttribute="trailing" id="arU-9A-0Lt"/>
+                <constraint firstItem="j7d-rT-zKq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="f3O-77-ZJP"/>
+                <constraint firstItem="KMt-c3-3qR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nvJ-pg-UZj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j7d-rT-zKq" secondAttribute="trailing" id="oac-UT-WCL"/>
+                <constraint firstItem="iN8-Qu-D2I" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="w4O-f1-dfe"/>
+            </constraints>
+            <point key="canvasLocation" x="-49.275362318840585" y="75.669642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

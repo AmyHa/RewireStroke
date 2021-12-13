@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="RewireStroke" customModuleProvider="target">
+            <connections>
+                <outlet property="activityLabel" destination="jeA-z3-26H" id="jo1-8d-ews"/>
+                <outlet property="activityStackView" destination="Mtr-cT-Edo" id="hO5-pO-xVB"/>
+                <outlet property="balanceLabel" destination="BO2-bs-c64" id="PUQ-3B-amw"/>
+                <outlet property="lowerLimbLabel" destination="e2k-9H-ZOm" id="auP-F0-YIL"/>
+                <outlet property="outerProgressView" destination="8qz-Gn-IIo" id="eBD-NY-6lu"/>
+                <outlet property="upperLimbLabel" destination="JRm-vZ-tcV" id="0G4-f3-PC2"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Uau-ga-nZV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeA-z3-26H" userLabel="Activity Label">
+                    <rect key="frame" x="179" y="109" width="56.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="Mtr-cT-Edo" userLabel="Activities Stack View">
+                    <rect key="frame" x="60.5" y="184.5" width="293" height="65"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upperLimbIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ehF-i6-ldq" userLabel="Upper Limb Image View">
+                            <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="65" id="gyj-S4-vkI"/>
+                                <constraint firstAttribute="width" constant="65" id="vui-As-tep"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lowerLimbIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7qF-Fs-rNO" userLabel="Lower Limb Image View">
+                            <rect key="frame" x="114" y="0.0" width="65" height="65"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balanceIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2Kg-Sy-2ij" userLabel="Balance Image View">
+                            <rect key="frame" x="228" y="0.0" width="65" height="65"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="7qF-Fs-rNO" firstAttribute="width" secondItem="ehF-i6-ldq" secondAttribute="width" id="6dT-X5-Faa"/>
+                        <constraint firstItem="2Kg-Sy-2ij" firstAttribute="width" secondItem="ehF-i6-ldq" secondAttribute="width" id="HLW-aq-qC0"/>
+                        <constraint firstItem="7qF-Fs-rNO" firstAttribute="height" secondItem="ehF-i6-ldq" secondAttribute="height" id="dD9-pj-PRx"/>
+                        <constraint firstItem="2Kg-Sy-2ij" firstAttribute="height" secondItem="ehF-i6-ldq" secondAttribute="height" id="yRs-l7-yqc"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="4dE-Yx-X16" userLabel="Progress Stack View">
+                    <rect key="frame" x="60.5" y="259.5" width="293" height="65"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRm-vZ-tcV" userLabel="Upper Limb Score Label">
+                            <rect key="frame" x="0.0" y="0.0" width="65.5" height="65"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="65" id="LjO-GZ-hO7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2k-9H-ZOm" userLabel="Lower Limb Score Label">
+                            <rect key="frame" x="113.5" y="0.0" width="66" height="65"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO2-bs-c64" userLabel="Balance Score Label">
+                            <rect key="frame" x="227.5" y="0.0" width="65.5" height="65"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="8qz-Gn-IIo" userLabel="Progress View">
+                    <rect key="frame" x="32" y="344" width="350" height="300"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <color key="tintColor" red="0.91217237709999999" green="0.43358969689999999" blue="0.20903137329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="ZzI-Sz-Ase"/>
+                        <constraint firstAttribute="width" constant="350" id="hPY-9W-QWL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4dE-Yx-X16" firstAttribute="width" secondItem="Mtr-cT-Edo" secondAttribute="width" id="3In-M8-pK2"/>
+                <constraint firstItem="Mtr-cT-Edo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5cl-2b-vVG"/>
+                <constraint firstItem="8qz-Gn-IIo" firstAttribute="top" secondItem="4dE-Yx-X16" secondAttribute="bottom" constant="19.5" id="Bbo-AZ-jq5"/>
+                <constraint firstItem="4dE-Yx-X16" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pi9-vH-4a4"/>
+                <constraint firstItem="4dE-Yx-X16" firstAttribute="top" secondItem="Mtr-cT-Edo" secondAttribute="bottom" constant="10" id="RcT-yc-JMy"/>
+                <constraint firstItem="Mtr-cT-Edo" firstAttribute="top" secondItem="jeA-z3-26H" secondAttribute="bottom" constant="55" id="ZUF-Nb-LJl"/>
+                <constraint firstItem="8qz-Gn-IIo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="psA-pr-gtW"/>
+                <constraint firstItem="jeA-z3-26H" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uTy-pr-z74"/>
+                <constraint firstItem="jeA-z3-26H" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="65" id="yBJ-n0-9k0"/>
+            </constraints>
+            <point key="canvasLocation" x="94" y="125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="balanceIcon" width="58" height="58"/>
+        <image name="lowerLimbIcon" width="48" height="48"/>
+        <image name="upperLimbIcon" width="49" height="49"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

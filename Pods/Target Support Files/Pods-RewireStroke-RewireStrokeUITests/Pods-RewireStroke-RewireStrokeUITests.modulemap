@@ -1,0 +1,6 @@
+framework module Pods_RewireStroke_RewireStrokeUITests {
+  umbrella header "Pods-RewireStroke-RewireStrokeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

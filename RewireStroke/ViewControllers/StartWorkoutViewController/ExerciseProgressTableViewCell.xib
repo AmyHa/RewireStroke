@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="KGk-i7-Jjw" customClass="ExerciseProgressTableViewCell" customModule="RewireStroke" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW8-Fg-qqh" userLabel="timeLabel">
+                        <rect key="frame" x="71" y="27.5" width="41.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teK-J1-ztl" userLabel="exerciseLabel">
+                        <rect key="frame" x="20" y="27.5" width="21" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="IWb-dV-BrH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="gxx-zO-gsG"/>
+                        </constraints>
+                    </progressView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IWb-dV-BrH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7PN-Pk-aDU"/>
+                    <constraint firstItem="tW8-Fg-qqh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DF7-dR-9kH"/>
+                    <constraint firstItem="IWb-dV-BrH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PJ9-hd-Dfm"/>
+                    <constraint firstItem="tW8-Fg-qqh" firstAttribute="leading" secondItem="teK-J1-ztl" secondAttribute="trailing" constant="30" id="ROs-qD-N4E"/>
+                    <constraint firstItem="teK-J1-ztl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ev2-wS-pUd"/>
+                    <constraint firstItem="teK-J1-ztl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="h0u-af-eg8"/>
+                    <constraint firstAttribute="trailing" secondItem="IWb-dV-BrH" secondAttribute="trailing" id="yHh-3S-0le"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="exerciseTitleLabel" destination="tW8-Fg-qqh" id="rQw-zr-3Ne"/>
+                <outlet property="progressBar" destination="IWb-dV-BrH" id="vT9-mn-zq1"/>
+                <outlet property="timeLabel" destination="teK-J1-ztl" id="WPP-bG-7C9"/>
+            </connections>
+            <point key="canvasLocation" x="-35" y="109"/>
+        </tableViewCell>
+    </objects>
+</document>
