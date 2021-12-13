@@ -100,34 +100,7 @@ class LoginViewController: UIViewController {
     
     func transitionToHome() {
     
-        let db = Firestore.firestore()
-        
-        let user = Auth.auth().currentUser
-        if let user = user {
-            UserManager.uid = user.uid
-            db.collection("users").whereField("uid", isEqualTo: user.uid)
-                .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting user document: \(err)")
-                } else {
-                    let userData = querySnapshot!.documents[0].data()
-                    let userRef = querySnapshot!.documents[0].documentID
-
-                    if let numberOfLogins = userData["numberOfLogins"] as? Int {
-                            db.collection("users").document(userRef).updateData([
-                            "numberOfLogins": numberOfLogins+1
-                        ]) { err in
-                            if let err = err {
-                                print("Error updating document: \(err)")
-                            } else {
-                                print("Document successfully updated")
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
+        loginViewModel.increaseNumberOfLogins()
         
         // Since numberOfLogins > 0, then just transition to the homepage
         let homeViewController = HomeViewController.init(nibName: Constants.View.homeViewController, bundle: nil)

@@ -6,6 +6,11 @@
 //  Copyright © 2021 Amy Ha. All rights reserved.
 //
 
+import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import Firebase
+import FirebaseFirestoreSwift
 
 class LoginViewModel {
     
@@ -24,4 +29,35 @@ class LoginViewModel {
         }
         return nil
     }
+    
+    func increaseNumberOfLogins() {
+        let db = Firestore.firestore()
+        
+        let user = Auth.auth().currentUser
+        if let user = user {
+            UserManager.uid = user.uid
+            db.collection("users").whereField("uid", isEqualTo: user.uid)
+                .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting user document: \(err)")
+                } else {
+                    let userData = querySnapshot!.documents[0].data()
+                    let userRef = querySnapshot!.documents[0].documentID
+
+                    if let numberOfLogins = userData["numberOfLogins"] as? Int {
+                            db.collection("users").document(userRef).updateData([
+                            "numberOfLogins": numberOfLogins+1
+                        ]) { err in
+                            if let err = err {
+                                print("Error updating document: \(err)")
+                            } else {
+                                print("Document successfully updated")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
