@@ -176,7 +176,7 @@ class LoginViewController: UIViewController {
         loginViewModel.performLogin(email: email, password: password) { error in
             if let error = error {
                 switch error {
-                case LoginError.incompleteDetails:
+                case LoginError.emptyDetails:
                     self.showError(error: "Please complete all fields.")
 
                 default:

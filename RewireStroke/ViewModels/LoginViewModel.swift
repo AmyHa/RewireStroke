@@ -13,7 +13,7 @@ import Firebase
 import FirebaseFirestoreSwift
 
 enum LoginError: Error {
-    case incompleteDetails
+    case emptyDetails
 }
 
 class LoginViewModel {
@@ -24,30 +24,24 @@ class LoginViewModel {
         self.firebaseService = firebaseService
     }
     
-    func areFieldsComplete(email: String, password: String) -> Bool {
+    func areFieldsEmpty(email: String, password: String) -> Bool {
         
-        // check that all fields are filled in
-        if email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            password.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            return false
-        } else {
-            return true
-        }
+        return email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        password.trimmingCharacters(in: .whitespacesAndNewlines) == ""
     }
 
     func performLogin(email: String, password: String, completion: @escaping (Error?) ->()) {
         
-        if self.areFieldsComplete(email: email, password: password) {
+        if self.areFieldsEmpty(email: email, password: password) {
+            completion(LoginError.emptyDetails)
+        } else {
             firebaseService.login(email: email, password: password) { error in
                 if let error = error {
                     completion(error)
                 } else {
                     completion(nil)
                 }
-            }            
-        } else {
-            completion(LoginError.incompleteDetails)
+            }
         }
-        
     }
 }
