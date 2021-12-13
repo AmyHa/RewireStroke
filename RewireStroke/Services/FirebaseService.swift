@@ -19,9 +19,9 @@ class FirebaseService {
         
     }
     
-    func login(email: String, password: String, completion: @escaping (Error?) -> ()) {
+    func login(_ userCredentials: UserCredentials, completion: @escaping (Error?) -> ()) {
         // Signing in the user
-        Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
+        Auth.auth().signIn(withEmail: userCredentials.email, password: userCredentials.password) { (_, error) in
             if error != nil {
                 completion(error)
             } else {
@@ -31,7 +31,7 @@ class FirebaseService {
         }
     }
     
-    func createNewUser(userCredentials: UserCredentials, completion: @escaping (Error?) -> ()) {
+    func createNewUser(_ userCredentials: UserCredentials, completion: @escaping (Error?) -> ()) {
         Auth.auth().createUser(withEmail: userCredentials.email, password: userCredentials.password) { (result, err) in
             
             // If there was an error creating the user – don't add users details to the "users" table

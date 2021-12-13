@@ -33,7 +33,7 @@ class SignUpViewModel: CredentialsViewModel {
         if self.areFieldsEmpty(credentials: userCredentials) {
             completion(SignUpError.emptyDetails)
         } else {
-            firebaseService.createNewUser(userCredentials: userCredentials) { error in
+            firebaseService.createNewUser(userCredentials) { error in
                 completion(error)
             }
             completion(nil)

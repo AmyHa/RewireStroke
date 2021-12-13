@@ -124,7 +124,7 @@ class SignUpViewController: UIViewController {
         firstName = firstName.trimmingCharacters(in: .whitespacesAndNewlines)
         lastName = lastName.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        guard let userCredentials = UserCredentials(email: email, password: password, firstName: firstName, lastName: lastName) else { return }
+        let userCredentials = UserCredentials(email: email, password: password, firstName: firstName, lastName: lastName)
         
         signUpViewModel.performSignUp(userCredentials: userCredentials) { error in
             
@@ -139,7 +139,7 @@ class SignUpViewController: UIViewController {
                 self.transitionToHome()
             }
         }
-        
+
     }
     
     @objc func showButtonTapped() {
