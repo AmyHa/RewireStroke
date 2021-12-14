@@ -89,28 +89,14 @@ class SignUpViewController: UIViewController {
         showButton.addTarget(self, action: #selector(self.showButtonTapped), for: .touchDown)
     }
     
-    private func validateFields() -> String? {
-        
-        // check that all fields are filled in
-        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            
-            return "Please fill in all fields."
-        }
-        return nil
-    }
-    
     func showError(error: String) {
         errorLabel.text = error
         errorLabel.alpha = 1
     }
     
-    func transitionToHome() {
+    func transitionToWelcomePage() {
         
         // programmatically set home VC as root VC
-//        let welcomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.welcomeViewController) as? WelcomeViewController
         view.window?.rootViewController = WelcomeViewController(collectionViewLayout: UICollectionViewFlowLayout())
         view.window?.makeKeyAndVisible()
     }
@@ -136,10 +122,9 @@ class SignUpViewController: UIViewController {
                     print("Sign-up failed: \(error)")
                 }
             } else {
-                self.transitionToHome()
+                self.signUpViewModel.transitionToWelcomePage(view: self.view)
             }
         }
-
     }
     
     @objc func showButtonTapped() {

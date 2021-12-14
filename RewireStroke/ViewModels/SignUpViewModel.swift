@@ -6,6 +6,7 @@
 //  Copyright © 2021 Amy Ha. All rights reserved.
 //
 
+import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import Firebase
@@ -23,6 +24,11 @@ class SignUpViewModel: CredentialsViewModel {
     
     init(firebaseService: FirebaseService = FirebaseService()) {
         self.firebaseService = firebaseService
+    }
+    
+    func transitionToWelcomePage(view: UIView) {
+        view.window?.rootViewController = WelcomeViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        view.window?.makeKeyAndVisible()
     }
     
     func performSignUp(userCredentials: UserCredentials, completion: @escaping (Error?) ->()) {
