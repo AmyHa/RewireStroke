@@ -126,10 +126,8 @@ class LoginViewController: UIViewController {
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             return
         }
-        
-        let userCredentials = UserCredentials(email: email, password: password)
-        
-        loginViewModel.performLogin(userCredentials) { error in
+                
+        loginViewModel.performLogin(email: email, password: password) { error in
             if let error = error {
                 switch error {
                 case CredentialsError.emptyDetails:

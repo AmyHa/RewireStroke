@@ -14,8 +14,9 @@ import FirebaseFirestoreSwift
 
 class LoginViewModel: CredentialsViewModel {
 
-    func performLogin(_ userCredentials: UserCredentials, completion: @escaping (Error?) ->()) {
+    func performLogin(email: String, password: String, completion: @escaping (Error?) ->()) {
         
+        let userCredentials = UserCredentials(email: email, password: password)
         if self.areFieldsEmpty(credentials: userCredentials) {
             completion(CredentialsError.emptyDetails)
         } else {
