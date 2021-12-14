@@ -109,10 +109,8 @@ class SignUpViewController: UIViewController {
         
         firstName = firstName.trimmingCharacters(in: .whitespacesAndNewlines)
         lastName = lastName.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        let userCredentials = UserCredentials(email: email, password: password, firstName: firstName, lastName: lastName)
-        
-        signUpViewModel.performSignUp(userCredentials: userCredentials) { error in
+
+        signUpViewModel.performSignUp(email: email, password: password, firstName: firstName, lastName: lastName) { error in
             
             if let error = error {
                 switch error {

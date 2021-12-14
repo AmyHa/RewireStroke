@@ -19,7 +19,10 @@ class SignUpViewModel: CredentialsViewModel {
         view.window?.makeKeyAndVisible()
     }
     
-    func performSignUp(userCredentials: UserCredentials, completion: @escaping (Error?) ->()) {
+    func performSignUp(email: String, password: String, firstName: String, lastName: String, completion: @escaping (Error?) ->()) {
+        
+        let userCredentials = UserCredentials(email: email, password: password, firstName: firstName, lastName: lastName)
+        
         if self.areFieldsEmpty(credentials: userCredentials) {
             completion(CredentialsError.emptyDetails)
         } else {
