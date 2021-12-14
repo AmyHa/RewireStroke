@@ -15,8 +15,17 @@ enum CredentialsError: Error {
     case emptyDetails
 }
 
-protocol CredentialsViewModel {
-    var firebaseService: FirebaseService { get set }
+class CredentialsViewModel {
+    var firebaseService: FirebaseService
     
-    func areFieldsEmpty(credentials: UserCredentials) -> Bool
+    init(firebaseService: FirebaseService = FirebaseService()) {
+        self.firebaseService = firebaseService
+    }
+    
+    func areFieldsEmpty(credentials: UserCredentials) -> Bool {
+        return credentials.email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        credentials.password.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        credentials.firstName?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        credentials.lastName?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+    }
 }

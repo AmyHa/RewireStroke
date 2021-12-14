@@ -13,16 +13,6 @@ import Firebase
 import FirebaseFirestoreSwift
 
 class LoginViewModel: CredentialsViewModel {
-    internal var firebaseService: FirebaseService
-    
-    func areFieldsEmpty(credentials: UserCredentials) -> Bool {
-        return credentials.email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        credentials.password.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-    }
-    
-    init(firebaseService: FirebaseService = FirebaseService()) {
-        self.firebaseService = firebaseService
-    }
 
     func performLogin(_ userCredentials: UserCredentials, completion: @escaping (Error?) ->()) {
         
