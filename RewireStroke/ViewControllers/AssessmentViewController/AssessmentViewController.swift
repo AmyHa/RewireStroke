@@ -56,29 +56,6 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         self.setUpButtonResponses()
         self.prepareForPlayback()
         
-        // Get a reference to the storage service using the default Firebase App
-        let storage = Storage.storage()
-
-        // Create a storage reference from our storage service
-        let storageRef = storage.reference()
-    
-        // Create a child reference
-        // videosRef now points to "videos"
-        let videosRef = storageRef.child("videos")
-        let spaceRef = videosRef.child("assessment-knee-extension.mp4")
-        
-        // Create local filesystem URL
-        let localURL = URL(string: "path/to/video")!
-
-//        // Fetch the download URL
-//        spaceRef.downloadURL { url, error in
-//          if let error = error {
-//            // Handle any errors
-//          } else {
-//            print(url)
-//          }
-//        }
-        
         playEmbedInVideo()
    }
 
