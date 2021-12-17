@@ -49,15 +49,12 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        self.setUpUI()
-        self.setQuestionText(questionIndex: currentIndex)
-        self.setUpButtonResponses()
-
-        self.prepareForPlayback()
-        
+    
+        setUpUI()
+        setQuestionText(questionIndex: currentIndex)
+        setButtons(questionIndex: currentIndex)
+        setUpButtonResponses()
+        prepareForPlayback()
         addVideoView()
    }
     
@@ -109,10 +106,8 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
             button.setTitleColor(Colours.primaryDark, for: .normal)
             button.isSelected = !button.isSelected
         } else {
-            // if it's unselected, then we should return all other buttons to unselected state
-            // then continue with selected the button
+
             returnAnswerButtonsToUnselectedState()
-            
             button.isSelected = !button.isSelected
             button.backgroundColor = Colours.primaryBlue
             button.setTitleColor(.white, for: .normal)
@@ -120,13 +115,10 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     }
     
     @objc private func backButtonTapped(_ button : DefaultButton) {
-
-        // return all buttons to unselected state
-        returnAnswerButtonsToUnselectedState()
-        
-        // then we return to prev question
         currentIndex-=1
         setQuestionText(questionIndex: currentIndex)
+        setButtons(questionIndex: currentIndex)
+        returnAnswerButtonsToUnselectedState()
     }
     
     @objc private func nextButtonTapped(_ button : DefaultButton) {
@@ -140,15 +132,15 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
             // then we move on to next question
             currentIndex+=1
             
-            if currentIndex >= assessmentViewModel.questions.count || currentIndex < 0 {
+            if currentIndex >= assessmentViewModel.getNumberOfQuestions() {
                 let popupViewController = SubmitPopUpViewController.init(nibName: Constants.View.submitPopUpViewController, bundle: nil)
                 popupViewController.modalPresentationStyle = .popover
                 popupViewController.finishedWorkoutDelegate = self
                 popupViewController.activityViewModel = activityViewModel
                 present(popupViewController, animated: true)
             } else {
-                self.setQuestionText(questionIndex: currentIndex)
-                self.setButtons(questionIndex: currentIndex)
+                setQuestionText(questionIndex: currentIndex)
+                setButtons(questionIndex: currentIndex)
                 returnAnswerButtonsToUnselectedState()
                 addVideoView()
             }
@@ -162,7 +154,6 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     
     private func setQuestionText(questionIndex: Int) {
         questionLabel.text = assessmentViewModel.getQuestionText(questionIndex: currentIndex)
-        self.setButtons(questionIndex: currentIndex)
     }
     
     private func returnAnswerButtonsToUnselectedState() {
@@ -209,18 +200,15 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     func setButtons(questionIndex: Int) {
         
         let buttonLabels = assessmentViewModel.getAnswers(questionIndex: currentIndex)
-        
-        if buttonLabels.count < 3 {
-            if let view = answerButtonsStackView.arrangedSubviews.first {
+        // Hide the first button if we only have 2 answers!
+        if buttonLabels.count == 2 {
+            if let view = answerButtonsStackView.arrangedSubviews.last {
                 view.isHidden = true
             }
-            (answerButtonsStackView.arrangedSubviews[1] as! DefaultButton).setTitle("No", for: .normal)
-            (answerButtonsStackView.arrangedSubviews[2] as! DefaultButton).setTitle("Yes", for: .normal)
-        } else {
-            if let view = answerButtonsStackView.arrangedSubviews.first {
-                view.isHidden = false
-            }
-            answerButtonsStackView.arrangedSubviews.enumerated().forEach{ (idx, element) in (element as! DefaultButton).setTitle(buttonLabels[idx], for: .normal)}
+        }
+        
+        buttonLabels.enumerated().forEach { (idx, element) in
+            (answerButtonsStackView.arrangedSubviews[idx] as! DefaultButton).setTitle(element, for: .normal)
         }
     }
     
