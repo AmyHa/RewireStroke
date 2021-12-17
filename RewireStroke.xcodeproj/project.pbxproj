@@ -51,6 +51,7 @@
 		6270367826C04ADB00851B40 /* ActivityViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270367726C04ADB00851B40 /* ActivityViewModelTests.swift */; };
 		6270367E26C86E1600851B40 /* WorkoutPlaceholderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270367D26C86E1600851B40 /* WorkoutPlaceholderData.swift */; };
 		6270367F26C86E1600851B40 /* WorkoutPlaceholderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270367D26C86E1600851B40 /* WorkoutPlaceholderData.swift */; };
+		6270B8332768C9C900F56173 /* AssessmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270B8322768C9C900F56173 /* AssessmentViewModel.swift */; };
 		627AFA18261DB8F200A64CEE /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627AFA17261DB8F200A64CEE /* Workout.swift */; };
 		627AFA1F261DBEEA00A64CEE /* StartWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627AFA1D261DBEEA00A64CEE /* StartWorkoutViewController.swift */; };
 		627AFA20261DBEEA00A64CEE /* StartWorkoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627AFA1E261DBEEA00A64CEE /* StartWorkoutViewController.xib */; };
@@ -189,6 +190,7 @@
 		626EFB9E25DF2FB0009F7A97 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		6270367726C04ADB00851B40 /* ActivityViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModelTests.swift; sourceTree = "<group>"; };
 		6270367D26C86E1600851B40 /* WorkoutPlaceholderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlaceholderData.swift; sourceTree = "<group>"; };
+		6270B8322768C9C900F56173 /* AssessmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewModel.swift; sourceTree = "<group>"; };
 		627AFA17261DB8F200A64CEE /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		627AFA1D261DBEEA00A64CEE /* StartWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutViewController.swift; sourceTree = "<group>"; };
 		627AFA1E261DBEEA00A64CEE /* StartWorkoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartWorkoutViewController.xib; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 				620551AC2767603A00BD51C9 /* LoginViewModel.swift */,
 				620551B32767B96100BD51C9 /* SignUpViewModel.swift */,
 				620551B52767CD4700BD51C9 /* CredentialsViewModel.swift */,
+				6270B8322768C9C900F56173 /* AssessmentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -924,6 +927,7 @@
 				620551B62767CD4700BD51C9 /* CredentialsViewModel.swift in Sources */,
 				620551B22767AE5F00BD51C9 /* FirebaseService.swift in Sources */,
 				62C4341E251A479E00477355 /* SignUpViewController.swift in Sources */,
+				6270B8332768C9C900F56173 /* AssessmentViewModel.swift in Sources */,
 				62A6EC8725E1C96E009685D3 /* Question.swift in Sources */,
 				6239D340251BC73500D5795D /* Constants.swift in Sources */,
 				620551AB276229BE00BD51C9 /* Result.swift in Sources */,

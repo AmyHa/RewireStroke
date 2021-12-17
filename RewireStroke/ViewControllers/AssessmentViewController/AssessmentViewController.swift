@@ -18,6 +18,7 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     
     
     var activityViewModel: ActivityViewModel
+    var assessmentViewModel = AssessmentViewModel()
     
     init(activityViewModel: ActivityViewModel) {
         self.activityViewModel = activityViewModel
@@ -52,31 +53,13 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         // Do any additional setup after loading the view.
         
         self.setUpUI()
-        self.setUpQuestions()
+        self.setQuestionText(questionIndex: currentIndex)
         self.setUpButtonResponses()
+
         self.prepareForPlayback()
         
-        playEmbedInVideo()
+        addVideoView()
    }
-
-    private func setUpQuestions() {
-        
-        let question1 = Question(questionText: "Can your dad lift his foot up whilst keeping his heel on the ground?", activityType: .lowerLimb,  videoPath: "assess-forefoot-lift.mp4")
-        let question2 = Question(questionText: "Can your dad tense his thigh?", activityType: .lowerLimb,  videoPath: "assess-isometric-knee-contraction.mp4")
-        let question3 = Question(questionText: "Can your dad extend his knee?", activityType: .lowerLimb, videoPath: "assess-knee-extension.mp4")
-        let question4 = Question(questionText: "Can you dad move from sitting to standing?", activityType: .lowerLimb, answers: ["No", "Yes"], videoPath: "assess-sit-to-stand.mp4")
-        let question5 = Question(questionText: "Can your dad stand on his own for at least 2 minutes?", activityType: .lowerLimb, answers: ["No", "Yes"], videoPath: "assess-standing-for-two-minutes.mp4")
-        
-        
-        self.questions.append(question1)
-        self.questions.append(question2)
-        self.questions.append(question3)
-        self.questions.append(question4)
-        self.questions.append(question5)
-        
-        // Set current question to first question
-        setQuestionText(questionIndex: currentIndex)
-    }
     
     private func setUpUI() {
         self.title = "Assessment"
@@ -147,56 +130,39 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     }
     
     @objc private func nextButtonTapped(_ button : DefaultButton) {
+        
+        // First, stop playing the current video!
+        playerViewController.player?.pause()
     
-        // Only move on if we have an answer selected
+        // Only move on if we have an answer selected 
         if isAnswerSelected() {
             
             // then we move on to next question
             currentIndex+=1
-            setQuestionText(questionIndex: currentIndex)
             
-            // Make sure selection warning label is not visible
-            selectionWarningLabel.alpha = 0
-            
-            // Don't play video if we're at the end of our survey
-            if currentIndex >= questions.count || currentIndex < 0 {
-                //creating a reference for the dialogView controller
+            if currentIndex >= assessmentViewModel.questions.count || currentIndex < 0 {
                 let popupViewController = SubmitPopUpViewController.init(nibName: Constants.View.submitPopUpViewController, bundle: nil)
                 popupViewController.modalPresentationStyle = .popover
                 popupViewController.finishedWorkoutDelegate = self
                 popupViewController.activityViewModel = activityViewModel
-                //presenting the pop up viewController from the parent viewController
                 present(popupViewController, animated: true)
-                
             } else {
-                // return all buttons to unselected state
+                self.setQuestionText(questionIndex: currentIndex)
+                self.setButtons(questionIndex: currentIndex)
                 returnAnswerButtonsToUnselectedState()
-                
-                playEmbedInVideo()
+                addVideoView()
             }
+            
+            // Make sure selection warning label is not visible
+            selectionWarningLabel.alpha = 0
         } else {
             selectionWarningLabel.alpha = 1
         }
     }
     
     private func setQuestionText(questionIndex: Int) {
-        
-        // If we've reached the end of the survey...
-        if questionIndex >= questions.count || questionIndex < 0 {
-            return
-        } else {
-            questionLabel.text = "\(questionIndex+1). \(questions[questionIndex].questionText)"
-            if questions[currentIndex].answers.count < 3 {
-                if let view = answerButtonsStackView.arrangedSubviews.first {
-                    view.isHidden = true
-                }
-                
-                // Then change the second and third button to show "No" and "Yes"
-                (answerButtonsStackView.arrangedSubviews[1] as! DefaultButton).setTitle("No", for: .normal)
-                (answerButtonsStackView.arrangedSubviews[2] as! DefaultButton).setTitle("Yes", for: .normal) 
-            }
-        }
-            
+        questionLabel.text = assessmentViewModel.getQuestionText(questionIndex: currentIndex)
+        self.setButtons(questionIndex: currentIndex)
     }
     
     private func returnAnswerButtonsToUnselectedState() {
@@ -211,7 +177,7 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         }
     }
     
-    private func playEmbedInVideo() {
+    private func addVideoView() {
         
         self.addChild(playerViewController)
         videoContainerView.addSubview(playerViewController.view)
@@ -224,35 +190,38 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         ])
         playerViewController.didMove(toParent: self)
         
-//        let url = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!
-        let documentsDirectory = CacheManager.getDocumentsDirectory()
-        let currentVideoPath = questions[currentIndex].videoPath
-        let destinationURL = documentsDirectory.appendingPathComponent(currentVideoPath)
-        
-        // Check if it exissts before downloading
-        if FileManager.default.fileExists(atPath: destinationURL.path) {
-            let playerItem = AVPlayerItem(url: destinationURL)
+        if let playerItem = assessmentViewModel.getPlayerItem(currentIndex: currentIndex) {
             playerViewController.player = AVPlayer(playerItem: playerItem)
-            playerViewController.player?.play()
-        } else {
-            print("it doesn't exist!")
         }
     }
     
     private func isAnswerSelected() -> Bool {
-        for (index, view) in answerButtonsStackView.subviews.enumerated() {
+        for (_, view) in answerButtonsStackView.subviews.enumerated() {
             if let button = view as? DefaultButton {
                 if button.isSelected {
-                    // If fully is selected...
-                    if index == 2 {
-                        UserManager.LLAssessmentScore = UserManager.LLAssessmentScore + 1;
-                    }
-                    
                     return true
                 }
             }
         }
         return false
+    }
+    
+    func setButtons(questionIndex: Int) {
+        
+        let buttonLabels = assessmentViewModel.getAnswers(questionIndex: currentIndex)
+        
+        if buttonLabels.count < 3 {
+            if let view = answerButtonsStackView.arrangedSubviews.first {
+                view.isHidden = true
+            }
+            (answerButtonsStackView.arrangedSubviews[1] as! DefaultButton).setTitle("No", for: .normal)
+            (answerButtonsStackView.arrangedSubviews[2] as! DefaultButton).setTitle("Yes", for: .normal)
+        } else {
+            if let view = answerButtonsStackView.arrangedSubviews.first {
+                view.isHidden = false
+            }
+            answerButtonsStackView.arrangedSubviews.enumerated().forEach{ (idx, element) in (element as! DefaultButton).setTitle(buttonLabels[idx], for: .normal)}
+        }
     }
     
     func prepareForPlayback() {
