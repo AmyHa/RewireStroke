@@ -20,6 +20,7 @@ class StartWorkoutViewController: UIViewController, ExerciseSelectionDelegate {
     
     @IBOutlet weak var closeWorkoutButton: DefaultButton!
     
+    private let startWorkoutViewModel = StartWorkoutViewModel()
     var progress: Float
     
     func didTapExercise(videoIndex: Int) {
