@@ -58,6 +58,9 @@
 		627AFA20261DBEEA00A64CEE /* StartWorkoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627AFA1E261DBEEA00A64CEE /* StartWorkoutViewController.xib */; };
 		627AFA40261DD76F00A64CEE /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627AFA3E261DD76F00A64CEE /* WorkoutTableViewCell.swift */; };
 		627AFA41261DD76F00A64CEE /* WorkoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627AFA3F261DD76F00A64CEE /* WorkoutTableViewCell.xib */; };
+		628260752780C9C8004AFE3A /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628260742780C9C8004AFE3A /* ChartViewModel.swift */; };
+		628260792781C266004AFE3A /* CustomChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 628260782781C266004AFE3A /* CustomChartView.xib */; };
+		6282607B2781C27D004AFE3A /* CustomChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6282607A2781C27D004AFE3A /* CustomChartView.swift */; };
 		62A6019125FAE773002F456E /* ActivityScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A6019025FAE773002F456E /* ActivityScrollView.swift */; };
 		62A601D225FBB842002F456E /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A601D125FBB842002F456E /* FontExtension.swift */; };
 		62A6020A25FBBE25002F456E /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A6020825FBBE25002F456E /* ProgressViewController.swift */; };
@@ -199,6 +202,9 @@
 		627AFA1E261DBEEA00A64CEE /* StartWorkoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartWorkoutViewController.xib; sourceTree = "<group>"; };
 		627AFA3E261DD76F00A64CEE /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		627AFA3F261DD76F00A64CEE /* WorkoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutTableViewCell.xib; sourceTree = "<group>"; };
+		628260742780C9C8004AFE3A /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		628260782781C266004AFE3A /* CustomChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomChartView.xib; sourceTree = "<group>"; };
+		6282607A2781C27D004AFE3A /* CustomChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChartView.swift; sourceTree = "<group>"; };
 		62A6019025FAE773002F456E /* ActivityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScrollView.swift; sourceTree = "<group>"; };
 		62A601D125FBB842002F456E /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		62A6020825FBBE25002F456E /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
@@ -411,6 +417,9 @@
 			children = (
 				62A6020825FBBE25002F456E /* ProgressViewController.swift */,
 				62A6020925FBBE25002F456E /* ProgressViewController.xib */,
+				628260742780C9C8004AFE3A /* ChartViewModel.swift */,
+				628260782781C266004AFE3A /* CustomChartView.xib */,
+				6282607A2781C27D004AFE3A /* CustomChartView.swift */,
 			);
 			path = ProgressViewController;
 			sourceTree = "<group>";
@@ -750,6 +759,7 @@
 				62F3E595251BA2DC00BD1152 /* Roboto-Light.ttf in Resources */,
 				62A6020B25FBBE25002F456E /* ProgressViewController.xib in Resources */,
 				624F50A725F5A11000C46B3E /* ActivityViewController.xib in Resources */,
+				628260792781C266004AFE3A /* CustomChartView.xib in Resources */,
 				62F3E593251BA20E00BD1152 /* Roboto-Regular.ttf in Resources */,
 				62B5178A2611197F006876F6 /* WorkoutViewController.xib in Resources */,
 				62C6D5FB265043B20059BB47 /* ExerciseProgressTableViewCell.xib in Resources */,
@@ -928,10 +938,12 @@
 				6235D441276CE46000379614 /* IntExtension.swift in Sources */,
 				62F3E59A251BA57400BD1152 /* UILabelExtension.swift in Sources */,
 				627AFA18261DB8F200A64CEE /* Workout.swift in Sources */,
+				628260752780C9C8004AFE3A /* ChartViewModel.swift in Sources */,
 				6239D3502520928E00D5795D /* WelcomePage.swift in Sources */,
 				6251228C256A9FF70031627A /* HomeViewController.swift in Sources */,
 				62C433EC251A40DF00477355 /* SceneDelegate.swift in Sources */,
 				62E996BA25CF6175003B5051 /* RingProgressView.swift in Sources */,
+				6282607B2781C27D004AFE3A /* CustomChartView.swift in Sources */,
 				620551B62767CD4700BD51C9 /* CredentialsViewModel.swift in Sources */,
 				620551B22767AE5F00BD51C9 /* FirebaseService.swift in Sources */,
 				62C4341E251A479E00477355 /* SignUpViewController.swift in Sources */,
