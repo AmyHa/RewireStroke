@@ -139,7 +139,7 @@ class StartWorkoutDataSource: NSObject, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let exercise = data[indexPath.row]
         
-        cell = tableView.dequeueReusableCell(withIdentifier: "ExerciseProgressTableViewCell", for: indexPath) as! ExerciseProgressTableViewCell
+        cell = tableView.dequeueReusableCell(withIdentifier: "ExerciseProgressTableViewCell", for: indexPath) as? ExerciseProgressTableViewCell
     
         cell.progressBar.progress = Float(progress)
         cell.exerciseTitleLabel.text = exercise.name
