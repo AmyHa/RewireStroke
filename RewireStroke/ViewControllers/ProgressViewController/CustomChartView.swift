@@ -16,7 +16,8 @@ class CustomChartView: LineChartView {
 
     var results: [Result] = []
     var chartData: [ChartDataEntry] = []
-
+    var themeColour: UIColor = Colours.pain
+    
     typealias CompletionHandler = (_ success: Bool) -> Void
     
     override init(frame: CGRect) {
@@ -31,6 +32,7 @@ class CustomChartView: LineChartView {
         getResults(type: viewModel.type) { success in
             self.setData()
         }
+        self.themeColour = viewModel.type.themeColour
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -105,14 +107,12 @@ class CustomChartView: LineChartView {
 
     private func setData() {
 
-        let painDataSet = LineChartDataSet(entries: chartData, label: "Nov 2021")
-        let redColor = NSUIColor(red: 235/255, green: 100/255, blue: 96/255, alpha: 1)
-//        let yellowColor = NSUIColor(red: 204/255, green: 102/255, blue: 0, alpha: 1)
-        painDataSet.setCircleColor(redColor)
-        painDataSet.drawCircleHoleEnabled = false
-        painDataSet.setColor(redColor)
+        let dataSet = LineChartDataSet(entries: chartData, label: "Nov 2021")
+        dataSet.setCircleColor(themeColour)
+        dataSet.drawCircleHoleEnabled = false
+        dataSet.setColor(themeColour)
         let data = LineChartData()
-        data.addDataSet(painDataSet)
+        data.addDataSet(dataSet)
         self.data = data
     }
     
