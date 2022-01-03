@@ -18,6 +18,7 @@ class CustomChartView: LineChartView {
     var chartData: [ChartDataEntry] = []
 
     typealias CompletionHandler = (_ success: Bool) -> Void
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -27,7 +28,7 @@ class CustomChartView: LineChartView {
         self.results = viewModel.results
         self.chartData = viewModel.chartData
         self.setupUI()
-        getPainResults { success in
+        getResults(type: viewModel.type) { success in
             self.setData()
         }
     }
@@ -52,9 +53,9 @@ class CustomChartView: LineChartView {
         self.isUserInteractionEnabled = true
     }
 
-    func getPainResults(completeionHandler: @escaping CompletionHandler) {
+    func getResults(type: ChartType, completeionHandler: @escaping CompletionHandler) {
         let db = Firestore.firestore()
-        db.collection("results").whereField("type", isEqualTo: "pain")
+        db.collection("results").whereField("type", isEqualTo: type.rawValue)
             .addSnapshotListener{ [self] (data, error) in
                 if let err = error {
                     print("Error getting documents: \(err)")
@@ -74,9 +75,23 @@ class CustomChartView: LineChartView {
                             print("type: \(type)")
                             print("value: \(value)")
                             print("date: \(date)")
-                            return Result(type: type, value: value, date: date)
+                            
+                            var chartType: ChartType
+                            
+                            switch type {
+                            case "pain":
+                                chartType = ChartType.pain
+                            case "fatigue":
+                                chartType = ChartType.fatigue
+                            case "mood":
+                                chartType = ChartType.mood
+                            default:
+                                chartType = ChartType.pain
+                            }
+                            
+                            return Result(type: chartType, value: value, date: date)
                         }
-                        return Result(type: "pain", value: 0, date: 0)
+                        return Result(type: ChartType.pain, value: 0, date: 0)
                     })
 
                     for (index, result) in self.results.enumerated() {

@@ -11,7 +11,7 @@ import UIKit
 struct Result: Identifiable, Codable {
     var id = UUID()
     
-    var type: String
+    var type: ChartType
     var value: Int // Value between 1-4
     var date: Int64
 }

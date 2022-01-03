@@ -9,10 +9,18 @@
 import Charts
 
 struct ChartViewModel {
+    var type: ChartType
     var results: [Result] = []
     var chartData: [ChartDataEntry] = []
     
-    init(results: [Result]) {
+    init(type: ChartType, results: [Result]) {
         self.results = results
+        self.type = type
     }
+}
+
+enum ChartType: String, Codable {
+    case pain
+    case fatigue
+    case mood
 }
