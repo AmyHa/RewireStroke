@@ -39,13 +39,14 @@ struct Colours {
     static let primaryUpperLimb = UIColor.colorFromHexString("#7BACC0")
     static let primaryLowerLimb = UIColor.colorFromHexString("#C9C47D")
     static let primaryBalance = UIColor.colorFromHexString("#EB6460")
-    
-    // Theme
-//    static let primaryStrength = UIColor.colorFromHexString("#7BACC0")
+    static let pain = UIColor.colorFromHexString("#EB6460")
+    static let mood = UIColor.colorFromHexString("#7BACC0")
+    static let fatigue = UIColor.colorFromHexString("#C9C47D")
     
     // Standard colour palette used across the app - Color
     
-    static let primaryBlueColor = Color.colorFromHexString("#1A2D70")
+    // Primary
+    static  let primaryBlueColor = Color.colorFromHexString("#1A2D70")
     static let primaryLightColor = Color.colorFromHexString("#4E569F")
     static let primaryDarkColor = Color.colorFromHexString("#000444")
     
