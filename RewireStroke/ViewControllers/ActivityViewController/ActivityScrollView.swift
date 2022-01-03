@@ -25,7 +25,7 @@ struct ActivityScrollView: View {
     init(_ activityViewModel: ActivityViewModel) {
         
         //Use this if NavigationBarTitle is with Large Font
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryBlue, .font: UIFont.robotoMedium(size: 32)]
+//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryBlue, .font: UIFont.robotoMedium(size: 32)]
         self.activityViewModel = activityViewModel
     }
 
@@ -38,7 +38,7 @@ struct ActivityScrollView: View {
                     WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.ULworkouts, titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb)
                     WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.LLworkouts.value, titleFontColor: Colours.primaryLowerLimbColor, activityType: .lowerLimb)
                     WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.BAWorkouts, titleFontColor: Colours.primaryBalanceColor, activityType: .balance)
-                }.frame(minHeight: minRowHeight * 20).navigationBarTitle("Activity")
+                }.navigationBarTitle("Activity")
                 
             }.frame(minHeight: minRowHeight * 20).font(Font.robotoBold(size: 20.0)).foregroundColor(.black)
         }

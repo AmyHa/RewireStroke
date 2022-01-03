@@ -24,6 +24,14 @@ class ActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         
+//        self.title = "Activity"
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        // Need the below code to change bar title colour when using large titles – why?
+//        let appearance = UINavigationBarAppearance()
+//            appearance.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.robotoMedium(size: 32), NSAttributedString.Key.foregroundColor: Colours.primaryBlue]
+//            self.navigationController?.navigationBar.standardAppearance = appearance
+//            self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
         let data = WorkoutPlaceholderData()
         activityViewModel = ActivityViewModel(data: data)
         
