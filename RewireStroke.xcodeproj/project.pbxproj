@@ -207,6 +207,7 @@
 		628260782781C266004AFE3A /* CustomChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomChartView.xib; sourceTree = "<group>"; };
 		6282607A2781C27D004AFE3A /* CustomChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChartView.swift; sourceTree = "<group>"; };
 		6282607C27820B73004AFE3A /* ProgressScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressScrollView.swift; sourceTree = "<group>"; };
+		62826080278710C4004AFE3A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		62A6019025FAE773002F456E /* ActivityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScrollView.swift; sourceTree = "<group>"; };
 		62A601D125FBB842002F456E /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		62A6020825FBBE25002F456E /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
@@ -450,6 +451,7 @@
 		62C433DD251A40DE00477355 = {
 			isa = PBXGroup;
 			children = (
+				62826080278710C4004AFE3A /* README.md */,
 				62C433E8251A40DF00477355 /* RewireStroke */,
 				62C433FF251A40E000477355 /* RewireStrokeTests */,
 				62C4340A251A40E000477355 /* RewireStrokeUITests */,
