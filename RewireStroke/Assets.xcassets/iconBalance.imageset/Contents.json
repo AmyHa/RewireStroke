@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "upperLimbIcon.png",
+      "filename" : "iconBalance.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "iconBalance2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "iconBalance3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

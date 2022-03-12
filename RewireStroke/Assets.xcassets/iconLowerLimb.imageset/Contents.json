@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "lowerLimbIcon.png",
+      "filename" : "iconLowerLimb.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "iconLowerLimb2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "iconLowerLimb3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
