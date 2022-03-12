@@ -17,7 +17,7 @@ struct Colours {
     // Primary
     static let primaryBlue = UIColor.colorFromHexString("#1A2D70")
     static let primaryLight = UIColor.colorFromHexString("#4E569F")
-    static let primaryDark = UIColor.colorFromHexString("#000444")
+    static let primaryDark = UIColor.colorFromHexString("#121440")
     
     // Secondary
     static let secondaryLight = UIColor.colorFromHexString("#F4D2D3")
@@ -25,6 +25,7 @@ struct Colours {
     
     // Accent
     static let accent = UIColor.colorFromHexString("#D73A49")
+    static let selected = UIColor.colorFromHexString("#1DE9B6")
     
     // Background
     static let backgroundLightGrey = UIColor.colorFromHexString("#E5E5E5")
@@ -48,7 +49,7 @@ struct Colours {
     // Primary
     static  let primaryBlueColor = Color.colorFromHexString("#1A2D70")
     static let primaryLightColor = Color.colorFromHexString("#4E569F")
-    static let primaryDarkColor = Color.colorFromHexString("#000444")
+    static let primaryDarkColor = Color.colorFromHexString("#121440")
     
     // Secondary
     static let secondaryLightColor = Color.colorFromHexString("#F4D2D3")

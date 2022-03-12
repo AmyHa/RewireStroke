@@ -109,8 +109,8 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
 
             returnAnswerButtonsToUnselectedState()
             button.isSelected = !button.isSelected
-            button.backgroundColor = Colours.primaryBlue
-            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = Colours.selected
+            button.setTitleColor(Colours.primaryDark, for: .normal)
         }
     }
     
