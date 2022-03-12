@@ -36,12 +36,12 @@ struct Colours {
     static let grey04 = UIColor.colorFromHexString("#666666")
     
     // Theme
-    static let primaryUpperLimb = UIColor.colorFromHexString("#7BACC0")
-    static let primaryLowerLimb = UIColor.colorFromHexString("#C9C47D")
-    static let primaryBalance = UIColor.colorFromHexString("#EB6460")
-    static let pain = UIColor.colorFromHexString("#EB6460")
-    static let mood = UIColor.colorFromHexString("#7BACC0")
-    static let fatigue = UIColor.colorFromHexString("#C9C47D")
+    static let primaryUpperLimb = UIColor.colorFromHexString("#6BC7E8")
+    static let primaryLowerLimb = UIColor.colorFromHexString("#DCC817")
+    static let primaryBalance = UIColor.colorFromHexString("#FF6A88")
+    static let pain = UIColor.colorFromHexString("#FF6A88")
+    static let mood = UIColor.colorFromHexString("#6BC7E8")
+    static let fatigue = UIColor.colorFromHexString("#DCC817")
     
     // Standard colour palette used across the app - Color
     
@@ -67,9 +67,9 @@ struct Colours {
     static let grey04Color = Color.colorFromHexString("#666666")
     
     // Theme
-    static let primaryUpperLimbColor = Color.colorFromHexString("#7BACC0")
-    static let primaryLowerLimbColor = Color.colorFromHexString("#C9C47D")
-    static let primaryBalanceColor = Color.colorFromHexString("#EB6460")
+    static let primaryUpperLimbColor = Color.colorFromHexString("#6BC7E8")
+    static let primaryLowerLimbColor = Color.colorFromHexString("#DCC817")
+    static let primaryBalanceColor = Color.colorFromHexString("#FF6A88")
 }
 
 struct TextFields {

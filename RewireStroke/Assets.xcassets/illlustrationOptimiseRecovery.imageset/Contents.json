@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "monitorProgress.png",
+      "filename" : "optimiseRecovery1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "optimiseRecovery2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "optimiseRecovery3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "mockIphone.png",
+      "filename" : "mockIphone1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "mockIphone2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "mockIphone3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

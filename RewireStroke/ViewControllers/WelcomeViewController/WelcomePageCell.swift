@@ -20,7 +20,7 @@ class WelcomePageCell: UICollectionViewCell {
             
             // Hacky, think of a nicer way to implement
             if let text = bodyLabel.attributedText {
-                bodyLabel.midTextColorChange(fullText: text, changeText: "upper limb", Colours.primaryUpperLimb)
+                bodyLabel.midTextColorChange(fullText: text, changeText: "Upper limb", Colours.primaryUpperLimb)
             }
             if let text = bodyLabel.attributedText {
                 bodyLabel.midTextColorChange(fullText: text, changeText: "lower limb", Colours.primaryLowerLimb)
@@ -49,10 +49,12 @@ class WelcomePageCell: UICollectionViewCell {
         bodyLabel.numberOfLines = -1
         bodyLabel.textAlignment = .center
         stackView.addArrangedSubview(imageView)
+        stackView.setCustomSpacing(80, after: imageView)
         stackView.addArrangedSubview(titleLabel)
+        stackView.setCustomSpacing(30, after: titleLabel)
         stackView.addArrangedSubview(bodyLabel)
+        stackView.setCustomSpacing(30, after: bodyLabel)
         stackView.axis = .vertical
-        stackView.spacing = 10
         
         addSubview(blackView)
         addSubview(stackView)
