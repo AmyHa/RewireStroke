@@ -13,7 +13,7 @@ struct ProgressScrollView: View {
     @Environment(\.defaultMinListRowHeight) var minRowHeight
     
     init() {
-        
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.rajdhaniSemiBold(size: 32)]
     }
     
     var body: some View {

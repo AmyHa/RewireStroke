@@ -20,7 +20,7 @@ class WelcomePageCell: UICollectionViewCell {
             
             // Hacky, think of a nicer way to implement
             if let text = bodyLabel.attributedText {
-                bodyLabel.midTextColorChange(fullText: text, changeText: "Upper limb", Colours.primaryUpperLimb)
+                bodyLabel.midTextColorChange(fullText: text, changeText: "upper limb", Colours.primaryUpperLimb)
             }
             if let text = bodyLabel.attributedText {
                 bodyLabel.midTextColorChange(fullText: text, changeText: "lower limb", Colours.primaryLowerLimb)
@@ -45,7 +45,7 @@ class WelcomePageCell: UICollectionViewCell {
         titleLabel.numberOfLines = -1
         bodyLabel.text = ""
         bodyLabel.font = UIFont(name: Constants.Font.Name.robotoMedium, size: 14)
-        bodyLabel.textColor = Colours.primaryBlue
+        bodyLabel.textColor = Colours.primaryDark
         bodyLabel.numberOfLines = -1
         bodyLabel.textAlignment = .center
         stackView.addArrangedSubview(imageView)

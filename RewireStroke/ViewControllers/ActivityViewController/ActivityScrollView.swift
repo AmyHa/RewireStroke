@@ -25,7 +25,7 @@ struct ActivityScrollView: View {
     init(_ activityViewModel: ActivityViewModel) {
         
         //Use this if NavigationBarTitle is with Large Font
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryBlue, .font: UIFont.robotoMedium(size: 32)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.rajdhaniSemiBold(size: 32)]
         self.activityViewModel = activityViewModel
     }
 

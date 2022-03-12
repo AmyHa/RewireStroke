@@ -12,7 +12,7 @@ import UIKit
 struct InfoListView: View {
     
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryBlue, .font: UIFont.robotoMedium(size: 32)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.rajdhaniSemiBold(size: 32)]
     }
     
     @Environment(\.defaultMinListRowHeight) var minRowHeight
@@ -23,7 +23,7 @@ struct InfoListView: View {
                 InfoItemView(title: "Type of stroke")
                 InfoItemView(title: "Treatment")
                 InfoItemView(title: "Risk & Prevention")
-            }.frame(minHeight: minRowHeight * 20).navigationBarTitle("Information")
+            }.navigationBarTitle("Information")
         }.frame(minHeight: minRowHeight * 20).font(Font.robotoMedium(size: 18.0)).foregroundColor(Colours.primaryBlueColor)
     }
 }
