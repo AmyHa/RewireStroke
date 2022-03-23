@@ -128,7 +128,7 @@ class WelcomePageCell: UICollectionViewCell {
         titleLabel.backgroundColor = .clear
         titleLabel.textColor = Colours.primaryDark
         bodyLabel.backgroundColor = .clear
-        bodyLabel.textColor = Colours.primaryBlue
+        bodyLabel.textColor = Colours.primaryDark
     }
 
 }
