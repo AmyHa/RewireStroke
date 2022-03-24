@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "mockIphone1.png",
+      "filename" : "illustrationUnlockWorkouts.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "mockIphone2.png",
+      "filename" : "illustrationUnlockWorkouts2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "mockIphone3.png",
+      "filename" : "illustrationUnlockWorkouts3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
