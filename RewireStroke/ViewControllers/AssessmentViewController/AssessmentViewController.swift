@@ -10,6 +10,7 @@ import UIKit
 import FirebaseStorage
 import AVFoundation
 import AVKit
+import HCVimeoVideoExtractor
 
 class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     func didCloseWorkout() {
@@ -46,6 +47,7 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     
     private var questions = [Question]()
     private var currentIndex: Int = 0
+    var video: HCVimeoVideo!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -181,9 +183,27 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         ])
         playerViewController.didMove(toParent: self)
         
-        if let playerItem = assessmentViewModel.getPlayerItem(currentIndex: currentIndex) {
-            playerViewController.player = AVPlayer(playerItem: playerItem)
-        }
+//        if let playerItem = assessmentViewModel.getPlayerItem(currentIndex: currentIndex) {
+//            playerViewController.player = AVPlayer(playerItem: playerItem)
+//        }
+        
+        HCVimeoVideoExtractor.fetchVideoURLFrom(url: URL(string: assessmentViewModel.getVideoPath(questionIndex: self.currentIndex))!, completion: { ( video:HCVimeoVideo?, error:Error?) -> Void in
+            if let err = error {
+                print("Error = \(err.localizedDescription)")
+                return
+            }
+            
+            guard let vid = video else {
+                print("Invalid video object")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.playerViewController.player = AVPlayer(url: vid.videoURL[.Quality720p]!)
+            }
+            
+        })
+
     }
     
     private func isAnswerSelected() -> Bool {
