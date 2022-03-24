@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsE-kw-Cvr">
-                        <rect key="frame" x="160" y="50" width="101" height="20.5"/>
+                        <rect key="frame" x="108" y="50" width="100.66666666666669" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="EcG-H2-QxQ" secondAttribute="bottom" constant="10" id="AgD-ie-CwH"/>
                     <constraint firstItem="EcG-H2-QxQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Kp2-vP-NUg"/>
-                    <constraint firstItem="hsE-kw-Cvr" firstAttribute="leading" secondItem="EcG-H2-QxQ" secondAttribute="trailing" constant="60" id="TMs-oT-GTR"/>
+                    <constraint firstItem="hsE-kw-Cvr" firstAttribute="leading" secondItem="EcG-H2-QxQ" secondAttribute="trailing" constant="8" symbolic="YES" id="TMs-oT-GTR"/>
                     <constraint firstItem="EcG-H2-QxQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="W5i-uE-tPh"/>
                     <constraint firstItem="hsE-kw-Cvr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="chD-IN-H3q"/>
                 </constraints>
