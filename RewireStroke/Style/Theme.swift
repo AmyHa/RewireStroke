@@ -12,7 +12,7 @@ import SwiftUI
 
 struct Colours {
     
-    // Standard colour palette used across the app - UIColor
+    /** Standard colour palette used across the app - UIColor **/
     
     // Primary
     static let primaryBlue = UIColor.colorFromHexString("#1A2D70")
@@ -40,11 +40,14 @@ struct Colours {
     static let primaryUpperLimb = UIColor.colorFromHexString("#6BC7E8")
     static let primaryLowerLimb = UIColor.colorFromHexString("#DCC817")
     static let primaryBalance = UIColor.colorFromHexString("#FF6A88")
-    static let pain = UIColor.colorFromHexString("#FF6A88")
-    static let mood = UIColor.colorFromHexString("#6BC7E8")
-    static let fatigue = UIColor.colorFromHexString("#DCC817")
+    static let primaryUpperLimbText = UIColor.colorFromHexString("#00A1DB")
+    static let primaryLowerLimbText = UIColor.colorFromHexString("#DCB104")
+    static let primaryBalanceText = UIColor.colorFromHexString("#F83656")
+    static let pain = UIColor.colorFromHexString("#FF1744")
+    static let mood = UIColor.colorFromHexString("#0063A4")
+    static let fatigue = UIColor.colorFromHexString("#DB9A00")
     
-    // Standard colour palette used across the app - Color
+    /** Standard colour palette used across the app - Color **/
     
     // Primary
     static  let primaryBlueColor = Color.colorFromHexString("#1A2D70")

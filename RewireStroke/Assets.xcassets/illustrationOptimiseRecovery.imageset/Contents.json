@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "optimiseRecovery1.png",
+      "filename" : "illustrationOptimiseRecovery.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "optimiseRecovery2.png",
+      "filename" : "illustrationOptimiseRecovery2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "optimiseRecovery3.png",
+      "filename" : "illustrationOptimiseRecovery3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

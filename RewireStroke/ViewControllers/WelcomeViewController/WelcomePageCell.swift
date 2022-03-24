@@ -20,13 +20,23 @@ class WelcomePageCell: UICollectionViewCell {
             
             // Hacky, think of a nicer way to implement
             if let text = bodyLabel.attributedText {
-                bodyLabel.midTextColorChange(fullText: text, changeText: "upper limb", Colours.primaryUpperLimb)
+                bodyLabel.midTextColorChange(fullText: text, changeText: "upper limb", Colours.primaryUpperLimbText)
             }
             if let text = bodyLabel.attributedText {
-                bodyLabel.midTextColorChange(fullText: text, changeText: "lower limb", Colours.primaryLowerLimb)
+                bodyLabel.midTextColorChange(fullText: text, changeText: "lower limb", Colours.primaryLowerLimbText)
             }
             if let text = bodyLabel.attributedText {
-                bodyLabel.midTextColorChange(fullText: text, changeText: "balance", Colours.primaryBalance)
+                bodyLabel.midTextColorChange(fullText: text, changeText: "balance", Colours.primaryBalanceText)
+            }
+            
+            if let text = bodyLabel.attributedText {
+                bodyLabel.midTextColorChange(fullText: text, changeText: "mood", Colours.mood)
+            }
+            if let text = bodyLabel.attributedText {
+                bodyLabel.midTextColorChange(fullText: text, changeText: "fatigue", Colours.fatigue)
+            }
+            if let text = bodyLabel.attributedText {
+                bodyLabel.midTextColorChange(fullText: text, changeText: "pain", Colours.pain)
             }
         }
     }
