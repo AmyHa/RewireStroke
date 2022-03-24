@@ -30,4 +30,12 @@ extension Font {
     static func rajdhaniSemiBold(size: CGFloat = 14) -> Font? {
         return Font.custom(Constants.Font.Name.rajdhaniSemiBold, size: size)
     }
+    
+    static func outfitRegular(size: CGFloat = 14) -> Font? {
+        return Font.custom(Constants.Font.Name.outfitRegular, size: size)
+    }
+    
+    static func outfitBold(size: CGFloat = 14) -> Font? {
+        return Font.custom(Constants.Font.Name.outfitBold, size: size)
+    }
 }

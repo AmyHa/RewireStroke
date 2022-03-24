@@ -50,11 +50,11 @@ class WelcomePageCell: UICollectionViewCell {
     func setupUI() {
         blackView.backgroundColor = .black
         titleLabel.text = ""
-        titleLabel.font = UIFont(name: Constants.Font.Name.rajdhaniSemiBold, size: 28)
+        titleLabel.font = UIFont(name: Constants.Font.Name.outfitRegular, size: 28)
         titleLabel.textColor = Colours.primaryDark
         titleLabel.numberOfLines = -1
         bodyLabel.text = ""
-        bodyLabel.font = UIFont(name: Constants.Font.Name.robotoMedium, size: 14)
+        bodyLabel.font = UIFont(name: Constants.Font.Name.outfitRegular, size: 14)
         bodyLabel.textColor = Colours.primaryDark
         bodyLabel.numberOfLines = -1
         bodyLabel.textAlignment = .center

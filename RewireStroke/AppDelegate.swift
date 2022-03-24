@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /* set custom fonts for different views, default values is 17dp across the app, change in viewController class for custom sizes */
         
         // Roboto regular for labels
-        UILabel.appearance().font = UIFont(name: "Roboto-Regular", size: Constants.Font.Size.standard)
+        UILabel.appearance().font = UIFont(name: "Outfit-Regular", size: Constants.Font.Size.standard)
         
         // Roboto medium for buttons
         UIButton.appearance().titleLabelFont = UIFont(name: "Roboto-Medium", size: Constants.Font.Size.standard)

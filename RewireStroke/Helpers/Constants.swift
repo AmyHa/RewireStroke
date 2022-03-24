@@ -19,6 +19,9 @@ struct Constants {
             static let robotoBold = "Roboto-Bold"
             
             static let rajdhaniSemiBold = "Rajdhani-SemiBold"
+            
+            static let outfitBold = "Outfit-Bold"
+            static let outfitRegular = "Outfit-Regular"
         }
         
         struct Size {
