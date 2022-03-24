@@ -8,13 +8,17 @@
 
 import UIKit
 import SwiftUI
-import Combine
+import Foundation
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var homeView: UIView!
     
     private var host: UIHostingController<HomeScrollView>!
+    
+    convenience init() {
+        self.init(nibName: nil, bundle: nil)
+    }
     
     override func viewDidLoad() {
         
