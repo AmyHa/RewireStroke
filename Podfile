@@ -13,6 +13,7 @@ pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift'
 pod 'Firebase/Storage'
 pod 'Charts'
+pod 'HCVimeoVideoExtractor'
 
   target 'RewireStrokeTests' do
     inherit! :search_paths

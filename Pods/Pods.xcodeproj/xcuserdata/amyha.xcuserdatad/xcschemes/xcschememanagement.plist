@@ -94,6 +94,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HCVimeoVideoExtractor.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RewireStroke-RewireStrokeUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>

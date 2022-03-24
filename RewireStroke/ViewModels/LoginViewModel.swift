@@ -74,4 +74,9 @@ class LoginViewModel: CredentialsViewModel {
         view.window?.rootViewController = tabBarController
         view.window?.makeKeyAndVisible()
     }
+    
+    func transitionToWelcomePage(view: UIView) {
+        view.window?.rootViewController = WelcomeViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        view.window?.makeKeyAndVisible()
+    }
 }
