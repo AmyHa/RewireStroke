@@ -74,6 +74,10 @@ struct Colours {
     static let primaryUpperLimbColor = Color.colorFromHexString("#6BC7E8")
     static let primaryLowerLimbColor = Color.colorFromHexString("#DCC817")
     static let primaryBalanceColor = Color.colorFromHexString("#FF6A88")
+    static let painColor = Color.colorFromHexString("#FF1744")
+    static let moodColor = Color.colorFromHexString("#0063A4")
+    static let fatigueColor = Color.colorFromHexString("#DB9A00")
+    
 }
 
 struct TextFields {

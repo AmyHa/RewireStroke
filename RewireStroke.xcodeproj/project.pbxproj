@@ -125,6 +125,15 @@
 		62DF44CB27EC5D11008A9289 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DF44CA27EC5D11008A9289 /* Outfit-Regular.ttf */; };
 		62DF44CC27EC5D11008A9289 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DF44CA27EC5D11008A9289 /* Outfit-Regular.ttf */; };
 		62DF44CD27EC5D11008A9289 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DF44CA27EC5D11008A9289 /* Outfit-Regular.ttf */; };
+		62DF454027EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF453E27EDB79B008A9289 /* LogAssessmentViewController.swift */; };
+		62DF454127EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF453E27EDB79B008A9289 /* LogAssessmentViewController.swift */; };
+		62DF454227EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF453E27EDB79B008A9289 /* LogAssessmentViewController.swift */; };
+		62DF454327EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF453F27EDB79B008A9289 /* LogAssessmentViewController.xib */; };
+		62DF454427EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF453F27EDB79B008A9289 /* LogAssessmentViewController.xib */; };
+		62DF454527EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF453F27EDB79B008A9289 /* LogAssessmentViewController.xib */; };
+		62DF454F27EDB93A008A9289 /* LogAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */; };
+		62DF455027EDB93A008A9289 /* LogAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */; };
+		62DF455127EDB93A008A9289 /* LogAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */; };
 		62E2A4E0276F69F9001BE056 /* StartWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2A4DF276F69F9001BE056 /* StartWorkoutViewModel.swift */; };
 		62E996BA25CF6175003B5051 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E996B925CF6175003B5051 /* RingProgressView.swift */; };
 		62F3E593251BA20E00BD1152 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62F3E592251BA20E00BD1152 /* Roboto-Regular.ttf */; };
@@ -253,6 +262,9 @@
 		62C6D5FA265043B20059BB47 /* ExerciseProgressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseProgressTableViewCell.xib; sourceTree = "<group>"; };
 		62DF44C627EC5D08008A9289 /* Outfit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Bold.ttf"; sourceTree = "<group>"; };
 		62DF44CA27EC5D11008A9289 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Regular.ttf"; sourceTree = "<group>"; };
+		62DF453E27EDB79B008A9289 /* LogAssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAssessmentViewController.swift; sourceTree = "<group>"; };
+		62DF453F27EDB79B008A9289 /* LogAssessmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogAssessmentViewController.xib; sourceTree = "<group>"; };
+		62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAssessmentView.swift; sourceTree = "<group>"; };
 		62E2A4DF276F69F9001BE056 /* StartWorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutViewModel.swift; sourceTree = "<group>"; };
 		62E996B925CF6175003B5051 /* RingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
 		62F3E592251BA20E00BD1152 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -543,6 +555,7 @@
 			children = (
 				62C433ED251A40DF00477355 /* LoginViewController.swift */,
 				62C4341D251A479E00477355 /* SignUpViewController.swift */,
+				62DF454927EDB8A9008A9289 /* LogAsssessmentViewController */,
 				6239D34E2520926B00D5795D /* WelcomeViewController */,
 				626EFAD425DEB6C3009F7A97 /* AssessmentViewController */,
 				6251228D256AA1B70031627A /* HomeViewController */,
@@ -568,6 +581,16 @@
 				629B1EED27DCB40A00E38219 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		62DF454927EDB8A9008A9289 /* LogAsssessmentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				62DF453E27EDB79B008A9289 /* LogAssessmentViewController.swift */,
+				62DF453F27EDB79B008A9289 /* LogAssessmentViewController.xib */,
+				62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */,
+			);
+			path = LogAsssessmentViewController;
 			sourceTree = "<group>";
 		};
 		62F3E591251BA0AE00BD1152 /* Fonts */ = {
@@ -784,6 +807,7 @@
 				624F50A725F5A11000C46B3E /* ActivityViewController.xib in Resources */,
 				628260792781C266004AFE3A /* CustomChartView.xib in Resources */,
 				62F3E593251BA20E00BD1152 /* Roboto-Regular.ttf in Resources */,
+				62DF454327EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */,
 				62B5178A2611197F006876F6 /* WorkoutViewController.xib in Resources */,
 				62C6D5FB265043B20059BB47 /* ExerciseProgressTableViewCell.xib in Resources */,
 				627AFA41261DD76F00A64CEE /* WorkoutTableViewCell.xib in Resources */,
@@ -802,6 +826,7 @@
 				62DF44C827EC5D08008A9289 /* Outfit-Bold.ttf in Resources */,
 				626EFAFD25DED5BB009F7A97 /* AssessmentViewController.xib in Resources */,
 				62DF44CC27EC5D11008A9289 /* Outfit-Regular.ttf in Resources */,
+				62DF454427EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +834,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62DF454527EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */,
 				62DF44CD27EC5D11008A9289 /* Outfit-Regular.ttf in Resources */,
 				62DF44C927EC5D08008A9289 /* Outfit-Bold.ttf in Resources */,
 			);
@@ -937,6 +963,7 @@
 				62C433EE251A40DF00477355 /* LoginViewController.swift in Sources */,
 				6239D349251BF1F000D5795D /* CustomTextField.swift in Sources */,
 				62A6019125FAE773002F456E /* ActivityScrollView.swift in Sources */,
+				62DF454027EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */,
 				624F50A625F5A11000C46B3E /* ActivityViewController.swift in Sources */,
 				626357C02606B67300A58FFE /* UserManager.swift in Sources */,
 				627AFA40261DD76F00A64CEE /* WorkoutTableViewCell.swift in Sources */,
@@ -958,6 +985,7 @@
 				624F505B25F582E700C46B3E /* CacheManager.swift in Sources */,
 				626EFAD925DED58A009F7A97 /* AssessmentViewController.swift in Sources */,
 				62A6ECF725E1CC9B009685D3 /* UIFontExtension.swift in Sources */,
+				62DF454F27EDB93A008A9289 /* LogAssessmentView.swift in Sources */,
 				626EFB9F25DF2FB0009F7A97 /* PaddingLabel.swift in Sources */,
 				62E2A4E0276F69F9001BE056 /* StartWorkoutViewModel.swift in Sources */,
 				6239D3522520960C00D5795D /* WelcomePageCell.swift in Sources */,
@@ -1018,6 +1046,8 @@
 				62BAC5B026BFF33E0037C798 /* UIButtonExtension.swift in Sources */,
 				62BAC59C26BFF2D20037C798 /* UIColorExtension.swift in Sources */,
 				62BAC55826BFF1BD0037C798 /* Workout.swift in Sources */,
+				62DF454127EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */,
+				62DF455027EDB93A008A9289 /* LogAssessmentView.swift in Sources */,
 				62BAC59426BFF2B00037C798 /* InfoViewController.swift in Sources */,
 				626EFADA25DED58A009F7A97 /* AssessmentViewController.swift in Sources */,
 				62BAC45826BFDF560037C798 /* LoginViewController.swift in Sources */,
@@ -1039,7 +1069,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62DF455127EDB93A008A9289 /* LogAssessmentView.swift in Sources */,
 				62C4340C251A40E000477355 /* RewireStrokeUITests.swift in Sources */,
+				62DF454227EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
