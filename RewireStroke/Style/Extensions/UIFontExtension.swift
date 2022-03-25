@@ -38,4 +38,8 @@ extension UIFont {
     static func outfitBold(size: CGFloat = 14) -> UIFont? {
         return UIFont(name: Constants.Font.Name.outfitBold, size: size)
     }
+    
+    static func outfitSemiBold(size: CGFloat = 14) -> UIFont? {
+        return UIFont(name: Constants.Font.Name.outfitSemiBold, size: size)
+    }
 }

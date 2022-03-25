@@ -38,4 +38,8 @@ extension Font {
     static func outfitBold(size: CGFloat = 14) -> Font? {
         return Font.custom(Constants.Font.Name.outfitBold, size: size)
     }
+    
+    static func outfitSemiBold(size: CGFloat = 14) -> Font? {
+        return Font.custom(Constants.Font.Name.outfitSemiBold, size: size)
+    }
 }

@@ -134,6 +134,9 @@
 		62DF454F27EDB93A008A9289 /* LogAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */; };
 		62DF455027EDB93A008A9289 /* LogAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */; };
 		62DF455127EDB93A008A9289 /* LogAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */; };
+		62DF455327EDCD2E008A9289 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DF455227EDCD2E008A9289 /* Outfit-SemiBold.ttf */; };
+		62DF455427EDCD2E008A9289 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DF455227EDCD2E008A9289 /* Outfit-SemiBold.ttf */; };
+		62DF455527EDCD2E008A9289 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DF455227EDCD2E008A9289 /* Outfit-SemiBold.ttf */; };
 		62E2A4E0276F69F9001BE056 /* StartWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2A4DF276F69F9001BE056 /* StartWorkoutViewModel.swift */; };
 		62E996BA25CF6175003B5051 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E996B925CF6175003B5051 /* RingProgressView.swift */; };
 		62F3E593251BA20E00BD1152 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62F3E592251BA20E00BD1152 /* Roboto-Regular.ttf */; };
@@ -265,6 +268,7 @@
 		62DF453E27EDB79B008A9289 /* LogAssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAssessmentViewController.swift; sourceTree = "<group>"; };
 		62DF453F27EDB79B008A9289 /* LogAssessmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogAssessmentViewController.xib; sourceTree = "<group>"; };
 		62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAssessmentView.swift; sourceTree = "<group>"; };
+		62DF455227EDCD2E008A9289 /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
 		62E2A4DF276F69F9001BE056 /* StartWorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutViewModel.swift; sourceTree = "<group>"; };
 		62E996B925CF6175003B5051 /* RingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
 		62F3E592251BA20E00BD1152 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -596,6 +600,7 @@
 		62F3E591251BA0AE00BD1152 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				62DF455227EDCD2E008A9289 /* Outfit-SemiBold.ttf */,
 				62DF44CA27EC5D11008A9289 /* Outfit-Regular.ttf */,
 				62DF44C627EC5D08008A9289 /* Outfit-Bold.ttf */,
 				62F3E594251BA2DC00BD1152 /* Roboto-Light.ttf */,
@@ -803,6 +808,7 @@
 				62F3E597251BA2F200BD1152 /* Roboto-Medium.ttf in Resources */,
 				62F3E595251BA2DC00BD1152 /* Roboto-Light.ttf in Resources */,
 				62A6020B25FBBE25002F456E /* ProgressViewController.xib in Resources */,
+				62DF455327EDCD2E008A9289 /* Outfit-SemiBold.ttf in Resources */,
 				62DF44C727EC5D08008A9289 /* Outfit-Bold.ttf in Resources */,
 				624F50A725F5A11000C46B3E /* ActivityViewController.xib in Resources */,
 				628260792781C266004AFE3A /* CustomChartView.xib in Resources */,
@@ -824,6 +830,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62DF44C827EC5D08008A9289 /* Outfit-Bold.ttf in Resources */,
+				62DF455427EDCD2E008A9289 /* Outfit-SemiBold.ttf in Resources */,
 				626EFAFD25DED5BB009F7A97 /* AssessmentViewController.xib in Resources */,
 				62DF44CC27EC5D11008A9289 /* Outfit-Regular.ttf in Resources */,
 				62DF454427EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */,
@@ -836,6 +843,7 @@
 			files = (
 				62DF454527EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */,
 				62DF44CD27EC5D11008A9289 /* Outfit-Regular.ttf in Resources */,
+				62DF455527EDCD2E008A9289 /* Outfit-SemiBold.ttf in Resources */,
 				62DF44C927EC5D08008A9289 /* Outfit-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
