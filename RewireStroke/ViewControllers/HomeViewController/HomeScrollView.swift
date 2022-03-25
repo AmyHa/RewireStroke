@@ -28,7 +28,7 @@ struct HomeScrollView: View {
         activityViewModel = ActivityViewModel(data: data)
         
         //Use this if NavigationBarTitle is with Large Font
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.rajdhaniSemiBold(size: 32)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.outfitBold(size: 32)]
 
     }
     
@@ -65,9 +65,9 @@ struct SelectActivityView: View {
                         .resizable()
                         .scaledToFit()
                         .clipped().frame(width: 40, height: 60)
-                    Text(function).font(.robotoMedium(size: 22.0)).foregroundColor(Colours.primaryDarkColor).frame(maxWidth: .infinity, alignment: .leading)
+                    Text(function).font(.outfitRegular(size: 22.0)).foregroundColor(Colours.primaryDarkColor).frame(maxWidth: .infinity, alignment: .leading)
                     Image("iconRightArrow").frame(width:100, alignment: .leading)
-                    Text(String(score)).font(.rajdhaniSemiBold(size: 32.0)).foregroundColor(colour)
+                    Text(String(score)).font(.outfitRegular(size: 32.0)).foregroundColor(colour)
                 }
                 RoundedRectangle(cornerRadius: 35, style: .continuous).fill(Colours.grey02Color).frame(height: 20)
             }.frame(width: 300)

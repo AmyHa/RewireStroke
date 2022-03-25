@@ -51,6 +51,8 @@ class HomeViewController: UIViewController {
         hostView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         
         view.addSubview(floatingButton)
+        
+        floatingButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -60,5 +62,9 @@ class HomeViewController: UIViewController {
             y: view.frame.size.height - 160,
             width: 60,
             height: 60)
+    }
+    
+    @objc private func didTapButton() {
+        // Move to the next activity (LogActivity)
     }
 }
