@@ -27,7 +27,7 @@ struct LogAssessmentView: View {
         activityViewModel = ActivityViewModel(data: data)
         
         //Use this if NavigationBarTitle is with Large Font
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.outfitBold(size: 32)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.outfitSemiBold(size: 32)]
 
     }
     
