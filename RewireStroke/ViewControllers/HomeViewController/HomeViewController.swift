@@ -66,5 +66,8 @@ class HomeViewController: UIViewController {
     
     @objc private func didTapButton() {
         // Move to the next activity (LogActivity)
+        let logAssessmentVC = LogAssessmentViewController()
+        navigationController?.present(logAssessmentVC, animated: true)
+        
     }
 }
