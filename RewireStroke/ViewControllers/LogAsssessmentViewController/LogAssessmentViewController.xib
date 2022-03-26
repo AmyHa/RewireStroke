@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogAssessmentViewController" customModule="RewireStroke" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="1nA-mg-vuO" id="Kjg-XN-6bs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
