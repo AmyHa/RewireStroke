@@ -56,9 +56,9 @@ class SignUpViewController: UIViewController {
         passwordTextField.setLeftPaddingPoints(10)
         
         // Set custom font sizes
-        signUpButton.titleLabel?.font = UIFont.robotoBold(size: Constants.Font.Size.standard)
-        signUpLabel.font = UIFont.rajdhaniSemiBold(size: Constants.Font.Size.large)
-        forgottenPasswordLabel.font = UIFont.robotoBold(size: Constants.Font.Size.standard)
+        signUpButton.titleLabel?.font = UIFont.outfitBold(size: Constants.Font.Size.standard)
+        signUpLabel.font = UIFont.outfitBold(size: Constants.Font.Size.large)
+        forgottenPasswordLabel.font = UIFont.outfitBold(size: Constants.Font.Size.standard)
         
         // Set any additional colours
         loginButton.setTitleColor(Colours.primaryBlue, for: .normal)
@@ -80,7 +80,7 @@ class SignUpViewController: UIViewController {
         
         showButton = UIButton(type: .custom)
         showButton.setTitle("Show", for: .normal)
-        showButton.titleLabel?.font = UIFont(name: Constants.Font.Name.robotoRegular, size: Constants.Font.Size.hintButton)
+        showButton.titleLabel?.font = UIFont(name: Constants.Font.Name.outfitRegular, size: Constants.Font.Size.hintButton)
         showButton.setTitleColor(Colours.primaryBlue, for: .normal)
         showButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         passwordTextField.rightView = showButton

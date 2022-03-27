@@ -54,7 +54,10 @@ struct SelectActivityView: View {
     var icon: String
     var colour: Color
     var activityViewModel: ActivityViewModel
+    
     @State private var isWorkoutDisplayed = false
+    @State private var maxProgressLength: CGFloat = 300
+    @State private var progress: CGFloat = 0
     
     var body: some View {
         ZStack {
@@ -69,8 +72,11 @@ struct SelectActivityView: View {
                     Image("iconRightArrow").frame(width:100, alignment: .leading)
                     Text(String(score)).font(.outfitRegular(size: 32.0)).foregroundColor(colour)
                 }
-                RoundedRectangle(cornerRadius: 35, style: .continuous).fill(Colours.grey02Color).frame(height: 20)
-            }.frame(width: 300)
+                ZStack(alignment: .leading, content: {
+                    RoundedRectangle(cornerRadius: 35, style: .continuous).fill(Colours.grey02Color).frame(height: 20)
+                    RoundedRectangle(cornerRadius: 35, style: .continuous).fill(LinearGradient(gradient: Gradient(colors: [Colours.grey01Color, colour]), startPoint: .leading, endPoint: .trailing)).frame(width: (2/3)*maxProgressLength, height: 20)
+                })
+            }.frame(width: maxProgressLength)
             
         }
 

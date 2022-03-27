@@ -66,7 +66,7 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         for view in answerButtonsStackView.subviews {
             if let button = view as? DefaultButton {
                 button.backgroundColor = Colours.secondaryLight
-                button.titleLabel?.font = UIFont.robotoBold()
+                button.titleLabel?.font = UIFont.outfitBold()
                 button.setTitleColor(Colours.primaryDark, for: .normal)
             }
         }
@@ -75,10 +75,10 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         Labels.setWarningLabelStyle(warningLabel)
         Labels.setWarningLabelStyle(selectionWarningLabel)
         
-        warningLabel.font = UIFont.robotoRegular()
-        questionLabel.font = UIFont.robotoRegular()
-        selectionWarningLabel.font = UIFont.robotoRegular()
-        assessmentLabel.font = UIFont.robotoRegular()
+        warningLabel.font = UIFont.outfitRegular()
+        questionLabel.font = UIFont.outfitRegular()
+        selectionWarningLabel.font = UIFont.outfitRegular()
+        assessmentLabel.font = UIFont.outfitRegular()
         
         assessmentLabel.textColor = Colours.primaryDark
         questionLabel.textColor = Colours.primaryDark

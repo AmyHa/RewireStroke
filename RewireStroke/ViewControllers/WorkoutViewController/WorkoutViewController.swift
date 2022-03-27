@@ -52,12 +52,12 @@ class WorkoutViewController: UIViewController {
     private func setupUI() {
 
         startButton.backgroundColor = Colours.secondaryLight
-        startButton.titleLabel?.font = UIFont.robotoBold(size: 17)
+        startButton.titleLabel?.font = UIFont.outfitBold(size: 17)
         startButton.setTitleColor(Colours.primaryDark, for: .normal)
 
-        equipmentTypeLabel.font = UIFont.robotoRegular(size: 17)
-        equipmentLabel.font = UIFont.robotoBold(size: 17)
-        preliminaryTextLabel.font = UIFont.robotoBold(size: 17)
+        equipmentTypeLabel.font = UIFont.outfitRegular(size: 17)
+        equipmentLabel.font = UIFont.outfitBold(size: 17)
+        preliminaryTextLabel.font = UIFont.outfitBold(size: 17)
         
         equipmentTypeLabel.textColor = Colours.primaryDark
         equipmentLabel.textColor = Colours.primaryDark

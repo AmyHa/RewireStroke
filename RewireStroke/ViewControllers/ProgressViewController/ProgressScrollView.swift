@@ -13,7 +13,7 @@ struct ProgressScrollView: View {
     @Environment(\.defaultMinListRowHeight) var minRowHeight
     
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.rajdhaniSemiBold(size: 32)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.outfitSemiBold(size: 32)]
     }
     
     var body: some View {
@@ -29,7 +29,7 @@ struct ProgressScrollView: View {
                     ProgressChartView(type: .fatigue).frame(width: 200, height: 200, alignment: .center )
                 }.navigationBarTitle("Progress")
             }
-        }.frame(minHeight: minRowHeight * 20).font(Font.robotoBold(size: 20.0)).foregroundColor(.black)
+        }.frame(minHeight: minRowHeight * 20).font(Font.outfitBold(size: 20.0)).foregroundColor(.black)
     }
 }
 

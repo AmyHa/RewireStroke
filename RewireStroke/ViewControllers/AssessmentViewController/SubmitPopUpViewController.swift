@@ -29,9 +29,9 @@ class SubmitPopUpViewController: UIViewController {
     }
 
     private func setUpUI() {
-        titleLabel.font = UIFont.robotoMedium(size: 28)
-        firstSubmissionTextLabel.font = UIFont.robotoRegular(size: 14)
-        secondSubmissionTextLabel.font = UIFont.robotoRegular(size: 14)
+        titleLabel.font = UIFont.outfitSemiBold(size: 28)
+        firstSubmissionTextLabel.font = UIFont.outfitRegular(size: 14)
+        secondSubmissionTextLabel.font = UIFont.outfitRegular(size: 14)
         
         titleLabel.textColor = Colours.primaryDark
         firstSubmissionTextLabel.textColor = Colours.primaryDark
@@ -49,8 +49,8 @@ class SubmitPopUpViewController: UIViewController {
         correctButton.titleEdgeInsets.left = 10
         correctButton.titleEdgeInsets.right = 10
         
-        correctButton.titleLabelFont = UIFont.robotoBold(size: 11)
-        backButton.titleLabelFont = UIFont.robotoBold(size: 11)
+        correctButton.titleLabelFont = UIFont.outfitBold(size: 11)
+        backButton.titleLabelFont = UIFont.outfitBold(size: 11)
         
         containerView.layer.cornerRadius = 10
         setUpExitButton()

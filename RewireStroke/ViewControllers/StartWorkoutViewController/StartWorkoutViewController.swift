@@ -88,7 +88,7 @@ class StartWorkoutViewController: UIViewController, ExerciseSelectionDelegate {
 
     private func setupUI() {
         closeWorkoutButton.backgroundColor = Colours.secondaryLight
-        closeWorkoutButton.titleLabel?.font = UIFont.robotoBold()
+        closeWorkoutButton.titleLabel?.font = UIFont.outfitBold()
         closeWorkoutButton.setTitleColor(Colours.primaryDark, for: .normal)
     }
     

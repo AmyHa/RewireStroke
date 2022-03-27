@@ -47,7 +47,7 @@ class InfoViewController: UIViewController {
 //        // Need the below code to change bar title colour when using large titles – why?
 //        let appearance = UINavigationBarAppearance()
 //        appearance.backgroundColor = Colours.primaryLowerLimb
-//        appearance.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.rajdhaniSemiBold(size: 30), NSAttributedString.Key.foregroundColor: Colours.primaryBlue]
+//        appearance.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.outfitSemiBold(size: 30), NSAttributedString.Key.foregroundColor: Colours.primaryBlue]
 //        self.navigationController?.navigationBar.standardAppearance = appearance
 //        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
 //    }

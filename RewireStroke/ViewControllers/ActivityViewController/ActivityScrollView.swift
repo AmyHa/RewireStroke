@@ -25,7 +25,7 @@ struct ActivityScrollView: View {
     init(_ activityViewModel: ActivityViewModel) {
         
         //Use this if NavigationBarTitle is with Large Font
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.rajdhaniSemiBold(size: 32)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.outfitSemiBold(size: 32)]
         self.activityViewModel = activityViewModel
     }
 
@@ -59,7 +59,7 @@ struct WorkoutView: View {
                 .scaledToFit()
                 .frame(width: 150, height: 100)
                 .cornerRadius(5.0)
-            Text(workout.name).lineLimit(nil).font(Font.robotoRegular(size: 14.0)).foregroundColor(Colours.primaryDarkColor)
+            Text(workout.name).lineLimit(nil).font(Font.outfitRegular(size: 14.0)).foregroundColor(Colours.primaryDarkColor)
         }.padding(.trailing, 25)
         .onTapGesture {
             isWorkoutDisplayed = true
@@ -86,7 +86,7 @@ struct WorkoutsScrollView: View {
     var body: some View {
         if #available(iOS 14.0, *) {
             VStack(alignment: .leading) {
-                Text(activityType.rawValue).font(Font.robotoMedium(size: 20)).foregroundColor(titleFontColor)
+                Text(activityType.rawValue).font(Font.outfitMedium(size: 20)).foregroundColor(titleFontColor)
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(workouts) { workout in
