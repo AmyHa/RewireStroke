@@ -58,7 +58,7 @@ class ActivityViewModel: ObservableObject {
 
     func setupAssessment() {
         print("set up assessment called")
-        self.addNewWorkout.send([data.LL_PreassessmentPlaceholder, data.PreassessmentUnlock])
+        self.addNewWorkout.send([data.LL_PreassessmentPlaceholder])
     }
     
     func setUpLLWorkout() {

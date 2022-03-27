@@ -31,7 +31,6 @@ struct ActivityScrollView: View {
 
     var body: some View {
         
-        VStack{
             NavigationView {
                 
                 List {
@@ -40,8 +39,7 @@ struct ActivityScrollView: View {
                     WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.BAWorkouts, titleFontColor: Colours.primaryBalanceColor, activityType: .balance)
                 }.navigationBarTitle("Activity")
                 
-            }.frame(minHeight: minRowHeight * 20)
-        }
+            }.frame(minHeight: minRowHeight * 16)
     }
 }
 
@@ -56,10 +54,9 @@ struct WorkoutView: View {
             
             Image(workout.image)
                 .resizable()
-                .scaledToFit()
-                .frame(width: 150, height: 100)
+                .scaledToFill()
+                .frame(width: 150, height: 120, alignment: .leading)
                 .cornerRadius(5.0)
-            Text(workout.name).lineLimit(nil).font(Font.outfitRegular(size: 14.0)).foregroundColor(Colours.primaryDarkColor)
         }.padding(.trailing, 25)
         .onTapGesture {
             isWorkoutDisplayed = true
@@ -86,7 +83,7 @@ struct WorkoutsScrollView: View {
     var body: some View {
         if #available(iOS 14.0, *) {
             VStack(alignment: .leading) {
-                Text(activityType.rawValue).font(Font.outfitMedium(size: 20)).foregroundColor(titleFontColor)
+                Text(activityType.rawValue).font(Font.outfitBold(size: 16)).foregroundColor(titleFontColor)
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(workouts) { workout in

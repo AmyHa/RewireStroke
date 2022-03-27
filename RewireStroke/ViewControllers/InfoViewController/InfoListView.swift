@@ -24,7 +24,7 @@ struct InfoListView: View {
                 InfoItemView(title: "Treatment")
                 InfoItemView(title: "Risk & Prevention")
             }.navigationBarTitle("Information")
-        }.frame(minHeight: minRowHeight * 20).font(Font.outfitMedium(size: 18.0)).foregroundColor(Colours.primaryBlueColor)
+        }.frame(minHeight: minRowHeight*16).font(Font.outfitMedium(size: 18.0)).foregroundColor(Colours.primaryBlueColor)
     }
 }
 
@@ -55,17 +55,19 @@ struct StandardInfoView: View {
     }
     
     var body: some View {
+
         NavigationView {
+            
             VStack(spacing: 0) {
                 VStack(alignment: .leading, spacing: 0) {
                     Text("What is a stroke?")
                         .font(Font.outfitBold(size: 20.0)).foregroundColor(Colours.primaryDarkColor)
                     Spacer()
                         .frame(maxHeight: 20)
-
+                    
                     Text("A stroke is caused by a disruption to the brain's blood supply").frame(maxHeight: .infinity)
                         .fixedSize(horizontal: false, vertical: true)
-                        .font(Font.outfitMedium(size: 20.0)).foregroundColor(Colours.primaryDarkColor)
+                        .font(Font.outfitMedium(size: 14.0)).foregroundColor(Colours.primaryDarkColor)
                     
                     Spacer()
                         .frame(maxHeight: 20)
@@ -80,8 +82,8 @@ struct StandardInfoView: View {
                         Text("•").frame(maxHeight: .infinity, alignment: .top)
                         Text("An ischaemic stroke is caused by blockage of a blood vessel that supplies the brain. It accounts for around 85% of strokes.").frame(maxHeight: .infinity)
                     }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .font(Font.outfitRegular(size: 14.0)).foregroundColor(.black)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(Font.outfitRegular(size: 14.0)).foregroundColor(.black)
                     
                     Spacer()
                         .frame(maxHeight: 20)
@@ -90,23 +92,23 @@ struct StandardInfoView: View {
                         Text("•").frame(maxHeight: .infinity, alignment: .top)
                         Text("A haemorrhagic stroke happens when a vessel in the brain bursts.").frame(maxHeight: .infinity)
                     }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .font(Font.outfitRegular(size: 14.0)).foregroundColor(.black)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(Font.outfitRegular(size: 14.0)).foregroundColor(.black)
                     
-                }.frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading).navigationBarTitle("Types of stroke", displayMode: .inline).padding()
+                }.frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
                 
                 Image("infoPageBrainImage")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, alignment: .center)
                     .padding()
-
+                
                 Text("A transient ischaemic attack, or ‘mini-stroke’, is caused by a temporary clot. Symptoms resolve within 24 hours. However, it should be taken seriously as there’s significantly higher risk of getting having a full stroke in the near future.")
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading)
                     .padding()
                     .font(Font.outfitRegular(size: 14.0)).foregroundColor(.black)
                 
-            }.frame(minHeight: 0, maxHeight: .infinity, alignment: .top)
+            }.frame(minHeight: 0, maxHeight: .infinity, alignment: .top).navigationBarTitle("Types of Stroke", displayMode: .inline)
         }
     }
     
