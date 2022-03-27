@@ -21,11 +21,11 @@ class AssessmentViewModel {
     
     private func setUpQuestions() {
         // Questions are set up in the view model for now... but realistically will be taken from the backend
-        let question1 = Question(questionText: "Can your dad lift his foot up whilst keeping his heel on the ground?", activityType: .lowerLimb,  videoPath: "https://vimeo.com/691352036")
-        let question2 = Question(questionText: "Can your dad tense his thigh?", activityType: .lowerLimb,  videoPath: "https://vimeo.com/691352036")
-        let question3 = Question(questionText: "Can your dad extend his knee?", activityType: .lowerLimb, videoPath: "https://vimeo.com/691352036")
-        let question4 = Question(questionText: "Can you dad move from sitting to standing?", activityType: .lowerLimb, answers: ["No", "Yes"], videoPath: "https://vimeo.com/691352036")
-        let question5 = Question(questionText: "Can your dad stand on his own for at least 2 minutes?", activityType: .lowerLimb, answers: ["No", "Yes"], videoPath: "https://vimeo.com/691352036")
+        let question1 = Question(questionText: "Can you lift your foot off the ground?", activityType: .lowerLimb,  videoPath: "https://vimeo.com/691352036")
+        let question2 = Question(questionText: "Can you tense your thigh?", activityType: .lowerLimb,  videoPath: "https://vimeo.com/691352036")
+        let question3 = Question(questionText: "Can you extend your knee?", activityType: .lowerLimb, videoPath: "https://vimeo.com/691352036")
+        let question4 = Question(questionText: "Can you move from sitting to standing?", activityType: .lowerLimb, answers: ["No", "Yes"], videoPath: "https://vimeo.com/691352036")
+        let question5 = Question(questionText: "Can you stand independently for 2 minutes?", activityType: .lowerLimb, answers: ["No", "Yes"], videoPath: "https://vimeo.com/691352036")
         
         self.questions.append(question1)
         self.questions.append(question2)

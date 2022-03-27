@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,19 +29,19 @@
                     <rect key="frame" x="50" y="194" width="314" height="388"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Answers " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UD0-MA-w6h" userLabel="Title Label">
-                            <rect key="frame" x="20" y="55" width="135" height="21"/>
+                            <rect key="frame" x="20" y="30" width="135" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These answers will determine the content that we select for your loved one." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcz-Ll-Deh" userLabel="First Text Label">
-                            <rect key="frame" x="20" y="111" width="274" height="61"/>
+                            <rect key="frame" x="20" y="86" width="274" height="61"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go back and replay the videos if you’re uncertain." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfQ-qd-RHg" userLabel="Second Text Label">
-                            <rect key="frame" x="20" y="197" width="274" height="41"/>
+                            <rect key="frame" x="20" y="172" width="274" height="41"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -61,7 +61,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Stl-s4-FXz"/>
                             </constraints>
-                            <state key="normal" title="Yes, they're correct"/>
+                            <state key="normal" title="They're correct"/>
                             <connections>
                                 <action selector="onCorrectButtonPressed:" destination="-1" eventType="touchUpInside" id="r7I-7S-nqs"/>
                             </connections>
@@ -78,6 +78,7 @@
                         <constraint firstItem="AZ4-JU-AEl" firstAttribute="leading" secondItem="qet-qc-Nm0" secondAttribute="trailing" constant="15" id="2gd-rX-94l"/>
                         <constraint firstAttribute="trailing" secondItem="GfQ-qd-RHg" secondAttribute="trailing" constant="20" id="NNm-q8-DuJ"/>
                         <constraint firstItem="qet-qc-Nm0" firstAttribute="leading" secondItem="JxF-wf-7x7" secondAttribute="leading" constant="60" id="OOz-6K-gW0"/>
+                        <constraint firstItem="UD0-MA-w6h" firstAttribute="top" secondItem="JxF-wf-7x7" secondAttribute="top" constant="30" id="PNv-Sz-eww"/>
                         <constraint firstAttribute="bottom" secondItem="qet-qc-Nm0" secondAttribute="bottom" constant="20" id="Rd0-ig-iN1"/>
                         <constraint firstItem="UD0-MA-w6h" firstAttribute="leading" secondItem="JxF-wf-7x7" secondAttribute="leading" constant="20" id="VvO-Q2-eDy"/>
                         <constraint firstItem="AZ4-JU-AEl" firstAttribute="height" secondItem="qet-qc-Nm0" secondAttribute="height" id="gOS-Eb-0nX"/>
@@ -86,7 +87,6 @@
                         <constraint firstAttribute="trailing" secondItem="AZ4-JU-AEl" secondAttribute="trailing" constant="20" id="riI-lq-gqO"/>
                         <constraint firstItem="Xcz-Ll-Deh" firstAttribute="top" secondItem="UD0-MA-w6h" secondAttribute="bottom" constant="35" id="sr4-C1-xiN"/>
                         <constraint firstAttribute="bottom" secondItem="AZ4-JU-AEl" secondAttribute="bottom" constant="20" id="tiM-br-QSt"/>
-                        <constraint firstItem="UD0-MA-w6h" firstAttribute="top" secondItem="JxF-wf-7x7" secondAttribute="top" constant="55" id="u6i-JJ-NZh"/>
                         <constraint firstItem="Xcz-Ll-Deh" firstAttribute="leading" secondItem="JxF-wf-7x7" secondAttribute="leading" constant="20" id="uBx-ku-HWV"/>
                         <constraint firstItem="GfQ-qd-RHg" firstAttribute="leading" secondItem="JxF-wf-7x7" secondAttribute="leading" constant="20" id="uNe-5f-Fx3"/>
                         <constraint firstItem="8X9-oP-U2Z" firstAttribute="top" secondItem="JxF-wf-7x7" secondAttribute="top" constant="16" id="waQ-w5-eBV"/>

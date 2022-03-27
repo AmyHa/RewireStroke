@@ -65,13 +65,13 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         
         for view in answerButtonsStackView.subviews {
             if let button = view as? DefaultButton {
-                button.backgroundColor = Colours.secondaryLight
+                button.backgroundColor = Colours.grey03
                 button.titleLabel?.font = UIFont.outfitBold()
-                button.setTitleColor(Colours.primaryDark, for: .normal)
+                button.setTitleColor(.white, for: .normal)
             }
         }
         
-        warningLabel.text = "Please answer the questions accurately so we can deliver content appropriate for your loved one."
+        warningLabel.text = "Please have someone else complete this assessment on your behalf. \n\nQuestions must be answered accurately to devliver appropriate content."
         Labels.setWarningLabelStyle(warningLabel)
         Labels.setWarningLabelStyle(selectionWarningLabel)
         
@@ -104,14 +104,14 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         
         // if the button is selected, then return to unselected state and exit
         if button.isSelected {
-            button.backgroundColor = Colours.secondaryLight
-            button.setTitleColor(Colours.primaryDark, for: .normal)
+            button.backgroundColor = Colours.grey03
+            button.setTitleColor(.white, for: .normal)
             button.isSelected = !button.isSelected
         } else {
 
             returnAnswerButtonsToUnselectedState()
             button.isSelected = !button.isSelected
-            button.backgroundColor = Colours.selected
+            button.backgroundColor = Colours.primaryDark
             button.setTitleColor(Colours.primaryDark, for: .normal)
         }
     }
@@ -162,8 +162,8 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         for view in answerButtonsStackView.subviews {
             if let button = view as? DefaultButton {
                 if button.isSelected {
-                    button.backgroundColor = Colours.secondaryLight
-                    button.setTitleColor(Colours.primaryDark, for: .normal)
+                    button.backgroundColor = Colours.grey03
+                    button.setTitleColor(.white, for: .normal)
                     button.isSelected = !button.isSelected
                 }
             }
