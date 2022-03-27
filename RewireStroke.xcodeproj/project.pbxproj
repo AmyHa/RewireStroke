@@ -24,7 +24,6 @@
 		6235D441276CE46000379614 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235D440276CE46000379614 /* IntExtension.swift */; };
 		6239D340251BC73500D5795D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D33F251BC73500D5795D /* Constants.swift */; };
 		6239D342251BC88E00D5795D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6239D341251BC88E00D5795D /* Roboto-Bold.ttf */; };
-		6239D344251BCB5900D5795D /* Rajdhani-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6239D343251BCB5900D5795D /* Rajdhani-SemiBold.ttf */; };
 		6239D346251BEFC800D5795D /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D345251BEFC800D5795D /* UITextFieldExtension.swift */; };
 		6239D349251BF1F000D5795D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D348251BF1F000D5795D /* CustomTextField.swift */; };
 		6239D34B251F4E8D00D5795D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6239D34A251F4E8D00D5795D /* GoogleService-Info.plist */; };
@@ -197,7 +196,6 @@
 		6235D440276CE46000379614 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		6239D33F251BC73500D5795D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6239D341251BC88E00D5795D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		6239D343251BCB5900D5795D /* Rajdhani-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rajdhani-SemiBold.ttf"; sourceTree = "<group>"; };
 		6239D345251BEFC800D5795D /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		6239D348251BF1F000D5795D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		6239D34A251F4E8D00D5795D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -612,7 +610,6 @@
 				62F3E592251BA20E00BD1152 /* Roboto-Regular.ttf */,
 				62F3E596251BA2F200BD1152 /* Roboto-Medium.ttf */,
 				6239D341251BC88E00D5795D /* Roboto-Bold.ttf */,
-				6239D343251BCB5900D5795D /* Rajdhani-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -825,7 +822,6 @@
 				627AFA41261DD76F00A64CEE /* WorkoutTableViewCell.xib in Resources */,
 				6251228F256AA2090031627A /* HomeViewController.xib in Resources */,
 				626EFAFC25DED5BB009F7A97 /* AssessmentViewController.xib in Resources */,
-				6239D344251BCB5900D5795D /* Rajdhani-SemiBold.ttf in Resources */,
 				62219A07267B846C0049F9FE /* ProfileViewController.xib in Resources */,
 				62C433F1251A40DF00477355 /* Main.storyboard in Resources */,
 			);
