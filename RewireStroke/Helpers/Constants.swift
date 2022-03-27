@@ -23,6 +23,7 @@ struct Constants {
             static let outfitBold = "Outfit-Bold"
             static let outfitRegular = "Outfit-Regular"
             static let outfitSemiBold = "Outfit-SemiBold"
+            static let outfitMedium = "Outfit-Medium"
         }
         
         struct Size {
