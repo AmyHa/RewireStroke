@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "BalanceProprioceptionGame.png",
+      "filename" : "Proprioception Game.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Exercise Card (7).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Exercise Card (8).png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "LLWorkoutBThumbNail.png",
+      "filename" : "Leg Strength Pt 2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Exercise Card (2).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Exercise Card (3).png",
       "idiom" : "universal",
       "scale" : "3x"
     }
