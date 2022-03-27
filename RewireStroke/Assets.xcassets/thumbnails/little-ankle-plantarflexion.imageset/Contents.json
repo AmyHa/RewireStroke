@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "little-ankle-plantarflexion.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "little-ankle-plantarflexion2.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "little-ankle-plantarflexion3.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
