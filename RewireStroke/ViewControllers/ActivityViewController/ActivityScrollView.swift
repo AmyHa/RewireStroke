@@ -40,7 +40,7 @@ struct ActivityScrollView: View {
                     WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.BAWorkouts, titleFontColor: Colours.primaryBalanceColor, activityType: .balance)
                 }.navigationBarTitle("Activity")
                 
-            }.frame(minHeight: minRowHeight * 20).font(Font.robotoBold(size: 20.0)).foregroundColor(.black)
+            }.frame(minHeight: minRowHeight * 20)
         }
     }
 }

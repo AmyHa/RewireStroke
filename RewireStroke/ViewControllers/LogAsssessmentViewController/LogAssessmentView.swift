@@ -46,7 +46,7 @@ struct LogAssessmentView: View {
                 
             }.navigationTitle(Text("How are you feeling?"))
                 .offset(y: -90)
-        }
+        }.frame(minHeight: minRowHeight * 18)
     }
 }
 
