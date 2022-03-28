@@ -68,10 +68,4 @@ class ActivityViewModelTests: XCTestCase {
         
         XCTAssertEqual(sut.image, "BAHipBalanceThumbnail")
     }
-    
-    func test_afterIntialisation_BAWorkoutsFirstItemContainsStandingBalanceImage() {
-        let sut = activityViewModel.data.BAWorkouts[3]
-        
-        XCTAssertEqual(sut.image, "BAStandingBalanceThumbnail")
-    }
 }

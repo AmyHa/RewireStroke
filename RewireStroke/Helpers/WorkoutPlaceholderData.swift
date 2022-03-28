@@ -21,7 +21,6 @@ struct WorkoutPlaceholderData {
     var LL_LittleWorkout2: Workout!
     var LL_Fully: Workout!
     var LL_PreassessmentPlaceholder: Workout!
-    var LL_ImprovingFlexibility: Workout!
     var LL_EnduranceWorkout: Workout!
         
     var UL_PreassessmentPlaceholder: Workout!
@@ -29,7 +28,6 @@ struct WorkoutPlaceholderData {
     var BA_BodyScanWorkout: Workout!
     var BA_ProprioceptionGame: Workout!
     var BA_HipBalance: Workout!
-    var BA_StandingBalance: Workout!
     
     var PreassessmentUnlock: Workout!
     
@@ -65,11 +63,11 @@ struct WorkoutPlaceholderData {
         LL_LittleWorkout1 = Workout(name: "Leg strength part 1", exercises: LL_ExerciseArrayA, activityType: .lowerLimb, image: "LLWorkout1Thumbnail")
         LL_LittleWorkout2 = Workout(name: "Leg strength part 2", exercises: LL_ExerciseArrayB, activityType: .lowerLimb, image: "LLWorkout2Thumbnail")
         
-        LL_ImprovingFlexibility = Workout(name: "Improving Flexibility", exercises: [Exercise](), activityType: .lowerLimb, image: "LLImprovingFlexibilityThumbnail")
         LL_EnduranceWorkout = Workout(name: "Endurance Workout", exercises: [Exercise](), activityType: .lowerLimb, image: "LLEnduranceWorkoutThumbnail")
         
         LL_Fully = Workout(name: "Fully Workout", exercises: LL_FullyExerciseArray, activityType: .lowerLimb, image: "LLWorkout1Thumbnail")
-        LL_PreassessmentPlaceholder = Workout(name: "Assessment", exercises: [Exercise](), activityType: .lowerLimb, image: "LLWorkout1Thumbnail")
+        
+        LL_PreassessmentPlaceholder = Workout(name: "Assessment", exercises: [Exercise](), activityType: .lowerLimb, image: "LLPreassessmentCard")
         
         UL_PreassessmentPlaceholder = Workout(name: "Assessment", exercises: [Exercise](), activityType: .lowerLimb, image: "ULAssessmentThumbnail")
         PreassessmentUnlock = Workout( name: "", exercises: [Exercise](), activityType: .lowerLimb, image: "UnlockAssessment")
@@ -78,9 +76,8 @@ struct WorkoutPlaceholderData {
         BA_ProprioceptionGame = Workout(name: "Proprioception game", exercises: [Exercise](), activityType: .lowerLimb, image: "BalanceProprioceptionGameThumbnail")
         
         BA_HipBalance = Workout(name: "Hip Balance", exercises: [Exercise](), activityType: .lowerLimb, image: "BAHipBalanceThumbnail")
-        BA_StandingBalance = Workout(name: "Standing Balance", exercises: [Exercise](), activityType: .lowerLimb, image: "BAStandingBalanceThumbnail")
         
         ULworkouts = [UL_PreassessmentPlaceholder]
-        BAWorkouts = [BA_BodyScanWorkout, BA_ProprioceptionGame, BA_HipBalance, BA_StandingBalance]
+        BAWorkouts = [BA_BodyScanWorkout, BA_ProprioceptionGame, BA_HipBalance]
     }
 }
