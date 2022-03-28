@@ -33,13 +33,17 @@ struct ActivityScrollView: View {
         
             NavigationView {
                 
-                List {
-                    WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.ULworkouts, titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb)
-                    WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.LLworkouts.value, titleFontColor: Colours.primaryLowerLimbColor, activityType: .lowerLimb)
-                    WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.BAWorkouts, titleFontColor: Colours.primaryBalanceColor, activityType: .balance)
-                }.navigationBarTitle("Activity")
+                if #available(iOS 15.0, *) {
+                    List {
+                        WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.ULworkouts, titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb)
+                        WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.LLworkouts.value, titleFontColor: Colours.primaryLowerLimbColor, activityType: .lowerLimb)
+                        WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.BAWorkouts, titleFontColor: Colours.primaryBalanceColor, activityType: .balance)
+                    }.navigationBarTitle("Activity").background(.white)
+                } else {
+                    // Fallback on earlier versions
+                }
                 
-            }.frame(minHeight: minRowHeight * 16)
+            }.frame(minHeight: minRowHeight * 18)
     }
 }
 
