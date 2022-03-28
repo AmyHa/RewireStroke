@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "LLImprovingFlexibilityThumbnail.png",
+      "filename" : "LLPreassessmentCard.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "LLPreassessmentCard2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "LLPreassessmentCard3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "BAHipBalanceThumbnail.png",
+      "filename" : "Hip Balance.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Hip Balance (1).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Hip Balance (2).png",
       "idiom" : "universal",
       "scale" : "3x"
     }
