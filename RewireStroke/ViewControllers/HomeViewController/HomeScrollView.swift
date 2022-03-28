@@ -43,7 +43,7 @@ struct HomeScrollView: View {
                 SelectActivityView(function: "Balance", score: 0, icon: "iconBalance", colour: Colours.primaryBalanceColor, activityViewModel: activityViewModel)
             }.navigationTitle(Text("Select an Activity"))
                 .offset(y: -90)
-        }.frame(minHeight: minRowHeight*16)
+        }.frame(minHeight: minRowHeight*18)
     }
 }
 

@@ -24,7 +24,7 @@ struct InfoListView: View {
                 InfoItemView(title: "Treatment")
                 InfoItemView(title: "Risk & Prevention")
             }.navigationBarTitle("Information")
-        }.frame(minHeight: minRowHeight*16).font(Font.outfitMedium(size: 18.0)).foregroundColor(Colours.primaryBlueColor)
+        }.frame(minHeight: minRowHeight*18).font(Font.outfitMedium(size: 18.0)).foregroundColor(Colours.primaryBlueColor)
     }
 }
 

@@ -29,7 +29,7 @@ struct ProgressScrollView: View {
                     ProgressChartView(type: .fatigue).frame(width: 200, height: 200, alignment: .center )
                 }.navigationBarTitle("Progress")
             }
-        }.frame(minHeight: minRowHeight * 20).font(Font.outfitBold(size: 20.0)).foregroundColor(.black)
+        }.frame(minHeight: minRowHeight * 18).font(Font.outfitBold(size: 20.0)).foregroundColor(.black)
     }
 }
 
