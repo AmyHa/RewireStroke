@@ -36,23 +36,20 @@ struct WorkoutPlaceholderData {
         instance = WorkoutPlaceholderData.allInstances
         print("WorkoutPlaceholderData.init() #\(instance)")
         
-        let kneeExtension = Exercise(name: "Knee Extension", activityType: .lowerLimb, ability: .fully, image: "little-knee-extension", videoPath: "little-knee-extension.mp4")
-        let kneeFlexion = Exercise(name: "Knee Flexion", activityType: .lowerLimb, ability: .little, image: "little-knee-flexion", videoPath: "little-knee-flexion.mp4")
-        let quadActivation = Exercise(name: "Quad Activation", activityType: .lowerLimb, ability: .little, image: "little-quad-activation", videoPath: "little-quad-activation.mp4")
-        let hamstringActivation = Exercise(name: "Hamstring Activation", activityType: .lowerLimb, ability: .little, image: "little-hamstring-activation", videoPath: "little-hamstring-activation.mp4")
-        let ankleDorsiflexion = Exercise(name: "Ankle Dorsiflexion", activityType: .lowerLimb, ability: .little, image: "little-ankle-dorsiflexion", videoPath: "little-ankle-dorsiflexion.mp4")
-        let anklePlantarflexion = Exercise(name: "Ankle Plantarflexion", activityType: .lowerLimb, ability: .little, image: "little-ankle-plantarflexion", videoPath: "little-ankle-plantarflexion.mp4")
-        let quadContraction = Exercise(name: "Quad Contraction", activityType: .lowerLimb, ability: .little, image: "little-quad-contraction", videoPath: "little-quad-contraction.mp4")
+        let kneeExtension = Exercise(name: "Knee Extension", activityType: .lowerLimb, ability: .fully, image: "little-knee-extension", videoPath: "https://vimeo.com/693645125")
+        let kneeFlexion = Exercise(name: "Knee Flexion", activityType: .lowerLimb, ability: .little, image: "little-knee-flexion", videoPath: "https://vimeo.com/693645204")
+        let quadActivation = Exercise(name: "Quad Activation", activityType: .lowerLimb, ability: .little, image: "little-quad-activation", videoPath: "https://vimeo.com/693645659")
+        let hamstringActivation = Exercise(name: "Hamstring Activation", activityType: .lowerLimb, ability: .little, image: "little-hamstring-activation", videoPath: "https://vimeo.com/693642909")
+        let ankleDorsiflexion = Exercise(name: "Ankle Dorsiflexion", activityType: .lowerLimb, ability: .little, image: "little-ankle-dorsiflexion", videoPath: "https://vimeo.com/693642334")
+        let anklePlantarflexion = Exercise(name: "Ankle Plantarflexion", activityType: .lowerLimb, ability: .little, image: "little-ankle-plantarflexion", videoPath: "https://vimeo.com/692145096")
+        let quadContraction = Exercise(name: "Quad Contraction", activityType: .lowerLimb, ability: .little, image: "little-quad-contraction", videoPath: "https://vimeo.com/693645819")
 
-//        let standingTolerance = Exercise(name: "Standing Tolerance", activityType: .lowerLimb, ability: .little, image: "little-standing-tolerance", videoPath: "little-standing-tolerance.mp4")
-//        let supportedKneeFlexion = Exercise(name: "Supported Knee Flexion", activityType: .lowerLimb, ability: .little, image: "little-supported-knee-flexion", videoPath: "little-supported-knee-flexion.mp4")
-        
-        let fullyToeRaises = Exercise(name: "Toe Raises", activityType: .lowerLimb, ability: .fully, image: "fully-toe-raises", videoPath: "fully-toe-raises.mp4")
-        let fullyHeelRaises = Exercise(name: "Heel Raises", activityType: .lowerLimb, ability: .fully, image: "fully-heel-raises", videoPath: "fully-heel-raises.mp4")
-        let fullyKneeExtension = Exercise(name: "Knee Extension", activityType: .lowerLimb, ability: .fully, image: "fully-knee-extension", videoPath: "fully-knee-extension.mp4")
-        let fullySquats = Exercise(name: "Squats", activityType: .lowerLimb, ability: .fully, image: "fully-squats", videoPath: "fully-squats.mp4")
-        let fullySplitStanding = Exercise(name: "Split Standing", activityType: .lowerLimb, ability: .fully, image: "fully-split-standing", videoPath: "fully-split-standing.mp4")
-        let fullyHipPush = Exercise(name: "Hip Push", activityType: .lowerLimb, ability: .fully, image: "fully-hip-push", videoPath: "fully-hip-push.mp4")
+        let fullyToeRaises = Exercise(name: "Toe Raises", activityType: .lowerLimb, ability: .fully, image: "fully-toe-raises", videoPath: "https://vimeo.com/693714418")
+        let fullyHeelRaises = Exercise(name: "Heel Raises", activityType: .lowerLimb, ability: .fully, image: "fully-heel-raises", videoPath: "https://vimeo.com/693713788")
+        let fullyKneeExtension = Exercise(name: "Knee Extension", activityType: .lowerLimb, ability: .fully, image: "fully-knee-extension", videoPath: "https://vimeo.com/693714138")
+        let fullySquats = Exercise(name: "Squats", activityType: .lowerLimb, ability: .fully, image: "fully-squats", videoPath: "https://vimeo.com/693714328")
+        let fullySplitStanding = Exercise(name: "Split Standing", activityType: .lowerLimb, ability: .fully, image: "fully-split-standing", videoPath: "https://vimeo.com/693713618")
+        let fullyHipPush = Exercise(name: "Hip Push", activityType: .lowerLimb, ability: .fully, image: "fully-hip-push", videoPath: "https://vimeo.com/693713938")
         
         let LL_ExerciseArrayA = [kneeExtension, kneeFlexion, quadActivation, hamstringActivation, ankleDorsiflexion, anklePlantarflexion]
         
