@@ -107,13 +107,20 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
             button.backgroundColor = Colours.grey03
             button.setTitleColor(.white, for: .normal)
             button.isSelected = !button.isSelected
+            
         } else {
 
             returnAnswerButtonsToUnselectedState()
             button.isSelected = !button.isSelected
             button.backgroundColor = Colours.primaryDark
             button.setTitleColor(Colours.primaryDark, for: .normal)
+            // Hacky
+            if button.currentTitle == "Yes" || button.currentTitle == "Fully" {
+                UserManager.LLAssessmentScore += 1
+            }
+            
         }
+        
     }
     
     @objc private func backButtonTapped(_ button : DefaultButton) {
@@ -199,7 +206,7 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
             }
             
             DispatchQueue.main.async {
-                self.playerViewController.player = AVPlayer(url: vid.videoURL[.Quality720p]!)
+                self.playerViewController.player = AVPlayer(url: vid.videoURL[.Quality540p]!)
             }
             
         })
