@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import AVKit
+import HCVimeoVideoExtractor
 
 class WorkoutViewController: UIViewController {
 
@@ -64,38 +65,15 @@ class WorkoutViewController: UIViewController {
         preliminaryTextLabel.textColor = Colours.primaryDark
     }
     
-    private func playEmbedInVideo() {
-        
-        self.addChild(playerViewController)
-        videoContainerView.addSubview(playerViewController.view)
-        playerViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            playerViewController.view.centerXAnchor.constraint(equalTo: videoContainerView.centerXAnchor),
-            playerViewController.view.centerYAnchor.constraint(equalTo: videoContainerView.centerYAnchor),
-            playerViewController.view.widthAnchor.constraint(equalTo: videoContainerView.widthAnchor),
-            playerViewController.view.heightAnchor.constraint(equalTo: videoContainerView.heightAnchor)
-        ])
-        playerViewController.didMove(toParent: self)
-
-        let documentsDirectory = CacheManager.getDocumentsDirectory()
-        let currentVideoPath = workout.exercises[0].videoPath
-        let destinationURL = documentsDirectory.appendingPathComponent(currentVideoPath)
-
-        // Check if it exissts before downloading
-        if FileManager.default.fileExists(atPath: destinationURL.path) {
-            let playerItem = AVPlayerItem(url: destinationURL)
-            playerViewController.player = AVPlayer(playerItem: playerItem)
-        } else {
-            print("it doesn't exist!")
-        }
-    }
-    
     // MARK:- Actions
     
     @IBAction func startButtonPressed(_ sender: Any) {
-        let mainView = StartWorkoutViewController.init(workout: workout)
-        mainView.modalPresentationStyle = .fullScreen
-        present(mainView, animated: false)
+        // Hacky, ofc change this!
+        if workout.exercises.count > 0 {
+            let mainView = StartWorkoutViewController.init(workout: workout)
+            mainView.modalPresentationStyle = .fullScreen
+            present(mainView, animated: false)
+        }
     }
 }
 
