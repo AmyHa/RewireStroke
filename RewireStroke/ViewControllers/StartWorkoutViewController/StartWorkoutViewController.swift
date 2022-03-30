@@ -10,6 +10,7 @@ import UIKit
 import Combine
 import AVKit
 import AVFoundation
+import HCVimeoVideoExtractor
 
 class StartWorkoutViewController: UIViewController, ExerciseSelectionDelegate {
     
@@ -105,17 +106,36 @@ class StartWorkoutViewController: UIViewController, ExerciseSelectionDelegate {
         ])
         playerViewController.didMove(toParent: self)
 
-        let documentsDirectory = CacheManager.getDocumentsDirectory()
+//        let documentsDirectory = CacheManager.getDocumentsDirectory()
         let currentVideoPath = workout.exercises[video].videoPath
-        let destinationURL = documentsDirectory.appendingPathComponent(currentVideoPath)
-
-        // Check if it exissts before downloading
-        if FileManager.default.fileExists(atPath: destinationURL.path) {
-            let playerItem = AVPlayerItem(url: destinationURL)
-            playerViewController.player = AVPlayer(playerItem: playerItem)
-        } else {
-            print("it doesn't exist!")
-        }
+//        let destinationURL = documentsDirectory.appendingPathComponent(currentVideoPath)
+//
+//        // Check if it exissts before downloading
+//        if FileManager.default.fileExists(atPath: destinationURL.path) {
+//            let playerItem = AVPlayerItem(url: destinationURL)
+//            playerViewController.player = AVPlayer(playerItem: playerItem)
+//        } else {
+//            print("it doesn't exist!")
+//        }
+        
+        
+        HCVimeoVideoExtractor.fetchVideoURLFrom(url: URL(string: currentVideoPath)!, completion: { ( video:HCVimeoVideo?, error:Error?) -> Void in
+            if let err = error {
+                print("Error = \(err.localizedDescription)")
+                return
+            }
+            
+            guard let vid = video else {
+                print("Invalid video object")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.playerViewController.player = AVPlayer(url: vid.videoURL[.Quality720p]!)
+            }
+            
+        })
+        
     }
 }
 
