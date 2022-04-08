@@ -94,7 +94,7 @@ class WelcomeViewController: UICollectionViewController, UICollectionViewDelegat
             profileViewController.tabBarItem = profileItem
             
             let tabBarController = CustomTabController()
-            let controllers = [infoViewController, activityViewController, homeViewController, progressViewController, profileViewController]
+            let controllers = [infoViewController, progressViewController, homeViewController, activityViewController, profileViewController]
             tabBarController.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
             
             tabBarController.selectedIndex = 2 // 2nd tab

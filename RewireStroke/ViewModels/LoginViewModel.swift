@@ -62,9 +62,9 @@ class LoginViewModel: CredentialsViewModel {
         infoItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
         infoItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
         
-        let profileItem = UITabBarItem()
-        profileItem.title = "Profile"
-        profileItem.image = UIImage(named: "iconProfile")
+        let profileIcon = UIImage(named: "iconProfile")!.withRenderingMode(.alwaysOriginal)
+        let profileIconSelected = UIImage(named: "iconProfileSelected")!.withRenderingMode(.alwaysOriginal)
+        let profileItem = UITabBarItem(title: "Profile", image: profileIcon, selectedImage: profileIconSelected)
         profileItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
         profileItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
         
@@ -75,7 +75,7 @@ class LoginViewModel: CredentialsViewModel {
         profileViewController.tabBarItem = profileItem
         
         let tabBarController = CustomTabController()
-        let controllers = [infoViewController, activityViewController, homeViewController, progressViewController, profileViewController]
+        let controllers = [infoViewController, progressViewController, homeViewController, activityViewController, profileViewController]
         tabBarController.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
         
         tabBarController.selectedIndex = 2 // 2nd tab
