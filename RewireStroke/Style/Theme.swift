@@ -19,6 +19,8 @@ struct Colours {
     static let primaryLight = UIColor.colorFromHexString("#4E569F")
     static let primaryDark = UIColor.colorFromHexString("#121440")
     
+    static let primaryIcon = UIColor.colorFromHexString("#080B32")
+    
     // Secondary
     static let secondaryLight = UIColor.colorFromHexString("#F4D2D3")
     static let secondaryDark = UIColor.colorFromHexString("#C1A1A2")
