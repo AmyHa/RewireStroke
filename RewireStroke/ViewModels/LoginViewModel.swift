@@ -38,27 +38,35 @@ class LoginViewModel: CredentialsViewModel {
         let infoViewController = InfoViewController.init(nibName: Constants.View.infoViewController, bundle: nil)
         let profileViewController = ProfileViewController.init(nibName: Constants.View.profileViewController, bundle: nil)
         
-        
-        // tab bar icon
-        let homeItem = UITabBarItem()
-        homeItem.title = "Home"
-        homeItem.image = UIImage(named: "iconHome")
-        
-        let activityItem = UITabBarItem()
-        activityItem.title = "Activity"
-        activityItem.image = UIImage(named: "iconActivity")
+        let homeIcon = UIImage(named: "iconHome")!.withRenderingMode(.alwaysOriginal)
+        let homeIconSelected = UIImage(named: "iconHomeSelected")!.withRenderingMode(.alwaysOriginal)
+        let homeItem = UITabBarItem(title: "Home", image: homeIcon, selectedImage: homeIconSelected)
+        homeItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
+        homeItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
 
-        let progressItem = UITabBarItem()
-        progressItem.title = "Progress"
-        progressItem.image = UIImage(named: "iconProgress")
-        
+        let activityIcon = UIImage(named: "iconActivity")!.withRenderingMode(.alwaysOriginal)
+        let activityIconSelected = UIImage(named: "iconActivitySelected")!.withRenderingMode(.alwaysOriginal)
+        let activityItem = UITabBarItem(title: "Activity", image: activityIcon, selectedImage: activityIconSelected)
+        activityItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
+        activityItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
+
+        let progressIcon = UIImage(named: "iconProgress")!.withRenderingMode(.alwaysOriginal)
+        let progressIconSelected = UIImage(named: "iconProgressSelected")!.withRenderingMode(.alwaysOriginal)
+        let progressItem = UITabBarItem(title: "Progress", image: progressIcon, selectedImage: progressIconSelected)
+        progressItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
+        progressItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
+
         let infoItem = UITabBarItem()
         infoItem.title = "Info"
         infoItem.image = UIImage(named: "iconInfo")
+        infoItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
+        infoItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
         
         let profileItem = UITabBarItem()
         profileItem.title = "Profile"
         profileItem.image = UIImage(named: "iconProfile")
+        profileItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
+        profileItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
         
         homeViewController.tabBarItem = homeItem
         activityViewController.tabBarItem = activityItem
@@ -71,6 +79,7 @@ class LoginViewModel: CredentialsViewModel {
         tabBarController.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
         
         tabBarController.selectedIndex = 2 // 2nd tab
+        tabBarController.tabBar.unselectedItemTintColor = Colours.primaryIcon
         view.window?.rootViewController = tabBarController
         view.window?.makeKeyAndVisible()
     }
