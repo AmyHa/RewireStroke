@@ -74,7 +74,7 @@ class LoginViewModel: CredentialsViewModel {
         infoViewController.tabBarItem = infoItem
         profileViewController.tabBarItem = profileItem
         
-        let tabBarController = UITabBarController()
+        let tabBarController = CustomTabController()
         let controllers = [infoViewController, activityViewController, homeViewController, progressViewController, profileViewController]
         tabBarController.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
         
