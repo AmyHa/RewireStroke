@@ -35,4 +35,12 @@ class LogAssessmentViewController: UIViewController {
         hostView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         hostView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+    }
 }

@@ -31,6 +31,14 @@ class WelcomeViewController: UICollectionViewController, UICollectionViewDelegat
         setupPageControl()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+    }
+    
     let pageControl = UIPageControl()
     fileprivate func setupPageControl() {
         pageControl.numberOfPages = pages.count

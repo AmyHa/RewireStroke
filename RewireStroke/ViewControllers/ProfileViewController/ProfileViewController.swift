@@ -24,6 +24,13 @@ class ProfileViewController: UIViewController {
             self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+    }
 
     /*
     // MARK: - Navigation
