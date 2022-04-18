@@ -59,6 +59,9 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         prepareForPlayback()
         addVideoView()
    }
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+    }
     
     private func setUpUI() {
         self.title = "Assessment"
