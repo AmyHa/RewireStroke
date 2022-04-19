@@ -42,17 +42,17 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a warning label." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuW-36-oPK" userLabel="Warning Label" customClass="WarningLabel" customModule="RewireStroke" customModuleProvider="target">
-                    <rect key="frame" x="20" y="314" width="374" height="100"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a warning label." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuW-36-oPK" userLabel="Warning Label" customClass="WarningLabel" customModule="RewireStroke" customModuleProvider="target">
+                    <rect key="frame" x="20" y="314" width="374" height="120"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="2xc-8W-RuL"/>
+                        <constraint firstAttribute="height" constant="120" id="2xc-8W-RuL"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wR-6U-nVJ" userLabel="Question Label">
-                    <rect key="frame" x="20" y="449" width="374" height="60"/>
+                    <rect key="frame" x="20" y="469" width="374" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="IfI-aw-UtA"/>
                     </constraints>
@@ -61,7 +61,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VLD-Hd-4r0" userLabel="Answer Buttons Stack View">
-                    <rect key="frame" x="20" y="544" width="374" height="30"/>
+                    <rect key="frame" x="20" y="564" width="374" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMf-dQ-7CL" customClass="DefaultButton" customModule="RewireStroke" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="104.5" height="30"/>
@@ -78,7 +78,7 @@
                     </subviews>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please make a selection before clicking Next." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPC-c7-wyV" userLabel="Selectiion Warning Label" customClass="WarningLabel" customModule="RewireStroke" customModuleProvider="target">
-                    <rect key="frame" x="20" y="634" width="374" height="30.5"/>
+                    <rect key="frame" x="20" y="654" width="374" height="30.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

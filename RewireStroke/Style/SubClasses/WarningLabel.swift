@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable class WarningLabel: PaddingLabel {
-    
+    let padding = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     override func drawText(in rect: CGRect) {
         
         self.textColor = .red
@@ -17,6 +17,6 @@ import UIKit
         self.layer.cornerRadius = frame.size.height / 15
         self.layer.borderColor = UIColor.red.cgColor
         self.backgroundColor = .white
-        super.drawText(in: rect)
+        super.drawText(in: rect.inset(by: padding))
     }
 }
