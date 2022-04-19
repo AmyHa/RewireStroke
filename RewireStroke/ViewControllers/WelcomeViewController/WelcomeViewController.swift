@@ -83,15 +83,15 @@ class WelcomeViewController: UICollectionViewController, UICollectionViewDelegat
             progressItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
             progressItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
 
-            let infoItem = UITabBarItem()
-            infoItem.title = "Info"
-            infoItem.image = UIImage(named: "iconInfo")
+            let infoIcon = UIImage(named: "iconInfo")!.withRenderingMode(.alwaysOriginal)
+            let infoIconSelected = UIImage(named: "iconInfoSelected")!.withRenderingMode(.alwaysOriginal)
+            let infoItem = UITabBarItem(title: "Info", image: infoIcon, selectedImage: infoIconSelected)
             infoItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
             infoItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
             
-            let profileItem = UITabBarItem()
-            profileItem.title = "Profile"
-            profileItem.image = UIImage(named: "iconProfile")
+            let profileIcon = UIImage(named: "iconProfile")!.withRenderingMode(.alwaysOriginal)
+            let profileIconSelected = UIImage(named: "iconProfileSelected")!.withRenderingMode(.alwaysOriginal)
+            let profileItem = UITabBarItem(title: "Profile", image: profileIcon, selectedImage: profileIconSelected)
             profileItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
             profileItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
             

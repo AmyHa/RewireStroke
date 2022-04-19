@@ -56,9 +56,9 @@ class LoginViewModel: CredentialsViewModel {
         progressItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
         progressItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
 
-        let infoItem = UITabBarItem()
-        infoItem.title = "Info"
-        infoItem.image = UIImage(named: "iconInfo")
+        let infoIcon = UIImage(named: "iconInfo")!.withRenderingMode(.alwaysOriginal)
+        let infoIconSelected = UIImage(named: "iconInfoSelected")!.withRenderingMode(.alwaysOriginal)
+        let infoItem = UITabBarItem(title: "Info", image: infoIcon, selectedImage: infoIconSelected)
         infoItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
         infoItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
         
