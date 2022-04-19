@@ -63,6 +63,9 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
     private func setUpUI() {
         self.title = "Assessment"
         
