@@ -55,7 +55,7 @@ class AssessmentViewModel {
     }
     
     func getVideoPath(questionIndex: Int) -> String {
-        return questions[currentIndex].videoPath
+        return questions[questionIndex].videoPath
     }
 
 }
