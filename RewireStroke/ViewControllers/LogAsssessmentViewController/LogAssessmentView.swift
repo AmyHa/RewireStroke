@@ -61,6 +61,7 @@ struct LogView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 35, style: .continuous).fill(Colours.grey01Color).frame(width: 340, height: 150)
+                .overlay(RoundedRectangle(cornerRadius: 35).stroke(colour, lineWidth: 1))
             VStack {
                 Image(icon)
                     .resizable()
