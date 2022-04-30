@@ -138,7 +138,7 @@ struct ScaleView: View {
                         RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Colours.grey02Color)
                         RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Colours.primaryBlueColor).frame(height: sliderHeight)
                     })
-                    .frame(width: 20, height: maxHeight)
+                        .frame(width: 20, height: maxHeight)
                         .gesture(DragGesture(minimumDistance: 0).onChanged({ value in
                             
                             // getting drag value
@@ -170,6 +170,13 @@ struct ScaleView: View {
                     
                 }
             }.navigationTitle(navTitle)
+                .navigationBarItems(trailing:                 Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.system(size: 15, weight: .bold, design: .rounded))
+                        .foregroundColor(Colours.primaryDarkColor)
+                })
             
         }
     }
