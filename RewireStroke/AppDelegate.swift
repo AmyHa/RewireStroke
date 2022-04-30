@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Outfit regular for labels
         UILabel.appearance().font = UIFont(name: "Outfit-Regular", size: Constants.Font.Size.standard)
-        
+        UILabel.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).adjustsFontSizeToFitWidth = true
+
         // Outfit medium for buttons
         UIButton.appearance().titleLabelFont = UIFont(name: "Outfit-Medium", size: Constants.Font.Size.standard)
         print(CacheManager.getDocumentsDirectory())
