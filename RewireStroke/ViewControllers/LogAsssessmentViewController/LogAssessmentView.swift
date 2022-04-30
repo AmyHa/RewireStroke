@@ -89,14 +89,13 @@ struct ScaleView: View {
     var labels: [String]
     var navTitle: String
     
-    @State var maxHeight: CGFloat = 320
+    @State var maxHeight: CGFloat = 480
     @State var sliderProgress: CGFloat = 0
     @State var sliderHeight: CGFloat = 0
     @State var lastDragValue: CGFloat = 0
     
     var body: some View {
         NavigationView {
-            
             VStack {
                 HStack{
                     VStack{
@@ -106,38 +105,35 @@ struct ScaleView: View {
                                 .scaledToFit()
                                 .clipped().frame(width: 70, height: 40)
                             Text(String(labels[0])).font(.outfitRegular(size: 18))
-                        }.frame(width: 260, alignment: .leading)
-                        Spacer().frame(height: 50)
+                        }.frame(maxWidth: 280, maxHeight: .infinity, alignment: .leading)
                         HStack{
                             Image(icons[1])
                                 .resizable()
                                 .scaledToFit()
                                 .clipped().frame(width: 70, height: 40)
                             Text(String(labels[1])).font(.outfitRegular(size: 18))
-                        }.frame(width: 260, alignment: .leading)
-                        Spacer().frame(height: 50)
+                        }.frame(maxWidth: 280, maxHeight: .infinity, alignment: .leading)
                         HStack{
                             Image(icons[2])
                                 .resizable()
                                 .scaledToFit()
                                 .clipped().frame(width: 70, height: 40)
                             Text(String(labels[2])).font(.outfitRegular(size: 18))
-                        }.frame(width: 260, alignment: .leading)
-                        Spacer().frame(height: 50)
+                        }.frame(maxWidth: 280, maxHeight: .infinity, alignment: .leading)
                         HStack{
                             Image(icons[3])
                                 .resizable()
                                 .scaledToFit()
                                 .clipped().frame(width: 70, height: 40)
                             Text(String(labels[3])).font(.outfitRegular(size: 18))
-                        }.frame(width: 260, alignment: .leading)
+                        }.frame(maxWidth: 280, maxHeight: .infinity, alignment: .leading)
                     }.foregroundColor(Colours.primaryDarkColor)
                     ZStack(alignment: .bottom, content: {
                         
                         RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Colours.grey02Color)
                         RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Colours.primaryBlueColor).frame(height: sliderHeight)
                     })
-                        .frame(width: 20, height: maxHeight)
+                        .frame(width: 30, height: maxHeight)
                         .gesture(DragGesture(minimumDistance: 0).onChanged({ value in
                             
                             // getting drag value
@@ -154,7 +150,6 @@ struct ScaleView: View {
                         )
                     
                 }
-                Spacer().frame(height: 50)
                 Button {
                     presentationMode.wrappedValue.dismiss()
                 } label: {
@@ -176,7 +171,6 @@ struct ScaleView: View {
                         .font(.system(size: 15, weight: .bold, design: .rounded))
                         .foregroundColor(Colours.primaryDarkColor)
                 })
-            
         }
     }
 }
