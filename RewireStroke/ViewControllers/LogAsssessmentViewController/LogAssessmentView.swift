@@ -35,7 +35,7 @@ struct LogAssessmentView: View {
         
         let moodScaleView = ScaleView(icons: ["iconHappyFace", "iconOkFace", "iconSadFace", "iconLowFace"], labels: ["I'm happy", "I feel okay", "I feel sad", "I feel really low"], navTitle: "How do you feel?")
         let painScaleView = ScaleView(icons: ["iconPainFree", "iconPainMinor", "iconPainMajor", "iconPainSevere"], labels: ["I'm painfree", "I have some minor aches", "Pain is impacting on \nmy daily function", "I am in severe pain"], navTitle: "Are you in pain?")
-        let fatigueScaleView = ScaleView(icons: ["iconBatteryFull", "iconBatteryThreeQuarters", "iconBatteryHalf", "iconBatteryLow"], labels: ["I'm full of beans!", "I'm able to \ncomplete my daily activities", "I feel tired", "I have very little energy"], navTitle: "How much energy do you have?")
+        let fatigueScaleView = ScaleView(icons: ["iconBatteryFull", "iconBatteryThreeQuarters", "iconBatteryHalf", "iconBatteryLow"], labels: ["I'm full of beans!", "I'm able to \ncomplete my daily activities", "I feel tired", "I have very little energy"], navTitle: "Do you have energy?")
         NavigationView{
             VStack {
                 LogView(icon: "iconHappyFace", text: "Log your mood", colour: Colours.moodColor, scaleView: moodScaleView)
@@ -132,7 +132,7 @@ struct ScaleView: View {
                     ZStack(alignment: .bottom, content: {
                         
                         RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Colours.grey02Color)
-                        RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Colours.primaryBlueColor).frame(height: sliderHeight)
+                        RoundedRectangle(cornerRadius: 20, style: .continuous).fill(LinearGradient(gradient: Gradient(colors: [Colours.primaryDarkColor, Colours.primaryBlueColor]), startPoint: .top, endPoint: .bottom)).frame(height: sliderHeight)
                     })
                         .frame(width: 30, height: maxHeight)
                         .gesture(DragGesture(minimumDistance: 0).onChanged({ value in
