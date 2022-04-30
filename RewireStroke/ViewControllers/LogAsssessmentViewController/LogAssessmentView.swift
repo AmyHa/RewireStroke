@@ -39,13 +39,12 @@ struct LogAssessmentView: View {
         NavigationView{
             VStack {
                 LogView(icon: "iconHappyFace", text: "Log your mood", colour: Colours.moodColor, scaleView: moodScaleView)
-                Spacer().frame(height: 20)
+                    .frame(maxHeight: .infinity)
                 LogView(icon: "iconBattery", text: "Log your energy levels", colour: Colours.fatigueColor, scaleView: fatigueScaleView)
-                Spacer().frame(height: 20)
+                    .frame(maxHeight: .infinity)
                 LogView(icon: "iconPainCircles", text: "Log your pain levels", colour: Colours.painColor, scaleView: painScaleView)
-                
+                    .frame(maxHeight: .infinity)
             }.navigationTitle(Text("How are you feeling?"))
-                .offset(y: -90)
         }.frame(minHeight: minRowHeight * 18)
     }
 }
@@ -61,7 +60,7 @@ struct LogView: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 35, style: .continuous).fill(Colours.grey01Color).frame(width: 340, height: 120)
+            RoundedRectangle(cornerRadius: 35, style: .continuous).fill(Colours.grey01Color).frame(width: 340, height: 150)
             VStack {
                 Image(icon)
                     .resizable()
