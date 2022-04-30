@@ -156,11 +156,11 @@ struct ScaleView: View {
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(Colours.primaryBlueColor)
+                            .fill(LinearGradient(gradient: Gradient(colors: [Colours.primaryBlueColor, Colours.primaryDarkColor]), startPoint: .leading, endPoint: .trailing))
                             .frame(maxWidth: .infinity, maxHeight: 45)
                             .padding(.leading, 45)
                             .padding(.trailing, 45)
-                        Text("Submit").font(.outfitSemiBold(size: 15))
+                        Text("Submit").font(.outfitSemiBold(size: 18))
                             .foregroundColor(.white)
                     }
                     
