@@ -157,9 +157,10 @@ struct ScaleView: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(Colours.primaryBlueColor)
-                            .frame(width: 110, height: 45)
+                            .frame(maxWidth: .infinity, maxHeight: 45)
+                            .padding(.leading, 45)
+                            .padding(.trailing, 45)
                         Text("Submit").font(.outfitSemiBold(size: 15))
-                            .padding()
                             .foregroundColor(.white)
                     }
                     
