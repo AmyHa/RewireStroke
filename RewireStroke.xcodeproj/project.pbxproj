@@ -15,6 +15,25 @@
 		620551B42767B96100BD51C9 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B32767B96100BD51C9 /* SignUpViewModel.swift */; };
 		620551B62767CD4700BD51C9 /* CredentialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B52767CD4700BD51C9 /* CredentialsViewModel.swift */; };
 		620551BA2767CEF600BD51C9 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B92767CEF600BD51C9 /* UserCredentials.swift */; };
+		620B7138281FCC4D0039D349 /* HomeScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629B1EEF27DCB49A00E38219 /* HomeScrollView.swift */; };
+		620B7139281FCC780039D349 /* AssessmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270B8322768C9C900F56173 /* AssessmentViewModel.swift */; };
+		620B713A281FCC950039D349 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551AC2767603A00BD51C9 /* LoginViewModel.swift */; };
+		620B713B281FCC9E0039D349 /* ProgressScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6282607C27820B73004AFE3A /* ProgressScrollView.swift */; };
+		620B713C281FCCE10039D349 /* CredentialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B52767CD4700BD51C9 /* CredentialsViewModel.swift */; };
+		620B713D281FCCFB0039D349 /* CustomChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6282607A2781C27D004AFE3A /* CustomChartView.swift */; };
+		620B713E281FCD090039D349 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C433E9251A40DF00477355 /* AppDelegate.swift */; };
+		620B713F281FCD2D0039D349 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628260742780C9C8004AFE3A /* ChartViewModel.swift */; };
+		620B7140281FCD3B0039D349 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B12767AE5F00BD51C9 /* FirebaseService.swift */; };
+		620B7141281FCD490039D349 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551B92767CEF600BD51C9 /* UserCredentials.swift */; };
+		620B7142281FCD650039D349 /* CustomTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE9BB62800439A000EBB39 /* CustomTabController.swift */; };
+		620B7143281FCD830039D349 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D34C251FA88A00D5795D /* WelcomeViewController.swift */; };
+		620B7144281FCDA40039D349 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D34F2520928E00D5795D /* WelcomePage.swift */; };
+		620B7145281FCDC50039D349 /* StartWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2A4DF276F69F9001BE056 /* StartWorkoutViewModel.swift */; };
+		620B7146281FCDCE0039D349 /* WelcomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D3512520960C00D5795D /* WelcomePageCell.swift */; };
+		620B7147281FCDFD0039D349 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F3E599251BA57400BD1152 /* UILabelExtension.swift */; };
+		620B7148281FCE2D0039D349 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235D440276CE46000379614 /* IntExtension.swift */; };
+		620B7149281FCE350039D349 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620551AA276229BE00BD51C9 /* Result.swift */; };
+		620B714A281FCE410039D349 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D353252096CC00D5795D /* UIViewExtension.swift */; };
 		6219FAA5268204CA00E88396 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6219FAA4268204CA00E88396 /* InfoListView.swift */; };
 		621CCB9E26337D1C00C1DC47 /* ExerciseProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621CCB9C26337D1C00C1DC47 /* ExerciseProgressTableViewCell.swift */; };
 		622199FF267B845B0049F9FE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622199FD267B845B0049F9FE /* InfoViewController.swift */; };
@@ -127,13 +146,11 @@
 		62DF44CD27EC5D11008A9289 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DF44CA27EC5D11008A9289 /* Outfit-Regular.ttf */; };
 		62DF454027EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF453E27EDB79B008A9289 /* LogAssessmentViewController.swift */; };
 		62DF454127EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF453E27EDB79B008A9289 /* LogAssessmentViewController.swift */; };
-		62DF454227EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF453E27EDB79B008A9289 /* LogAssessmentViewController.swift */; };
 		62DF454327EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF453F27EDB79B008A9289 /* LogAssessmentViewController.xib */; };
 		62DF454427EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF453F27EDB79B008A9289 /* LogAssessmentViewController.xib */; };
 		62DF454527EDB79B008A9289 /* LogAssessmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF453F27EDB79B008A9289 /* LogAssessmentViewController.xib */; };
 		62DF454F27EDB93A008A9289 /* LogAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */; };
 		62DF455027EDB93A008A9289 /* LogAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */; };
-		62DF455127EDB93A008A9289 /* LogAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF454E27EDB93A008A9289 /* LogAssessmentView.swift */; };
 		62DF455327EDCD2E008A9289 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DF455227EDCD2E008A9289 /* Outfit-SemiBold.ttf */; };
 		62DF455427EDCD2E008A9289 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DF455227EDCD2E008A9289 /* Outfit-SemiBold.ttf */; };
 		62DF455527EDCD2E008A9289 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DF455227EDCD2E008A9289 /* Outfit-SemiBold.ttf */; };
@@ -1041,9 +1058,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				62BAC45426BFDEFC0037C798 /* LoginViewControllerTests.swift in Sources */,
+				620B7142281FCD650039D349 /* CustomTabController.swift in Sources */,
+				620B7138281FCC4D0039D349 /* HomeScrollView.swift in Sources */,
 				62BAC58426BFF2930037C798 /* UITextFieldExtension.swift in Sources */,
+				620B713E281FCD090039D349 /* AppDelegate.swift in Sources */,
+				620B7140281FCD3B0039D349 /* FirebaseService.swift in Sources */,
+				620B7144281FCDA40039D349 /* WelcomePage.swift in Sources */,
 				62BAC5C426BFF3980037C798 /* ExerciseProgressTableViewCell.swift in Sources */,
 				62BAC5AC26BFF31E0037C798 /* FontExtension.swift in Sources */,
+				620B713A281FCC950039D349 /* LoginViewModel.swift in Sources */,
 				62BAC58826BFF29F0037C798 /* HomeViewController.swift in Sources */,
 				62BAC5C026BFF38F0037C798 /* WorkoutTableViewCell.swift in Sources */,
 				62BAC5B426BFF3580037C798 /* InfoListView.swift in Sources */,
@@ -1052,6 +1075,7 @@
 				62BAC5BC26BFF37D0037C798 /* StartWorkoutViewController.swift in Sources */,
 				62BAC5A026BFF2F60037C798 /* ActivityScrollView.swift in Sources */,
 				62BAC58C26BFF2A30037C798 /* ActivityViewController.swift in Sources */,
+				620B713B281FCC9E0039D349 /* ProgressScrollView.swift in Sources */,
 				62BAC55C26BFF1D50037C798 /* Exercise.swift in Sources */,
 				6270367826C04ADB00851B40 /* ActivityViewModelTests.swift in Sources */,
 				62BAC57026BFF23E0037C798 /* DefaultButton.swift in Sources */,
@@ -1061,22 +1085,34 @@
 				62BAC56426BFF2050037C798 /* CustomTextField.swift in Sources */,
 				62BAC5B026BFF33E0037C798 /* UIButtonExtension.swift in Sources */,
 				62BAC59C26BFF2D20037C798 /* UIColorExtension.swift in Sources */,
+				620B713D281FCCFB0039D349 /* CustomChartView.swift in Sources */,
+				620B7146281FCDCE0039D349 /* WelcomePageCell.swift in Sources */,
 				62BAC55826BFF1BD0037C798 /* Workout.swift in Sources */,
 				62DF454127EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */,
+				620B7141281FCD490039D349 /* UserCredentials.swift in Sources */,
+				620B7143281FCD830039D349 /* WelcomeViewController.swift in Sources */,
+				620B7147281FCDFD0039D349 /* UILabelExtension.swift in Sources */,
 				62DF455027EDB93A008A9289 /* LogAssessmentView.swift in Sources */,
 				62BAC59426BFF2B00037C798 /* InfoViewController.swift in Sources */,
 				626EFADA25DED58A009F7A97 /* AssessmentViewController.swift in Sources */,
+				620B7148281FCE2D0039D349 /* IntExtension.swift in Sources */,
+				620B713F281FCD2D0039D349 /* ChartViewModel.swift in Sources */,
 				62BAC45826BFDF560037C798 /* LoginViewController.swift in Sources */,
 				62BAC59826BFF2B40037C798 /* ProfileViewController.swift in Sources */,
 				62BAC57426BFF2660037C798 /* UIFontExtension.swift in Sources */,
 				626EFB9A25DF2F66009F7A97 /* WarningLabel.swift in Sources */,
 				62BAC57C26BFF2760037C798 /* CacheManager.swift in Sources */,
 				62BAC45C26BFDFCC0037C798 /* ActivityViewModel.swift in Sources */,
+				620B7149281FCE350039D349 /* Result.swift in Sources */,
 				62BAC56C26BFF2150037C798 /* Constants.swift in Sources */,
+				620B713C281FCCE10039D349 /* CredentialsViewModel.swift in Sources */,
 				62BAC57826BFF26E0037C798 /* SubmitPopUpViewController.swift in Sources */,
 				62BAC5B826BFF3690037C798 /* WorkoutViewController.swift in Sources */,
+				620B714A281FCE410039D349 /* UIViewExtension.swift in Sources */,
+				620B7145281FCDC50039D349 /* StartWorkoutViewModel.swift in Sources */,
 				62BAC58026BFF27C0037C798 /* UserManager.swift in Sources */,
 				62BAC5A826BFF3040037C798 /* RingProgressView.swift in Sources */,
+				620B7139281FCC780039D349 /* AssessmentViewModel.swift in Sources */,
 				62BAC5A426BFF2FE0037C798 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1085,9 +1121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62DF455127EDB93A008A9289 /* LogAssessmentView.swift in Sources */,
 				62C4340C251A40E000477355 /* RewireStrokeUITests.swift in Sources */,
-				62DF454227EDB79B008A9289 /* LogAssessmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1225,7 +1259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1280,7 +1314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1341,7 +1375,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4M72DLPM3;
 				INFOPLIST_FILE = RewireStrokeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1363,7 +1397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4M72DLPM3;
 				INFOPLIST_FILE = RewireStrokeTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
