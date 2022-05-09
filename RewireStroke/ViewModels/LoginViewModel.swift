@@ -35,7 +35,6 @@ class LoginViewModel: CredentialsViewModel {
         let homeViewController = HomeViewController.init(nibName: Constants.View.homeViewController, bundle: nil)
         let activityViewController = ActivityViewController.init(nibName: Constants.View.activityViewController, bundle: nil)
         let progressViewController = ProgressViewController.init(nibName: Constants.View.progressViewController, bundle: nil)
-        let infoViewController = InfoViewController.init(nibName: Constants.View.infoViewController, bundle: nil)
         let profileViewController = ProfileViewController.init(nibName: Constants.View.profileViewController, bundle: nil)
         
         let homeIcon = UIImage(named: "iconHome")!.withRenderingMode(.alwaysOriginal)
@@ -56,12 +55,6 @@ class LoginViewModel: CredentialsViewModel {
         progressItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
         progressItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
 
-        let infoIcon = UIImage(named: "iconInfo")!.withRenderingMode(.alwaysOriginal)
-        let infoIconSelected = UIImage(named: "iconInfoSelected")!.withRenderingMode(.alwaysOriginal)
-        let infoItem = UITabBarItem(title: "Info", image: infoIcon, selectedImage: infoIconSelected)
-        infoItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 5)
-        infoItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colours.primaryIcon], for: .selected)
-        
         let profileIcon = UIImage(named: "iconProfile")!.withRenderingMode(.alwaysOriginal)
         let profileIconSelected = UIImage(named: "iconProfileSelected")!.withRenderingMode(.alwaysOriginal)
         let profileItem = UITabBarItem(title: "Profile", image: profileIcon, selectedImage: profileIconSelected)
@@ -71,14 +64,13 @@ class LoginViewModel: CredentialsViewModel {
         homeViewController.tabBarItem = homeItem
         activityViewController.tabBarItem = activityItem
         progressViewController.tabBarItem = progressItem
-        infoViewController.tabBarItem = infoItem
         profileViewController.tabBarItem = profileItem
         
         let tabBarController = CustomTabController()
-        let controllers = [infoViewController, progressViewController, homeViewController, activityViewController, profileViewController]
+        let controllers = [progressViewController, homeViewController, activityViewController, profileViewController]
         tabBarController.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
         
-        tabBarController.selectedIndex = 2 // 2nd tab
+        tabBarController.selectedIndex = 1 // 2nd tab
         tabBarController.tabBar.unselectedItemTintColor = Colours.primaryIcon
         view.window?.rootViewController = tabBarController
         view.window?.makeKeyAndVisible()
