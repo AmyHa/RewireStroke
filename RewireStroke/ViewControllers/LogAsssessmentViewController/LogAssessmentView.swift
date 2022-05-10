@@ -90,10 +90,13 @@ struct ScaleView: View {
     var labels: [String]
     var navTitle: String
     
+    // Start at the third point
+    var startHeight = 160
     @State var maxHeight: CGFloat = 480
     @State var sliderProgress: CGFloat = 0
-    @State var sliderHeight: CGFloat = 0
-    @State var lastDragValue: CGFloat = 0
+    @State var minSliderHeight: CGFloat = 20
+    @State var sliderHeight: CGFloat = 320
+    @State var lastDragValue: CGFloat = 320
     
     var body: some View {
         NavigationView {
@@ -128,22 +131,28 @@ struct ScaleView: View {
                                 .clipped().frame(width: 70, height: 40)
                             Text(String(labels[3])).font(.outfitRegular(size: 18))
                         }.frame(maxWidth: 280, maxHeight: .infinity, alignment: .leading)
+                        Spacer()
+                        Spacer()
                     }.foregroundColor(Colours.primaryDarkColor)
                     ZStack(alignment: .bottom, content: {
+                        RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Colours.grey02Color).frame(width: 30)
+                        RoundedRectangle(cornerRadius: 20, style: .continuous).fill(LinearGradient(gradient: Gradient(colors: [Colours.primaryDarkColor, Colours.primaryBlueColor]), startPoint: .top, endPoint: .bottom)).frame(width: 30, height: sliderHeight)
+                        let buttonHeight = UIImage(named: "dragButton")!.size.height
                         
-                        RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Colours.grey02Color)
-                        RoundedRectangle(cornerRadius: 20, style: .continuous).fill(LinearGradient(gradient: Gradient(colors: [Colours.primaryDarkColor, Colours.primaryBlueColor]), startPoint: .top, endPoint: .bottom)).frame(height: sliderHeight)
+                        Image("dragButton").frame(height: .infinity, alignment: .bottom).offset(y: -(sliderHeight - buttonHeight/2))
                     })
                         .frame(width: 30, height: maxHeight)
                         .gesture(DragGesture(minimumDistance: 0).onChanged({ value in
+                            
+                            let buttonHeight = UIImage(named: "dragButton")!.size.height
                             
                             // getting drag value
                             let translation = value.translation
                             sliderHeight = -translation.height + lastDragValue
                             
                             // limiting slider height value
-                            sliderHeight = sliderHeight > maxHeight ? maxHeight : sliderHeight
-                            sliderHeight = sliderHeight >= 0 ? sliderHeight : 0
+                            sliderHeight = sliderHeight > maxHeight - buttonHeight/3 ? maxHeight - buttonHeight/3 : sliderHeight
+                            sliderHeight = sliderHeight >= minSliderHeight ? sliderHeight : minSliderHeight
                         }).onEnded({ value in
                             // storing last drag value
                             lastDragValue = sliderHeight
