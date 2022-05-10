@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group 41.png",
+      "filename" : "rewireLogo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "rewireLogo2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "rewireLogo3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
