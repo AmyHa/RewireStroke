@@ -19,7 +19,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: CustomTextField!
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var signUpButton: GradientButton!
     @IBOutlet weak var forgottenPasswordLabel: UILabel!
     
     @IBOutlet weak var signUpLabel: UILabel!
@@ -30,6 +30,14 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tap)
+        
         self.applyStyle()
     }
     
@@ -64,8 +72,10 @@ class SignUpViewController: UIViewController {
         passwordTextField.setLeftPaddingPoints(10)
         
         // Set custom font sizes
-        signUpButton.titleLabel?.font = UIFont.outfitBold(size: Constants.Font.Size.standard)
-        signUpLabel.font = UIFont.outfitBold(size: Constants.Font.Size.large)
+        signUpButton.titleLabel?.font = UIFont.outfitSemiBold(size: Constants.Font.Size.standard)
+        signUpLabel.font = UIFont.outfitSemiBold(size: Constants.Font.Size.large)
+        loginButton.titleLabel?.font = UIFont.outfitSemiBold(size: Constants.Font.Size.standard)
+        loginButton.setTitleColor(Colours.primaryDark, for: .normal)
         forgottenPasswordLabel.font = UIFont.outfitBold(size: Constants.Font.Size.standard)
         
         // Set any additional colours
@@ -93,7 +103,6 @@ class SignUpViewController: UIViewController {
         showButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         passwordTextField.rightView = showButton
         passwordTextField.rightViewMode = .whileEditing
-        
         showButton.addTarget(self, action: #selector(self.showButtonTapped), for: .touchDown)
     }
     
@@ -144,5 +153,23 @@ class SignUpViewController: UIViewController {
         
         let buttonTitle = passwordTextField.isSecureTextEntry ? "Show" : "Hide"
         showButton.setTitle(buttonTitle, for: .normal)
+    }
+    
+    @objc func handleTap() {
+        firstNameTextField.resignFirstResponder()
+        lastNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        firstNameTextField.resignFirstResponder()
+        lastNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
     }
 }
