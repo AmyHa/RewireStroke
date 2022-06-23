@@ -17,7 +17,6 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
     var activityViewModel: ActivityViewModel
     var assessmentViewModel = AssessmentViewModel()
     
@@ -31,6 +30,10 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     }
     
     let playerViewController = AVPlayerViewController()
+    var playerLayer: AVPlayerLayer!
+    var backgroundPlayerLayer: CALayer!
+    var backgroundView: UIView!
+    var backgroundButton: UIButton!
     
     // MARK: - Outlets
     @IBOutlet weak var warningLabel: WarningLabel!
@@ -51,14 +54,15 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         setUpUI()
         setQuestionText(questionIndex: currentIndex)
         setButtons(questionIndex: currentIndex)
         setUpButtonResponses()
         prepareForPlayback()
         addVideoView()
-   }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
     }
@@ -66,6 +70,42 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
     }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            
+            DispatchQueue.main.async {
+                self.backgroundPlayerLayer = CALayer()
+                self.backgroundPlayerLayer.backgroundColor = UIColor.white.cgColor
+                self.backgroundPlayerLayer.opacity = 0.5
+                self.backgroundPlayerLayer?.frame = self.view.frame
+                self.backgroundPlayerLayer.frame.size.height = self.view.frame.width
+                self.backgroundPlayerLayer.frame.size.width = self.view.frame.height
+
+                self.backgroundButton = UIButton()
+                self.backgroundButton.backgroundColor = UIColor.white
+                self.backgroundButton?.frame = self.view.frame
+                self.backgroundButton.frame.size.height = self.view.frame.width
+                self.backgroundButton.frame.size.width = self.view.frame.height
+                
+                self.playerLayer = AVPlayerLayer(player: self.playerViewController.player)
+                self.playerLayer?.frame = self.view.frame
+                self.playerLayer.frame.size.height = self.view.frame.width
+                self.playerLayer.frame.size.width = self.view.frame.height
+
+                self.playerLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
+                self.view.addSubview(self.backgroundButton)
+                self.view.layer.addSublayer(self.playerLayer)
+            
+                self.backgroundButton.addTarget(self, action: #selector(self.pauseVideo), for: .touchUpInside)
+            }
+        } else if UIDevice.current.orientation.isPortrait || UIDevice.current.orientation == UIDeviceOrientation.portraitUpsideDown {
+            self.playerLayer?.removeFromSuperlayer()
+            self.backgroundButton?.removeFromSuperview()
+            self.backgroundPlayerLayer?.removeFromSuperlayer()
+        }
+    }
+
     private func setUpUI() {
         self.title = "Assessment"
         
@@ -77,7 +117,8 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
             }
         }
         
-        warningLabel.text = "Please have someone else complete this assessment on your behalf. \n\nQuestions must be answered accurately to devliver appropriate content."
+        warningLabel.text = "Please have someone else complete this assessment on your behalf. \n\nQuestions must be answered accurately to deliver appropriate content."
+        
         Labels.setWarningLabelStyle(warningLabel)
         Labels.setWarningLabelStyle(selectionWarningLabel)
         
@@ -196,9 +237,9 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         ])
         playerViewController.didMove(toParent: self)
         
-//        if let playerItem = assessmentViewModel.getPlayerItem(currentIndex: currentIndex) {
-//            playerViewController.player = AVPlayer(playerItem: playerItem)
-//        }
+        //        if let playerItem = assessmentViewModel.getPlayerItem(currentIndex: currentIndex) {
+        //            playerViewController.player = AVPlayer(playerItem: playerItem)
+        //        }
         
         HCVimeoVideoExtractor.fetchVideoURLFrom(url: URL(string: assessmentViewModel.getVideoPath(questionIndex: self.currentIndex))!, completion: { ( video:HCVimeoVideo?, error:Error?) -> Void in
             if let err = error {
@@ -253,5 +294,23 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         }
     }
     
+    @objc func pauseVideo() {
+        let currentRate = playerViewController.player?.rate
+        
+        playerViewController.player?.rate = currentRate == 0.0 ? 1.0 : 0.0
+        
+        if currentRate == 0.0 {
+            playerViewController.player?.play()
+            DispatchQueue.main.async {
+                self.backgroundPlayerLayer?.removeFromSuperlayer()
+            }
+            
+        } else {
+            DispatchQueue.main.async {
+                self.view.layer.addSublayer(self.backgroundPlayerLayer)
+            }
+        }
+        
+    }
 }
 

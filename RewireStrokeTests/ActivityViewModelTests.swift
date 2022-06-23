@@ -27,17 +27,17 @@ class ActivityViewModelTests: XCTestCase {
         print("tear down ran")
     }
     
-    func test_afterInitialisation_ULWorkoutsContainsTwoWorkouts() {
-        let sut = activityViewModel.data.ULworkouts
-        
-        XCTAssertEqual(sut?.count, 2)
-    }
-    
-    func test_afterInitialisation_BAWorkoutsContainsFourWorkouts() {
-        let sut = activityViewModel.data.BAWorkouts
-        
-        XCTAssertEqual(sut?.count, 4)
-    }
+//    func test_afterInitialisation_ULWorkoutsContainsTwoWorkouts() {
+//        let sut = activityViewModel.data.ULworkouts
+//
+//        XCTAssertEqual(sut?.count, 2)
+//    }
+//
+//    func test_afterInitialisation_BAWorkoutsContainsFourWorkouts() {
+//        let sut = activityViewModel.data.BAWorkouts
+//
+//        XCTAssertEqual(sut?.count, 4)
+//    }
 
     func test_afterIntialisation_ULWorkoutsFirstItemContainsPreassessmentPlaceholderImage() {
         let sut = activityViewModel.data.ULworkouts[0]

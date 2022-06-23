@@ -160,7 +160,6 @@ class StartWorkoutDataSource: NSObject, UITableViewDelegate, UITableViewDataSour
         let exercise = data[indexPath.row]
         
         cell = tableView.dequeueReusableCell(withIdentifier: "ExerciseProgressTableViewCell", for: indexPath) as? ExerciseProgressTableViewCell
-    
         cell.progressBar.progress = Float(progress)
         cell.exerciseTitleLabel.text = exercise.name
         cell.exerciseTitleLabel.textColor = Colours.primaryDark

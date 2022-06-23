@@ -38,6 +38,8 @@ struct Colours {
     static let grey03 = UIColor.colorFromHexString("#BDBDBD")
     static let grey04 = UIColor.colorFromHexString("#666666")
     
+    static let textFieldGrey = UIColor.colorFromHexString("F2F3F3")
+    
     // Theme
     static let primaryUpperLimb = UIColor.colorFromHexString("#6BC7E8")
     static let primaryLowerLimb = UIColor.colorFromHexString("#DCC817")
@@ -88,7 +90,7 @@ struct TextFields {
     
     static func setBorderTextField(_ textField: UITextField) {
         textField.layer.borderWidth = 1.0
-        textField.layer.cornerRadius = 8
+        textField.layer.cornerRadius = 15
         textField.layer.borderColor = Colours.secondaryLight.cgColor
         textField.backgroundColor = Colours.grey01
         textField.clipsToBounds = true
@@ -111,7 +113,7 @@ struct Buttons {
     // Rounded buttons with primary blue background and white text
     
     static func setBlueMainButton(_ button: UIButton) {
-        button.layer.cornerRadius = 8
+        button.layer.cornerRadius = 15
         button.backgroundColor = Colours.primaryBlue
         button.titleLabel?.textColor = .white
         button.setTitleColor(.white, for: .normal)

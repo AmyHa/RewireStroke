@@ -37,11 +37,11 @@ struct HomeScrollView: View {
         
         NavigationView{
             VStack {
-                SelectActivityView(function: "Upper Limb", score: 0, icon: "iconUpperLimb", colour: Colours.primaryUpperLimbColor, completedWorkouts: 0, activityViewModel: activityViewModel)
+                SelectActivityView(function: "Upper Limb", score: "Assess", icon: "iconUpperLimb", colour: Colours.primaryUpperLimbColor, completedWorkouts: 0, activityViewModel: activityViewModel)
                 
-                SelectActivityView(function: "Lower Limb", score: 0, icon: "iconLowerLimb", colour: Colours.primaryLowerLimbColor, completedWorkouts: 0, activityViewModel: activityViewModel)
+                SelectActivityView(function: "Lower Limb", score: "0/3", icon: "iconLowerLimb", colour: Colours.primaryLowerLimbColor, completedWorkouts: 0, activityViewModel: activityViewModel)
                 
-                SelectActivityView(function: "Balance", score: 1, icon: "iconBalance", colour: Colours.primaryBalanceColor, completedWorkouts: 1, activityViewModel: activityViewModel)
+                SelectActivityView(function: "Balance", score: "0/3", icon: "iconBalance", colour: Colours.primaryBalanceColor, completedWorkouts: 1, activityViewModel: activityViewModel)
             }.navigationTitle(Text("Select an Activity"))
                 .offset(y: -90)
         }.frame(minHeight: minRowHeight*18)
@@ -51,7 +51,7 @@ struct HomeScrollView: View {
 struct SelectActivityView: View {
     
     var function: String
-    var score: Int
+    var score: String
     var icon: String
     var colour: Color
     var completedWorkouts: Int
@@ -72,7 +72,7 @@ struct SelectActivityView: View {
                         .clipped().frame(width: 40, height: 60)
                     Text(function).font(.outfitRegular(size: 22.0)).foregroundColor(Colours.primaryDarkColor).frame(maxWidth: .infinity, alignment: .leading)
                     Image("iconRightArrow").frame(width:100, alignment: .leading)
-                    Text(String(score)).font(.outfitRegular(size: 32.0)).foregroundColor(colour)
+                    Text(score).font(.outfitMedium(size: 20)).foregroundColor(colour)
                 }
                 ZStack(alignment: .leading, content: {
                     RoundedRectangle(cornerRadius: 35, style: .continuous).fill(Colours.grey02Color).frame(height: 20)
