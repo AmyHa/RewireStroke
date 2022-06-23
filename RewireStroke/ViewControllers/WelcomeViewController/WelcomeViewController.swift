@@ -13,7 +13,7 @@ class WelcomeViewController: UICollectionViewController, UICollectionViewDelegat
     let cellId = "cellId"
     
     let pages = [
-        WelcomePage(title: "Personalised Rehab", text: "A personalised exercise programme with \n upper limb, lower limb & balance \n workouts", image: "illustrationCircularIconGraph"),
+        WelcomePage(title: "Personalised Rehab", text: "A personalised exercise programme with \n upper limb, lower limb & balance \n workouts.", image: "illustrationCircularIconGraph"),
         WelcomePage(title: "Monitor Progress", text: "Weekly targets help achieve recovery \n potential.", image: "illustrationMonitorProgress"),
         WelcomePage(title: "Optimise Recovery", text: "Rewire monitors and helps manage \n mood, fatigue and pain.", image:"illustrationOptimiseRecovery"),
         WelcomePage(title: "Unlock Workouts", text: "A simple assessment helps determine \n which exercises are appropriate.", image: "illustrationUnlockWorkouts"),
