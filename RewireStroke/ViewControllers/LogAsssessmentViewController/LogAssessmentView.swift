@@ -17,6 +17,7 @@ struct LogAssessmentView_Previews: PreviewProvider {
 struct LogAssessmentView: View {
     
     @Environment(\.defaultMinListRowHeight) var minRowHeight
+    @Environment(\.presentationMode) var presentationMode
     
     var data: WorkoutPlaceholderData!
     var activityViewModel: ActivityViewModel!
@@ -45,6 +46,13 @@ struct LogAssessmentView: View {
                 LogView(icon: "iconPainCircles", text: "Log your pain levels", colour: Colours.painColor, scaleView: painScaleView)
                     .frame(maxHeight: .infinity)
             }.navigationTitle(Text("How are you feeling?"))
+                .navigationBarItems(trailing:                 Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "chevron.down")
+                        .font(.system(size: 15, weight: .bold, design: .rounded))
+                        .foregroundColor(Colours.primaryDarkColor)
+                })
         }.frame(minHeight: minRowHeight * 18)
     }
 }
