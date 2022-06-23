@@ -38,7 +38,7 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     // MARK: - Outlets
     @IBOutlet weak var warningLabel: WarningLabel!
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var selectionWarningLabel: WarningLabel!
+    @IBOutlet weak var selectionWarningLabel: BorderlessWarningLabel!
     @IBOutlet weak var assessmentLabel: UILabel!
     
     @IBOutlet weak var answerButtonsStackView: UIStackView!
@@ -118,10 +118,7 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         }
         
         warningLabel.text = "Please have someone else complete this assessment on your behalf. \n\nQuestions must be answered accurately to deliver appropriate content."
-        
-        Labels.setWarningLabelStyle(warningLabel)
-        Labels.setWarningLabelStyle(selectionWarningLabel)
-        
+
         warningLabel.font = UIFont.outfitRegular()
         questionLabel.font = UIFont.outfitRegular()
         selectionWarningLabel.font = UIFont.outfitRegular()
@@ -132,7 +129,6 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         
         // Make the selection warning label invisible initially
         selectionWarningLabel.alpha = 0
-        
     }
     
     private func setUpButtonResponses() {

@@ -20,3 +20,14 @@ import UIKit
         super.drawText(in: rect.inset(by: padding))
     }
 }
+
+@IBDesignable class BorderlessWarningLabel: PaddingLabel {
+    let padding = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    override func drawText(in rect: CGRect) {
+        
+        self.textColor = .red
+        self.backgroundColor = .white
+        super.drawText(in: rect.inset(by: padding))
+    }
+}
+
