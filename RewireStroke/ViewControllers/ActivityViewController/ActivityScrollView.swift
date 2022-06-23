@@ -61,6 +61,8 @@ struct WorkoutView: View {
                 .scaledToFill()
                 .frame(width: 150, height: 120, alignment: .leading)
                 .cornerRadius(5.0)
+            Spacer()
+            Spacer()
         }.padding(.trailing, 25)
         .onTapGesture {
             isWorkoutDisplayed = true
