@@ -42,7 +42,7 @@ struct HomeScrollView: View {
                 SelectActivityView(function: "Lower Limb", score: "0/3", icon: "iconLowerLimb", colour: Colours.primaryLowerLimbColor, completedWorkouts: 0, activityViewModel: activityViewModel)
                 
                 SelectActivityView(function: "Balance", score: "0/3", icon: "iconBalance", colour: Colours.primaryBalanceColor, completedWorkouts: 1, activityViewModel: activityViewModel)
-            }.navigationTitle(Text("Select an Activity"))
+            }.navigationTitle(Text("Weekly Goals"))
                 .offset(y: -90)
         }.frame(minHeight: minRowHeight*18)
     }
@@ -71,8 +71,8 @@ struct SelectActivityView: View {
                         .scaledToFit()
                         .clipped().frame(width: 40, height: 60)
                     Text(function).font(.outfitRegular(size: 22.0)).foregroundColor(Colours.primaryDarkColor).frame(maxWidth: .infinity, alignment: .leading)
-                    Image("iconRightArrow").frame(width:100, alignment: .leading)
-                    Text(score).font(.outfitMedium(size: 20)).foregroundColor(colour)
+                    Image("iconRightArrow").frame(width:20, alignment: .leading)
+                    Text(score).font(.outfitMedium(size: 20)).foregroundColor(colour).frame(width: 80)
                 }
                 ZStack(alignment: .leading, content: {
                     RoundedRectangle(cornerRadius: 35, style: .continuous).fill(Colours.grey02Color).frame(height: 20)
