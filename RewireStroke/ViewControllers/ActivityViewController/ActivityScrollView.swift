@@ -34,11 +34,11 @@ struct ActivityScrollView: View {
             NavigationView {
                 
                 if #available(iOS 15.0, *) {
-                    List {
+                    ScrollView {
                         WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.ULworkouts, titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb)
                         WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.LLworkouts.value, titleFontColor: Colours.primaryLowerLimbColor, activityType: .lowerLimb)
                         WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.BAWorkouts, titleFontColor: Colours.primaryBalanceColor, activityType: .balance)
-                    }.navigationBarTitle("Activity").background(.white)
+                    }.navigationBarTitle("Activity").background(.white).frame(width: 350)
                 } else {
                     // Fallback on earlier versions
                 }
