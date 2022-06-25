@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="RewireStroke" customModuleProvider="target">
             <connections>
+                <outlet property="profileView" destination="Jmm-Dv-SWX" id="Eq5-o5-2zI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +19,20 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jmm-Dv-SWX">
+                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Jmm-Dv-SWX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="BY9-WH-wpM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Jmm-Dv-SWX" secondAttribute="bottom" id="LKy-qx-qrA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jmm-Dv-SWX" secondAttribute="trailing" id="chh-zO-8hX"/>
+                <constraint firstItem="Jmm-Dv-SWX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qkC-k7-3ak"/>
+            </constraints>
             <point key="canvasLocation" x="132" y="132"/>
         </view>
     </objects>

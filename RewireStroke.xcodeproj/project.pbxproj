@@ -50,6 +50,7 @@
 		6239D3502520928E00D5795D /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D34F2520928E00D5795D /* WelcomePage.swift */; };
 		6239D3522520960C00D5795D /* WelcomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D3512520960C00D5795D /* WelcomePageCell.swift */; };
 		6239D354252096CC00D5795D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239D353252096CC00D5795D /* UIViewExtension.swift */; };
+		623F807F2867BFB60092E0A9 /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623F807E2867BFB60092E0A9 /* ProfileListView.swift */; };
 		624F505B25F582E700C46B3E /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F505A25F582E700C46B3E /* CacheManager.swift */; };
 		624F50A625F5A11000C46B3E /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F50A425F5A11000C46B3E /* ActivityViewController.swift */; };
 		624F50A725F5A11000C46B3E /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 624F50A525F5A11000C46B3E /* ActivityViewController.xib */; };
@@ -222,6 +223,7 @@
 		6239D34F2520928E00D5795D /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		6239D3512520960C00D5795D /* WelcomePageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageCell.swift; sourceTree = "<group>"; };
 		6239D353252096CC00D5795D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		623F807E2867BFB60092E0A9 /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
 		624F505A25F582E700C46B3E /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		624F50A425F5A11000C46B3E /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		624F50A525F5A11000C46B3E /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 			children = (
 				62219A04267B846C0049F9FE /* ProfileViewController.swift */,
 				62219A05267B846C0049F9FE /* ProfileViewController.xib */,
+				623F807E2867BFB60092E0A9 /* ProfileListView.swift */,
 			);
 			path = ProfileViewController;
 			sourceTree = "<group>";
@@ -1029,6 +1032,7 @@
 				620551B42767B96100BD51C9 /* SignUpViewModel.swift in Sources */,
 				620551AD2767603A00BD51C9 /* LoginViewModel.swift in Sources */,
 				6235D441276CE46000379614 /* IntExtension.swift in Sources */,
+				623F807F2867BFB60092E0A9 /* ProfileListView.swift in Sources */,
 				62F3E59A251BA57400BD1152 /* UILabelExtension.swift in Sources */,
 				627AFA18261DB8F200A64CEE /* Workout.swift in Sources */,
 				629B1EF027DCB49A00E38219 /* HomeScrollView.swift in Sources */,

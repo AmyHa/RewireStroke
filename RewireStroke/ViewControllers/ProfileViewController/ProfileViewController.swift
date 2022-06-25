@@ -7,21 +7,42 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ProfileViewController: UIViewController {
+
+    @IBOutlet weak var profileView: UIView!
+
+    private var host: UIHostingController<ProfileListView>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Profile"
-        navigationController?.navigationBar.prefersLargeTitles = true
-
-        // Need the below code to change bar title colour when using large titles – why?
-        let appearance = UINavigationBarAppearance()
-            appearance.backgroundColor = Colours.primaryLowerLimb
-            appearance.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.outfitSemiBold(size: 30), NSAttributedString.Key.foregroundColor: Colours.primaryDark]
-            self.navigationController?.navigationBar.standardAppearance = appearance
-            self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        /** Use the below if want large navigation title without SwiftUI (and no shadow beaneath title) **/
+//        self.title = "Profile"
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//
+//        let navBarAppearance = UINavigationBarAppearance()
+//        navBarAppearance.configureWithOpaqueBackground()
+//        navBarAppearance.shadowColor = .clear
+//        navBarAppearance.shadowImage = UIImage()
+//        navBarAppearance.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont.outfitSemiBold(size: 30), NSAttributedString.Key.foregroundColor: Colours.primaryDark]
+//
+//        navigationController?.navigationBar.standardAppearance = navBarAppearance
+//        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+        let profileListView = ProfileListView()
+        host = UIHostingController(rootView: profileListView)
+        
+        guard let hostView = host.view else { return }
+        profileView.addSubview(hostView)
+        
+        // Add constraints
+        hostView.translatesAutoresizingMaskIntoConstraints = false
+        hostView.centerYAnchor.constraint(equalTo: profileView.centerYAnchor).isActive = true
+        hostView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        hostView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        hostView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -31,15 +52,4 @@ class ProfileViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
