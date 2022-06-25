@@ -88,9 +88,9 @@ class StartWorkoutViewController: UIViewController, ExerciseSelectionDelegate {
     }
 
     private func setupUI() {
-        closeWorkoutButton.backgroundColor = Colours.secondaryLight
+        closeWorkoutButton.backgroundColor = Colours.primaryBlue
         closeWorkoutButton.titleLabel?.font = UIFont.outfitBold()
-        closeWorkoutButton.setTitleColor(Colours.primaryDark, for: .normal)
+        closeWorkoutButton.setTitleColor(UIColor.white, for: .normal)
     }
     
     func playEmbedInVideo(video: Int) {
