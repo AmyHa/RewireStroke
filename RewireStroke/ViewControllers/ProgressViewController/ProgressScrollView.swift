@@ -20,13 +20,16 @@ struct ProgressScrollView: View {
         VStack {
             NavigationView {
                 
-                List {
-                    Text("Pain")
-                    ProgressChartView(type: .pain).frame(width: 200, height: 200, alignment: .center )
-                    Text("Mood")
-                    ProgressChartView(type: .mood).frame(width: 200, height: 200, alignment: .center )
-                    Text("Fatigue")
-                    ProgressChartView(type: .fatigue).frame(width: 200, height: 200, alignment: .center )
+                ScrollView {
+                    Spacer()
+                    Image("dummyImageMoodGraph")
+                    Spacer()
+//                    ProgressChartView(type: .pain).frame(width: 200, height: 200, alignment: .center )
+                    Image("dummyImageFatigueGraph")
+                    Spacer()
+//                    ProgressChartView(type: .mood).frame(width: 200, height: 200, alignment: .center )
+                    Image("dummyImagePainGraph")
+//                    ProgressChartView(type: .fatigue).frame(width: 200, height: 200, alignment: .center )
                 }.navigationBarTitle("Progress")
             }
         }.frame(minHeight: minRowHeight * 18).font(Font.outfitBold(size: 20.0)).foregroundColor(.black)
