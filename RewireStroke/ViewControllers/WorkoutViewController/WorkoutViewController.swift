@@ -59,9 +59,9 @@ class WorkoutViewController: UIViewController {
 
     private func setupUI() {
 
-        startButton.backgroundColor = Colours.secondaryLight
+        startButton.backgroundColor = Colours.primaryBlue
         startButton.titleLabel?.font = UIFont.outfitBold(size: 17)
-        startButton.setTitleColor(Colours.primaryDark, for: .normal)
+        startButton.setTitleColor(UIColor.white, for: .normal)
 
         equipmentTypeLabel.font = UIFont.outfitRegular(size: 17)
         equipmentLabel.font = UIFont.outfitBold(size: 17)
