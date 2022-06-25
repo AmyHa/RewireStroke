@@ -63,7 +63,7 @@ struct WorkoutView: View {
                 .cornerRadius(5.0)
             Spacer()
             Spacer()
-        }.padding(.trailing, 25)
+        }.padding(.trailing, 5)
         .onTapGesture {
             isWorkoutDisplayed = true
         }
