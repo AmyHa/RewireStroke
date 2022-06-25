@@ -38,12 +38,16 @@ struct HomeScrollView: View {
         NavigationView{
             VStack {
                 SelectActivityView(function: "Upper Limb", score: "Assess", icon: "iconUpperLimb", colour: Colours.primaryUpperLimbColor, completedWorkouts: 0.25, activityViewModel: activityViewModel)
-                
+                Spacer()
+                    .frame(height: 20)
                 SelectActivityView(function: "Lower Limb", score: "0/3", icon: "iconLowerLimb", colour: Colours.primaryLowerLimbColor, completedWorkouts: 0.25, activityViewModel: activityViewModel)
-                
+                Spacer()
+                    .frame(height: 20)
                 SelectActivityView(function: "Balance", score: "1/3", icon: "iconBalance", colour: Colours.primaryBalanceColor, completedWorkouts: 1.25, activityViewModel: activityViewModel)
+                Spacer()
+                    .frame(height: 20)
             }.navigationTitle(Text("Weekly Goals"))
-                .offset(y: -90)
+                .offset(y: -40)
         }.frame(minHeight: minRowHeight*18)
     }
 }
@@ -79,7 +83,6 @@ struct SelectActivityView: View {
                     RoundedRectangle(cornerRadius: 35, style: .continuous).fill(LinearGradient(gradient: Gradient(colors: [Colours.grey02Color, colour]), startPoint: .leading, endPoint: .trailing)).frame(width: (CGFloat(completedWorkouts)/3)*maxProgressLength, height: 20)
                 })
             }.frame(width: maxProgressLength)
-            
         }
 
         .onTapGesture {
