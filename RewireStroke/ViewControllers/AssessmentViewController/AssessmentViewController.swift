@@ -8,7 +8,6 @@
 
 import UIKit
 import FirebaseStorage
-import AVFoundation
 import AVKit
 import HCVimeoVideoExtractor
 
