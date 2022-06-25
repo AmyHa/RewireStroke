@@ -37,11 +37,11 @@ struct HomeScrollView: View {
         
         NavigationView{
             VStack {
-                SelectActivityView(function: "Upper Limb", score: "Assess", icon: "iconUpperLimb", colour: Colours.primaryUpperLimbColor, completedWorkouts: 0, activityViewModel: activityViewModel)
+                SelectActivityView(function: "Upper Limb", score: "Assess", icon: "iconUpperLimb", colour: Colours.primaryUpperLimbColor, completedWorkouts: 0.25, activityViewModel: activityViewModel)
                 
-                SelectActivityView(function: "Lower Limb", score: "0/3", icon: "iconLowerLimb", colour: Colours.primaryLowerLimbColor, completedWorkouts: 0, activityViewModel: activityViewModel)
+                SelectActivityView(function: "Lower Limb", score: "0/3", icon: "iconLowerLimb", colour: Colours.primaryLowerLimbColor, completedWorkouts: 0.25, activityViewModel: activityViewModel)
                 
-                SelectActivityView(function: "Balance", score: "0/3", icon: "iconBalance", colour: Colours.primaryBalanceColor, completedWorkouts: 1, activityViewModel: activityViewModel)
+                SelectActivityView(function: "Balance", score: "1/3", icon: "iconBalance", colour: Colours.primaryBalanceColor, completedWorkouts: 1.25, activityViewModel: activityViewModel)
             }.navigationTitle(Text("Weekly Goals"))
                 .offset(y: -90)
         }.frame(minHeight: minRowHeight*18)
@@ -54,7 +54,7 @@ struct SelectActivityView: View {
     var score: String
     var icon: String
     var colour: Color
-    var completedWorkouts: Int
+    var completedWorkouts: CGFloat
     var activityViewModel: ActivityViewModel
     
     @State private var isWorkoutDisplayed = false
@@ -76,7 +76,7 @@ struct SelectActivityView: View {
                 }
                 ZStack(alignment: .leading, content: {
                     RoundedRectangle(cornerRadius: 35, style: .continuous).fill(Colours.grey02Color).frame(height: 20)
-                    RoundedRectangle(cornerRadius: 35, style: .continuous).fill(LinearGradient(gradient: Gradient(colors: [Colours.grey01Color, colour]), startPoint: .leading, endPoint: .trailing)).frame(width: (CGFloat(completedWorkouts)/3)*maxProgressLength, height: 20)
+                    RoundedRectangle(cornerRadius: 35, style: .continuous).fill(LinearGradient(gradient: Gradient(colors: [Colours.grey02Color, colour]), startPoint: .leading, endPoint: .trailing)).frame(width: (CGFloat(completedWorkouts)/3)*maxProgressLength, height: 20)
                 })
             }.frame(width: maxProgressLength)
             
