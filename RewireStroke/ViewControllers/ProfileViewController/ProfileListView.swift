@@ -8,6 +8,12 @@
 
 import SwiftUI
 
+struct ProfileListView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileListView()
+    }
+}
+
 struct ProfileListView: View {
     
     init() {
@@ -19,13 +25,17 @@ struct ProfileListView: View {
     var body: some View {
         
         NavigationView {
-            List {
+            ScrollView {
                 ProfileItemView(title: "Personal Information")
+                Divider().frame(width: 300)
                 ProfileItemView(title: "Terms and Conditions")
+                Divider().frame(width: 300)
                 ProfileItemView(title: "Private Policy")
+                Divider().frame(width: 300)
                 ProfileItemView(title: "Support")
+                Divider().frame(width: 300)
             }.navigationBarTitle("Profile")
-        }.frame(minHeight: minRowHeight*18).font(Font.outfitMedium(size: 18.0)).foregroundColor(Colours.primaryBlueColor)
+        }.frame(minHeight: minRowHeight*18).font(Font.outfitMedium(size: 15.0)).foregroundColor(Colours.primaryDarkColor)
     }
 }
 
