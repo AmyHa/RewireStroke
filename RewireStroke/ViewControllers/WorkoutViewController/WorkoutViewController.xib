@@ -57,7 +57,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workoutBannerLegStrength" translatesAutoresizingMaskIntoConstraints="NO" id="aV8-R7-Rl1" userLabel="Banner">
-                    <rect key="frame" x="0.0" y="44" width="375" height="250"/>
+                    <rect key="frame" x="5" y="44" width="365" height="250"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="250" id="nIZ-Iw-VEl" userLabel="height = 250"/>
                     </constraints>
@@ -77,19 +77,19 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="smB-HD-cTs" secondAttribute="trailing" constant="20" id="TgS-KA-DeL"/>
                 <constraint firstItem="L55-3d-Oyc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="W1J-aX-sl0"/>
                 <constraint firstItem="Xdi-aO-2lW" firstAttribute="top" secondItem="a5j-uo-zGs" secondAttribute="bottom" constant="30" id="XGr-PX-sjd"/>
-                <constraint firstItem="aV8-R7-Rl1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YVx-C8-CRe"/>
+                <constraint firstItem="aV8-R7-Rl1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="YVx-C8-CRe"/>
                 <constraint firstItem="a5j-uo-zGs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bEe-82-vQb"/>
                 <constraint firstItem="smB-HD-cTs" firstAttribute="top" secondItem="aV8-R7-Rl1" secondAttribute="bottom" constant="30" id="eFb-kI-2rd"/>
                 <constraint firstItem="mQd-DS-jAr" firstAttribute="top" secondItem="Xdi-aO-2lW" secondAttribute="bottom" constant="30" id="pen-uB-Jbd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mQd-DS-jAr" secondAttribute="trailing" constant="20" id="qCH-6i-MsV"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aV8-R7-Rl1" secondAttribute="trailing" id="sL3-cW-sa4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aV8-R7-Rl1" secondAttribute="trailing" constant="5" id="sL3-cW-sa4"/>
                 <constraint firstItem="aV8-R7-Rl1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="y0T-qH-bA9"/>
             </constraints>
             <point key="canvasLocation" x="-84.057971014492765" y="75.669642857142847"/>
         </view>
     </objects>
     <resources>
-        <image name="workoutBannerLegStrength" width="375" height="208"/>
+        <image name="workoutBannerLegStrength" width="350" height="208"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

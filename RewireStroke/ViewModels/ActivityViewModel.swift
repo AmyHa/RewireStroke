@@ -63,8 +63,8 @@ class ActivityViewModel: ObservableObject {
     
     func setUpLLWorkout() {
         if UserManager.LLAssessmentScore < 5 {
-            self.addNewWorkout.send([data.LL_LittleWorkout1, data.LL_LittleWorkout2,
-                data.LL_EnduranceWorkout])
+            self.addNewWorkout.send([data.LL_LittleWorkoutA, data.LL_LittleWorkoutB,
+                data.LL_QuickQuadsWorkout])
         } else {
             self.addNewWorkout.send([data.LL_Fully])
         }

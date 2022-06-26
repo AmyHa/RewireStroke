@@ -65,7 +65,7 @@ class WorkoutViewController: UIViewController {
 
         equipmentTypeLabel.font = UIFont.outfitRegular(size: 17)
         equipmentLabel.font = UIFont.outfitBold(size: 17)
-        preliminaryTextLabel.font = UIFont.outfitBold(size: 17)
+        preliminaryTextLabel.font = UIFont.outfitRegular(size: 17)
         
         equipmentTypeLabel.textColor = Colours.primaryDark
         equipmentLabel.textColor = Colours.primaryDark

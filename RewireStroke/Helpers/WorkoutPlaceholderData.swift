@@ -17,11 +17,11 @@ struct WorkoutPlaceholderData {
     var BAWorkouts: [Workout]!
     
     // Workouts
-    var LL_LittleWorkout1: Workout!
-    var LL_LittleWorkout2: Workout!
+    var LL_LittleWorkoutA: Workout!
+    var LL_LittleWorkoutB: Workout!
     var LL_Fully: Workout!
     var LL_PreassessmentPlaceholder: Workout!
-    var LL_EnduranceWorkout: Workout!
+    var LL_QuickQuadsWorkout: Workout!
         
     var UL_PreassessmentPlaceholder: Workout!
     
@@ -53,16 +53,16 @@ struct WorkoutPlaceholderData {
         
         let LL_ExerciseArrayA = [kneeExtension, kneeFlexion, quadActivation, hamstringActivation, ankleDorsiflexion, anklePlantarflexion]
         
-        let LL_ExerciseArrayB = [kneeFlexion, kneeExtension, quadContraction, ankleDorsiflexion, anklePlantarflexion]
+        let LL_ExerciseArrayB = [kneeExtension, kneeFlexion, quadContraction, ankleDorsiflexion, anklePlantarflexion]
         
         let LL_FullyExerciseArray = [fullyKneeExtension, fullyHeelRaises, fullyToeRaises, fullySquats, fullySplitStanding, fullyHipPush]
         
-        LL_LittleWorkout1 = Workout(name: "Leg strength part 1", exercises: LL_ExerciseArrayA, activityType: .lowerLimb, image: "LLWorkout1Thumbnail")
-        LL_LittleWorkout2 = Workout(name: "Leg strength part 2", exercises: LL_ExerciseArrayB, activityType: .lowerLimb, image: "LLWorkout2Thumbnail")
+        LL_LittleWorkoutA = Workout(name: "Leg Strength A", exercises: LL_ExerciseArrayA, activityType: .lowerLimb, image: "LL_LegStrengthWorkoutAThumbnail")
+        LL_LittleWorkoutB = Workout(name: "Leg strength B", exercises: LL_ExerciseArrayB, activityType: .lowerLimb, image: "LL_LegStrengthWorkoutBThumbnail")
         
-        LL_EnduranceWorkout = Workout(name: "Endurance Workout", exercises: [Exercise](), activityType: .lowerLimb, image: "LLEnduranceWorkoutThumbnail")
+        LL_QuickQuadsWorkout = Workout(name: "Quick Quads", exercises: [Exercise](), activityType: .lowerLimb, image: "LLEnduranceWorkoutThumbnail")
         
-        LL_Fully = Workout(name: "Fully Workout", exercises: LL_FullyExerciseArray, activityType: .lowerLimb, image: "LLWorkout1Thumbnail")
+        LL_Fully = Workout(name: "Fully Workout", exercises: LL_FullyExerciseArray, activityType: .lowerLimb, image: "LL_LegStrengthWorkoutAThumbnail")
         
         LL_PreassessmentPlaceholder = Workout(name: "Assessment", exercises: [Exercise](), activityType: .lowerLimb, image: "LLPreassessmentCard")
         

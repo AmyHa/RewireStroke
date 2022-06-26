@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group 5.png",
+      "filename" : "workoutBannerLegStrength.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "workoutBannerLegStrength2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "workoutBannerLegStrength3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
