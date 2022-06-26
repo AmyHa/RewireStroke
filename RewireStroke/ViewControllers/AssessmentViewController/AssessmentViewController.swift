@@ -128,6 +128,9 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
         
         // Make the selection warning label invisible initially
         selectionWarningLabel.alpha = 0
+        
+        nextButton.tintColor = Colours.primaryDark
+        backButton.tintColor = Colours.primaryDark
     }
     
     private func setUpButtonResponses() {

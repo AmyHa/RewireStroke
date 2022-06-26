@@ -85,12 +85,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYo-TB-b7t" userLabel="Back Button">
-                    <rect key="frame" x="20" y="834" width="12" height="22"/>
-                    <state key="normal" image="backButton"/>
+                    <rect key="frame" x="20" y="834" width="12.5" height="22"/>
+                    <state key="normal" image="chevron.left" catalog="system"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhX-tn-g3c" userLabel="Next Button">
-                    <rect key="frame" x="382" y="834" width="12" height="22"/>
-                    <state key="normal" image="nextButton"/>
+                    <rect key="frame" x="381.5" y="834" width="12.5" height="22"/>
+                    <state key="normal" image="chevron.right" catalog="system"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -131,8 +131,8 @@
         </designable>
     </designables>
     <resources>
-        <image name="backButton" width="12" height="16"/>
-        <image name="nextButton" width="12" height="16"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
