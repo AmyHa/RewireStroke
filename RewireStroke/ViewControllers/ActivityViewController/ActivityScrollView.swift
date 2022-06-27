@@ -9,7 +9,7 @@
 import SwiftUI
 import UIKit
 
-
+//
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ActivityScrollView(lowerLimbWorkouts)
@@ -35,7 +35,8 @@ struct ActivityScrollView: View {
                 
                 if #available(iOS 15.0, *) {
                     ScrollView {
-                        WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.ULworkouts, titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb)
+                        AssessmentScrollView(titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb, imageName: "workoutBannerUpperLimb")
+//                        WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.ULworkouts, titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb)
                         WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.LLworkouts.value, titleFontColor: Colours.primaryLowerLimbColor, activityType: .lowerLimb)
                         WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.BAWorkouts, titleFontColor: Colours.primaryBalanceColor, activityType: .balance)
                     }.navigationBarTitle("Activity").background(.white).frame(width: 350)
@@ -104,6 +105,49 @@ struct WorkoutsScrollView: View {
     }
 }
 
+struct AssessmentScrollView: View {
+    
+    var titleFontColor: Color
+    var activityType: ActivityType
+    var imageName: String
+    @State private var isWorkoutDisplayed = false
+
+    var body: some View {
+        if #available(iOS 14.0, *) {
+            VStack(alignment: .leading) {
+                Text(activityType.rawValue).font(Font.outfitBold(size: 16)).foregroundColor(titleFontColor)
+                ScrollView(.horizontal) {
+                    
+                    VStack (alignment: .leading) {
+                        
+                        Image(imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 350, height: 180, alignment: .leading)
+                            .cornerRadius(5.0)
+                        Spacer()
+                        Spacer()
+                    }.padding(.trailing, 5)
+                    .onTapGesture {
+                        isWorkoutDisplayed = true
+                    }
+                    .sheet(isPresented: $isWorkoutDisplayed, onDismiss: {
+                    }, content: {
+                        DummyAssessmentView()
+                    })
+                }
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+}
+
+struct DummyAssessmentView: View {
+    var body: some View {
+        Text("Content to be added soon!")
+    }
+}
 
 struct WorkoutPageView: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
