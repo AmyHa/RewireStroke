@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "LL_LegStrengthBThumbnail.png",
+      "filename" : "LL_HappyHammysThumbnail.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "LL_LegStrengthBThumbnail2.png",
+      "filename" : "LL_HappyHammysThumbnail2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "LL_LegStrengthBThumbnail3.png",
+      "filename" : "LL_HappyHammysThumbnail3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

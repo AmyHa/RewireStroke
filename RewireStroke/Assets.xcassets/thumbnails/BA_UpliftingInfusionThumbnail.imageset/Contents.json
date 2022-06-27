@@ -1,17 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "LL_LegStrengthBThumbnail.png",
+      "filename" : "BA_UpliftingInfusionThumbnail.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "LL_LegStrengthBThumbnail2.png",
+      "filename" : "BA_UpliftingInfusionThumbnail2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "LL_LegStrengthBThumbnail3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
