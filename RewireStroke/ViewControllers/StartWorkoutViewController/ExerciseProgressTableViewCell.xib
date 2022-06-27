@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,18 +17,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW8-Fg-qqh" userLabel="timeLabel">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW8-Fg-qqh" userLabel="exerciseLabel">
                         <rect key="frame" x="71" y="27.5" width="41.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teK-J1-ztl" userLabel="exerciseLabel">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teK-J1-ztl" userLabel="timerLabel">
                         <rect key="frame" x="20" y="27.5" width="21" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1k3-cT-0jD" userLabel="Play Image">
+                        <rect key="frame" x="20" y="26.5" width="25" height="21.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="XCa-9s-NTm"/>
+                            <constraint firstAttribute="height" constant="25" id="s0N-Dw-7lw"/>
+                        </constraints>
+                    </imageView>
                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="IWb-dV-BrH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="11"/>
                         <constraints>
@@ -41,6 +48,8 @@
                     <constraint firstItem="tW8-Fg-qqh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DF7-dR-9kH"/>
                     <constraint firstItem="IWb-dV-BrH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PJ9-hd-Dfm"/>
                     <constraint firstItem="tW8-Fg-qqh" firstAttribute="leading" secondItem="teK-J1-ztl" secondAttribute="trailing" constant="30" id="ROs-qD-N4E"/>
+                    <constraint firstItem="1k3-cT-0jD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VsX-4B-C0s"/>
+                    <constraint firstItem="1k3-cT-0jD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bpT-TQ-Csv"/>
                     <constraint firstItem="teK-J1-ztl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ev2-wS-pUd"/>
                     <constraint firstItem="teK-J1-ztl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="h0u-af-eg8"/>
                     <constraint firstAttribute="trailing" secondItem="IWb-dV-BrH" secondAttribute="trailing" id="yHh-3S-0le"/>
@@ -49,10 +58,14 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="exerciseTitleLabel" destination="tW8-Fg-qqh" id="rQw-zr-3Ne"/>
+                <outlet property="playImage" destination="1k3-cT-0jD" id="9Bd-hN-Elm"/>
                 <outlet property="progressBar" destination="IWb-dV-BrH" id="vT9-mn-zq1"/>
                 <outlet property="timeLabel" destination="teK-J1-ztl" id="WPP-bG-7C9"/>
             </connections>
             <point key="canvasLocation" x="-35" y="109"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+    </resources>
 </document>

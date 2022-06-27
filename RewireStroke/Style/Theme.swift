@@ -50,6 +50,7 @@ struct Colours {
     static let pain = UIColor.colorFromHexString("#FF1744")
     static let mood = UIColor.colorFromHexString("#0063A4")
     static let fatigue = UIColor.colorFromHexString("#DB9A00")
+    static let logoPink = UIColor.colorFromHexString("#FF6B88")
     
     /** Standard colour palette used across the app - Color **/
     
@@ -81,6 +82,7 @@ struct Colours {
     static let painColor = Color.colorFromHexString("#FF1744")
     static let moodColor = Color.colorFromHexString("#0063A4")
     static let fatigueColor = Color.colorFromHexString("#DB9A00")
+    static let logoPinkColor = Color.colorFromHexString("#FF6B88")
     
 }
 

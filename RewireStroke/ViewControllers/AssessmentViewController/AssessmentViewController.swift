@@ -169,6 +169,7 @@ class AssessmentViewController: UIViewController, FinishedWorkoutDelegate {
     }
     
     @objc private func backButtonTapped(_ button : DefaultButton) {
+        guard currentIndex > 0 else { return }
         currentIndex-=1
         setQuestionText(questionIndex: currentIndex)
         setButtons(questionIndex: currentIndex)

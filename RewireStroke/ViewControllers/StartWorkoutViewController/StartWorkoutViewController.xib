@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartWorkoutViewController" customModule="RewireStroke" customModuleProvider="target">
             <connections>
                 <outlet property="closeWorkoutButton" destination="iN8-Qu-D2I" id="dnc-CS-bc0"/>
+                <outlet property="progressView" destination="n24-nD-J86" id="dj3-zp-cMs"/>
                 <outlet property="tableView" destination="KMt-c3-3qR" id="N3A-KL-R4L"/>
                 <outlet property="videoContainerView" destination="j7d-rT-zKq" id="5vS-Tc-bec"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,11 +27,11 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="200"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="c4g-M8-cpq"/>
+                        <constraint firstAttribute="height" constant="200" id="bn5-n5-UgA"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KMt-c3-3qR">
-                    <rect key="frame" x="0.0" y="244" width="414" height="568"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KMt-c3-3qR">
+                    <rect key="frame" x="0.0" y="450" width="414" height="362"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN8-Qu-D2I" customClass="DefaultButton" customModule="RewireStroke" customModuleProvider="target">
@@ -44,6 +45,10 @@
                         <action selector="closeWorkoutButtonTapped:" destination="-1" eventType="touchUpInside" id="kBX-Ed-k8g"/>
                     </connections>
                 </button>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="n24-nD-J86">
+                    <rect key="frame" x="0.0" y="246" width="414" height="4"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </progressView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -51,10 +56,10 @@
                 <constraint firstItem="j7d-rT-zKq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8wI-Uk-fW3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iN8-Qu-D2I" secondAttribute="bottom" id="AUx-9R-VDd"/>
                 <constraint firstItem="iN8-Qu-D2I" firstAttribute="top" secondItem="KMt-c3-3qR" secondAttribute="bottom" id="PSc-BU-QXb"/>
-                <constraint firstItem="KMt-c3-3qR" firstAttribute="top" secondItem="j7d-rT-zKq" secondAttribute="bottom" id="YgD-tQ-I5L"/>
+                <constraint firstItem="KMt-c3-3qR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="R3S-hE-m48"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KMt-c3-3qR" secondAttribute="trailing" id="arU-9A-0Lt"/>
-                <constraint firstItem="j7d-rT-zKq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="f3O-77-ZJP"/>
-                <constraint firstItem="KMt-c3-3qR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nvJ-pg-UZj"/>
+                <constraint firstItem="j7d-rT-zKq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="b25-6d-KGw"/>
+                <constraint firstItem="KMt-c3-3qR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lKr-XQ-r0s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j7d-rT-zKq" secondAttribute="trailing" id="oac-UT-WCL"/>
                 <constraint firstItem="iN8-Qu-D2I" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="w4O-f1-dfe"/>
             </constraints>

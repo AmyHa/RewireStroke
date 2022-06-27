@@ -14,6 +14,7 @@ class ExerciseProgressTableViewCell: UITableViewCell {
     @IBOutlet weak var exerciseTitleLabel: UILabel!
     
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var playImage: UIImageView!
     
     var runCount = 0 {
         didSet{
@@ -31,7 +32,7 @@ class ExerciseProgressTableViewCell: UITableViewCell {
         
         progressBar.isHidden = false
         progressBar.progress = 0.0
-        progressBar.progressTintColor = Colours.secondaryLight
+        progressBar.progressTintColor = Colours.logoPink
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
