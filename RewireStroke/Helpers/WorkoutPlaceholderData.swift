@@ -19,14 +19,16 @@ struct WorkoutPlaceholderData {
     // Workouts
     var LL_LittleWorkoutA: Workout!
     var LL_LittleWorkoutB: Workout!
-    var LL_Fully: Workout!
+    var LL_Fully_A: Workout!
+    var LL_Fully_B: Workout!
     var LL_PreassessmentPlaceholder: Workout!
     var LL_QuickQuadsWorkout: Workout!
+    var LL_HappyHammysWorkout: Workout!
         
     var UL_PreassessmentPlaceholder: Workout!
     
     var BA_BodyScanWorkout: Workout!
-    var BA_ProprioceptionGame: Workout!
+    var BA_UpliftingInfusion: Workout!
     var BA_HipBalance: Workout!
     
     var PreassessmentUnlock: Workout!
@@ -48,21 +50,27 @@ struct WorkoutPlaceholderData {
         let fullyHeelRaises = Exercise(name: "Heel Raises", activityType: .lowerLimb, ability: .fully, image: "fully-heel-raises", videoPath: "https://vimeo.com/693713788")
         let fullyKneeExtension = Exercise(name: "Knee Extension", activityType: .lowerLimb, ability: .fully, image: "fully-knee-extension", videoPath: "https://vimeo.com/693714138")
         let fullySquats = Exercise(name: "Squats", activityType: .lowerLimb, ability: .fully, image: "fully-squats", videoPath: "https://vimeo.com/693714328")
-        let fullySplitStanding = Exercise(name: "Split Standing", activityType: .lowerLimb, ability: .fully, image: "fully-split-standing", videoPath: "https://vimeo.com/693713618")
+        let fullyCalfStretch = Exercise(name: "Calf Stretch", activityType: .lowerLimb, ability: .fully, image: "fully-calf-stretch", videoPath: "https://vimeo.com/693713618")
         let fullyHipPush = Exercise(name: "Hip Push", activityType: .lowerLimb, ability: .fully, image: "fully-hip-push", videoPath: "https://vimeo.com/693713938")
         
         let LL_ExerciseArrayA = [kneeExtension, kneeFlexion, quadActivation, hamstringActivation, ankleDorsiflexion, anklePlantarflexion]
         
         let LL_ExerciseArrayB = [kneeExtension, kneeFlexion, quadContraction, ankleDorsiflexion, anklePlantarflexion]
         
-        let LL_FullyExerciseArray = [fullyKneeExtension, fullyHeelRaises, fullyToeRaises, fullySquats, fullySplitStanding, fullyHipPush]
+        let LL_FullyWorkoutAExerciseArray = [fullyHeelRaises, fullyToeRaises, fullyHeelRaises, fullySquats, fullyHipPush, fullyCalfStretch]
+        
+        let LL_FullyWorkoutBExerciseArray = [fullyKneeExtension, fullyHeelRaises, fullyToeRaises, fullySquats, fullyCalfStretch, fullyHipPush]
         
         LL_LittleWorkoutA = Workout(name: "Leg Strength A", exercises: LL_ExerciseArrayA, activityType: .lowerLimb, image: "LL_LegStrengthWorkoutAThumbnail")
         LL_LittleWorkoutB = Workout(name: "Leg strength B", exercises: LL_ExerciseArrayB, activityType: .lowerLimb, image: "LL_LegStrengthWorkoutBThumbnail")
         
-        LL_QuickQuadsWorkout = Workout(name: "Quick Quads", exercises: [Exercise](), activityType: .lowerLimb, image: "LLEnduranceWorkoutThumbnail")
+        LL_QuickQuadsWorkout = Workout(name: "Quick Quads", exercises: [Exercise](), activityType: .lowerLimb, image: "LL_QuickQuadsThumbnail")
         
-        LL_Fully = Workout(name: "Fully Workout", exercises: LL_FullyExerciseArray, activityType: .lowerLimb, image: "LL_LegStrengthWorkoutAThumbnail")
+        LL_HappyHammysWorkout = Workout(name: "Happy Hammys", exercises: [Exercise](), activityType: .lowerLimb, image: "LL_HappyHammysThumbnail")
+        
+        LL_Fully_A = Workout(name: "Workout A", exercises: LL_FullyWorkoutAExerciseArray, activityType: .lowerLimb, image: "LL_LegStrengthWorkoutAThumbnail")
+        
+        LL_Fully_B = Workout(name: "Workout B", exercises: LL_FullyWorkoutBExerciseArray, activityType: .lowerLimb, image: "LL_LegStrengthWorkoutAThumbnail")
         
         LL_PreassessmentPlaceholder = Workout(name: "Assessment", exercises: [Exercise](), activityType: .lowerLimb, image: "LLPreassessmentCard")
         
@@ -70,11 +78,11 @@ struct WorkoutPlaceholderData {
         PreassessmentUnlock = Workout( name: "", exercises: [Exercise](), activityType: .lowerLimb, image: "UnlockAssessment")
         
         BA_BodyScanWorkout = Workout(name: "Body scan", exercises: [Exercise](), activityType: .lowerLimb, image: "BalanceBodyScanThumbnail")
-        BA_ProprioceptionGame = Workout(name: "Proprioception game", exercises: [Exercise](), activityType: .lowerLimb, image: "BalanceProprioceptionGameThumbnail")
+        BA_UpliftingInfusion = Workout(name: "Uplifting infusion", exercises: [Exercise](), activityType: .lowerLimb, image: "BA_UpliftingInfusionThumbnail")
         
         BA_HipBalance = Workout(name: "Hip Balance", exercises: [Exercise](), activityType: .lowerLimb, image: "BAHipBalanceThumbnail")
         
         ULworkouts = [UL_PreassessmentPlaceholder]
-        BAWorkouts = [BA_BodyScanWorkout, BA_ProprioceptionGame, BA_HipBalance]
+        BAWorkouts = [BA_BodyScanWorkout, BA_UpliftingInfusion, BA_HipBalance]
     }
 }
