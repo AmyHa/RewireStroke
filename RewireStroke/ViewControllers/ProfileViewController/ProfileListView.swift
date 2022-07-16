@@ -26,16 +26,17 @@ struct ProfileListView: View {
         
         NavigationView {
             ScrollView {
+                Spacer().frame(height: 20)
                 ProfileItemView(title: "Personal Information")
                 Divider().frame(width: 300)
                 ProfileItemView(title: "Terms and Conditions")
                 Divider().frame(width: 300)
-                ProfileItemView(title: "Private Policy")
+                ProfileItemView(title: "Privacy")
                 Divider().frame(width: 300)
                 ProfileItemView(title: "Support")
                 Divider().frame(width: 300)
             }.navigationBarTitle("Profile")
-        }.frame(minHeight: minRowHeight*18).font(Font.outfitMedium(size: 15.0)).foregroundColor(Colours.primaryDarkColor)
+        }.frame(minHeight: minRowHeight*18).font(Font.outfitMedium(size: 18.0)).foregroundColor(Colours.primaryDarkColor)
     }
 }
 
