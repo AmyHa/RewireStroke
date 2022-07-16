@@ -9,11 +9,11 @@
 import SwiftUI
 import UIKit
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeScrollView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeScrollView()
+//    }
+//}
 
 struct HomeScrollView: View {
     

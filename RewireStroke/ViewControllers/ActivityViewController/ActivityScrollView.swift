@@ -9,7 +9,7 @@
 import SwiftUI
 import UIKit
 
-//
+
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ActivityScrollView(lowerLimbWorkouts)
@@ -28,23 +28,19 @@ struct ActivityScrollView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Colours.primaryDark, .font: UIFont.outfitSemiBold(size: 32)]
         self.activityViewModel = activityViewModel
     }
-
+    
     var body: some View {
         
-            NavigationView {
-                
-                if #available(iOS 15.0, *) {
-                    ScrollView {
-                        AssessmentScrollView(titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb, imageName: "workoutBannerUpperLimb")
-//                        WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.ULworkouts, titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb)
-                        WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.LLworkouts.value, titleFontColor: Colours.primaryLowerLimbColor, activityType: .lowerLimb)
-                        WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.BAWorkouts, titleFontColor: Colours.primaryBalanceColor, activityType: .balance)
-                    }.navigationBarTitle("Activity").background(.white).frame(width: 350)
-                } else {
-                    // Fallback on earlier versions
-                }
-                
-            }.frame(minHeight: minRowHeight * 18)
+        NavigationView {
+            ScrollView {
+                Spacer().frame(height: 20)
+                AssessmentScrollView(titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb, imageName: "workoutBannerUpperLimb")
+                //                        WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.ULworkouts, titleFontColor: Colours.primaryUpperLimbColor, activityType: .upperLimb)
+                WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.LLworkouts.value, titleFontColor: Colours.primaryLowerLimbColor, activityType: .lowerLimb)
+                WorkoutsScrollView(activityViewModel: activityViewModel, workouts: activityViewModel.BAWorkouts, titleFontColor: Colours.primaryBalanceColor, activityType: .balance)
+            }.navigationTitle("Activity")
+                .padding()
+        }.frame(minHeight: minRowHeight * 18)
     }
 }
 
@@ -116,7 +112,7 @@ struct AssessmentScrollView: View {
         if #available(iOS 14.0, *) {
             VStack(alignment: .leading) {
                 Text(activityType.rawValue).font(Font.outfitBold(size: 16)).foregroundColor(titleFontColor)
-                ScrollView(.horizontal) {
+//                ScrollView(.horizontal) {
                     
                     VStack (alignment: .leading) {
                         
@@ -135,7 +131,7 @@ struct AssessmentScrollView: View {
                     }, content: {
                         DummyAssessmentView()
                     })
-                }
+//                }
             }
         } else {
             // Fallback on earlier versions
@@ -144,8 +140,60 @@ struct AssessmentScrollView: View {
 }
 
 struct DummyAssessmentView: View {
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
-        Text("Content to be added soon!")
+        NavigationView {
+            VStack {
+                Image("Banner_ULAssessment")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 350, height: 220, alignment: .leading)
+                    .cornerRadius(5.0)
+                Spacer().frame(height: 50)
+                Button {
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(LinearGradient(gradient: Gradient(colors: [Colours.primaryBlueColor, Colours.primaryDarkColor]), startPoint: .leading, endPoint: .trailing))
+                            .frame(maxWidth: .infinity, maxHeight: 45)
+                            .padding(.leading, 45)
+                            .padding(.trailing, 45)
+                        Text("Begin").font(.outfitSemiBold(size: 18))
+                            .foregroundColor(.white)
+                    }
+                    
+                }
+                Spacer().frame(height: 50)
+                Text("Our assessment will determine which exercises are appropriate for your level of function.").frame(alignment: .leading).font(.outfitRegular(size: 15))
+                Spacer().frame(height: 30)
+                HStack {
+                    Text("Equipment").font(.outfitSemiBold(size: 15)).frame(maxWidth: 100, alignment: .leading).padding(.leading, 20)
+                    Text("Chair or surface for support").font(.outfitRegular(size: 15)).frame(maxWidth: .infinity, alignment: .leading).padding(.trailing, 20)
+                }
+                Spacer().frame(height: 30)
+                
+                Text("Please have someone else complete this assessment on your behalf. \n\nQuestions must be answered accurately to deliver appropriate content.")
+                    .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Colours.accentColor, lineWidth: 2)).padding()
+                            .frame(alignment: .leading)
+                            .font(.outfitRegular(size: 15))
+                            .foregroundColor(Colours.accentColor)
+            }.navigationBarTitle("", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 15, weight: .bold, design: .rounded))
+                            .foregroundColor(Colours.primaryDarkColor)
+                    }
+                }
+            }
+        }
     }
 }
 
