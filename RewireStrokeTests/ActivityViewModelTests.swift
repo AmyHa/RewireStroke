@@ -57,12 +57,6 @@ class ActivityViewModelTests: XCTestCase {
         XCTAssertEqual(sut.image, "BalanceBodyScanThumbnail")
     }
     
-    func test_afterIntialisation_BAWorkoutsSecondItemContainsProprioceptionGameImage() {
-        let sut = activityViewModel.data.BAWorkouts[1]
-        
-        XCTAssertEqual(sut.image, "BalanceProprioceptionGameThumbnail")
-    }
-    
     func test_afterIntialisation_BAWorkoutsThirdItemContainsHipBalanceImage() {
         let sut = activityViewModel.data.BAWorkouts[2]
         

@@ -66,7 +66,8 @@ class ActivityViewModel: ObservableObject {
             self.addNewWorkout.send([data.LL_LittleWorkoutA, data.LL_LittleWorkoutB,
                                      data.LL_QuickQuadsWorkout, data.LL_HappyHammysWorkout])
         } else {
-            self.addNewWorkout.send([data.LL_Fully_A])
+            self.addNewWorkout.send([data.LL_Fully_A, data.LL_Fully_B])
+
         }
     }
 }
